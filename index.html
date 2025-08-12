@@ -1,113 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ChaOz - Votre titre ici</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Sky Clone</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#"><img src="assets/images/logo-placeholder.png" alt="Logo" /></a>
-      <nav class="main-nav">
-        <a href="#home">Accueil</a>
-        <a href="#recipes">Recettes</a>
-        <a href="#about">À propos</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Menu">☰</button>
+
+<header>
+    <div class="container">
+        <img src="assets/images/logo-placeholder.png" alt="Logo" class="logo">
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#recipes">Recettes</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>ChaOz</h1>
-          <p class="lead">Recettes fraîches & inspirations saines. Remplacez ce texte par le vôtre.</p>
-          <a class="btn" href="#recipes">Voir les recettes</a>
-        </div>
-        <div class="hero-media">
-          <img src="assets/images/hero-placeholder.jpg" alt="Photo de plat">
-        </div>
-      </div>
-    </section>
+<section class="hero">
+    <img src="assets/images/hero-placeholder.jpg" alt="Hero image">
+    <div class="hero-text">
+        <h1>Bien manger, c’est facile</h1>
+        <p>Recettes saines et gourmandes pour tous les jours.</p>
+    </div>
+</section>
 
-    <section id="recipes" class="section recipes">
-      <div class="container">
-        <h2>Recettes populaires</h2>
-        <div class="grid">
-          <article class="card">
+<section id="recipes" class="recipes">
+    <h2>Nos recettes</h2>
+    <div class="recipe-grid">
+        <div class="recipe">
             <img src="assets/images/recipe1.jpg" alt="Recette 1">
-            <div class="card-body">
-              <h3>Recette 1</h3>
-              <p>Brève description. Remplacez par votre contenu.</p>
-            </div>
-          </article>
-
-          <article class="card">
+            <h3>Smoothie Bowl</h3>
+        </div>
+        <div class="recipe">
             <img src="assets/images/recipe2.jpg" alt="Recette 2">
-            <div class="card-body">
-              <h3>Recette 2</h3>
-              <p>Brève description. Remplacez par votre contenu.</p>
-            </div>
-          </article>
-
-          <article class="card">
+            <h3>Pâtes aux boulettes</h3>
+        </div>
+        <div class="recipe">
             <img src="assets/images/recipe3.jpg" alt="Recette 3">
-            <div class="card-body">
-              <h3>Recette 3</h3>
-              <p>Brève description. Remplacez par votre contenu.</p>
-            </div>
-          </article>
+            <h3>Grillade healthy</h3>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="container about-inner">
-        <div class="about-text">
-          <h2>À propos</h2>
-          <p>Texte à propos — présentez votre concept, votre histoire, vos valeurs.</p>
-          <a href="#contact" class="btn-outline">Contactez-nous</a>
-        </div>
-        <div class="about-media">
-          <img src="assets/images/about-placeholder.jpg" alt="À propos">
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <form id="contact-form">
-          <label>Nom
-            <input type="text" name="name" placeholder="Votre nom">
-          </label>
-          <label>Email
-            <input type="email" name="email" placeholder="email@exemple.com">
-          </label>
-          <label>Message
-            <textarea name="message" rows="4" placeholder="Votre message"></textarea>
-          </label>
-          <button class="btn" type="submit">Envoyer</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Blue Sky Eating — Remplacez par le nom de votre site.</p>
     </div>
-  </footer>
+</section>
 
-<script>
-  document.querySelector('.menu-toggle').addEventListener('click', function(){
-    document.querySelector('.main-nav').classList.toggle('open');
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<section id="about" class="about">
+    <h2>À propos</h2>
+    <img src="assets/images/about-placeholder.jpg" alt="About us">
+    <p>
+        Nous croyons que bien manger est la clé d’une vie équilibrée. 
+        Nos recettes sont simples, rapides et pleines de saveurs.
+    </p>
+</section>
+
+<footer id="contact">
+    <p>© 2025 - Mon site Blue Sky Clone | Email : contact@example.com</p>
+</footer>
+
 </body>
 </html>
