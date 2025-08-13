@@ -32,14 +32,18 @@ body {
   margin-bottom: 35px; /* espace ajouté */
 }
 /* MENU */
+.menu {
+  text-align: center; /* centre le bloc menu */
+  margin-top: 15px;
+}
+
 .menu ul {
-  display: flex;
-  justify-content: center;
+  display: inline-flex; /* centré et réduit */
   list-style: none;
   gap: 30px;
   padding: 10px 0;
-  border-top: 2px solid #ccc;  /* ligne en haut */
-  border-bottom: 2px solid #ccc; /* ligne en bas */
+  border-top: 1px solid rgba(0, 0, 0, 0.2);  /* noir pâle */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .menu a {
