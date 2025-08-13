@@ -230,13 +230,10 @@ footer {
 .social-links img:hover {
   transform: scale(1.1); /* petit effet au survol */
 }
+
 /* Témoignages */
 .testimonials {
-  margin-top: 30px;
-  background-color: #fff8f6;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 50px; /* plus bas sous les logos */
   text-align: center;
 }
 
@@ -247,8 +244,18 @@ footer {
   margin-bottom: 15px;
 }
 
+.testimonial-slider {
+  position: relative;
+  height: 120px; /* hauteur fixe pour le défilement */
+  overflow: hidden;
+}
+
 .testimonial {
-  margin-bottom: 15px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slide 12s infinite;
 }
 
 .testimonial p {
@@ -267,4 +274,12 @@ footer {
 .testimonial span {
   font-size: 0.85rem;
   color: #777;
+}
+
+/* Animation défilement vertical */
+@keyframes slide {
+  0%, 30% { transform: translateY(0); }
+  33%, 63% { transform: translateY(-120px); }
+  66%, 96% { transform: translateY(-240px); }
+  100% { transform: translateY(0); }
 }
