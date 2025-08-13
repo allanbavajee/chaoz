@@ -208,3 +208,9 @@ footer {
     width: 100%;
   }
 }
+.new-charlotte-photo {
+  width: 150px;      /* ajuste selon la taille désirée */
+  height: auto;
+  border-radius: 10px;  /* optionnel, pour arrondir les coins */
+  margin-bottom: 10px;  /* espace sous l'image */
+}
