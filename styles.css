@@ -5,41 +5,38 @@
   box-sizing: border-box;
 }
 
+/* FONTS */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #fff;
   color: #333;
 }
 
 /* HEADER */
-.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.header-logo {
-  width: 80px;
-  height: auto;
-}
-
-.title-container {
-  text-align: center;
-}
-
 .site-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
+  font-family: 'Parisienne', cursive;
+  font-size: 4rem;
+  font-weight: normal;
+  color: #ff6f61;
 }
 
 .slogan {
-  font-size: 1.2rem;
-  color: #777;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #b5651d;
 }
 
+/* TITRES SECONDAIRES */
+.latest-recipes h2 {
+  font-family: 'Parisienne', cursive;
+  color: #ff6f61;
+}
+
+/* TEXTES GENERAUX */
+.image-desc,
+p {
+  font-family: 'Poppins', sans-serif;
+}
 /* MENU */
 .menu ul {
   display: flex;
