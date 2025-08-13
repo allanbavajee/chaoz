@@ -5,120 +5,95 @@
   box-sizing: border-box;
 }
 
-/* FONTS */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #fff;
   color: #333;
 }
 
-/* Import des polices Google */
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@400;600&display=swap');
-
 /* HEADER */
-.site-title {
-  font-family: 'Parisienne', cursive;
-  font-size: 5rem;
-  font-weight: normal;
-  color: #ff6f61;
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.header-logo {
+  width: 80px;
+  height: auto;
+}
+
+.title-container {
   text-align: center;
+}
+
+.site-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .slogan {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #000;
-  text-align: center;
-  margin-bottom: 35px; /* espace ajouté */
+  margin-top: 10px;
 }
+
 /* MENU */
 .menu {
-  text-align: center; /* centre le bloc menu */
-  margin-top: 15px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .menu ul {
-  display: inline-flex; /* centré et réduit */
+  display: inline-flex;
   list-style: none;
   gap: 30px;
-  padding: 10px 0;
-  width: 400px; /* tu ajustes cette valeur */
-  justify-content: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);  /* noir pâle */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 60px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .menu a {
   text-decoration: none;
   color: #333;
-  font-weight: normal; /* plus bold */
-  font-size: 1rem;
+  font-weight: normal;
 }
 
-.menu a:hover {
-  color: #ff6f61;
-}
-
-/* SECTION TITRES */
-.latest-recipes h2 {
-  font-family: 'Playfair Display', serif; /* élégant mais lisible */
-  font-size: 2.2rem;
-  text-align: center;
-  color: #000;
-  letter-spacing: 1px;
-  position: relative;
-  margin-bottom: 35px;
-}
-
-.latest-recipes h2::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background-color: #ff6f61; /* petit accent coloré */
-  display: block;
-  margin: 8px auto 0 auto;
-  border-radius: 2px;
-}
-
-/* LAYOUT */
-.content {
+/* CONTENU PRINCIPAL */
+.main-content {
   display: flex;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 40px;
   padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
 }
 
-/* LEFT COLUMN */
+/* Colonne gauche */
 .latest-recipes {
   flex: 3;
-}
-
-.latest-recipes h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
 }
 
 /* Grandes images */
 .big-image.side-by-side {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 30px;
-}
-
-.big-image-block {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .big-image-block img {
   width: 100%;
+  max-width: 45%;
   height: auto;
   border-radius: 10px;
+}
+
+.image-desc {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* Petites images */
@@ -129,7 +104,7 @@ body {
 }
 
 .image-block {
-  width: calc(25% - 10px);
+  width: calc(25% - 7.5px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,96 +116,27 @@ body {
   border-radius: 10px;
 }
 
-.image-desc {
-  margin-top: 5px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* RIGHT COLUMN */
-.sidebar {
+/* Colonne droite */
+.welcome-box {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.welcome-box {
-  text-align: center;
-}
-
-.welcome-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-links img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.2s ease;
-}
-
-.social-links img:hover {
-  transform: scale(1.1);
-}
-footer {
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 30px;
-}
-.chef-photo {
-  width: 150px;   /* même largeur que tes petites images */
-  height: auto;
-  border-radius: 10px; /* arrondi pour harmoniser */
-}
-.main-content {
-  display: flex;
-  align-items: flex-start; /* aligne le haut des deux colonnes */
-  gap: 20px; /* espace entre la gauche et la droite */
-}
-.welcome-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.main-content {
-  display: flex;           /* active la mise en page en colonnes */
-  align-items: flex-start; /* aligne le haut des colonnes */
-  gap: 40px;               /* espace entre les colonnes */
-  padding: 20px;
-}
-
-/* Colonne gauche : dernières créations */
-.latest-recipes {
-  flex: 3;                 /* occupe plus de place */
-}
-
-/* Colonne droite : welcome box */
-.welcome-box {
-  flex: 1;                 /* moins large que la colonne gauche */
   background-color: #fff8f5;
   padding: 20px;
   border-radius: 10px;
-  text-align: left;        /* aligner le texte à gauche */
+  text-align: left;
 }
 
 .chef-photo {
-  width: 100%;             /* image pleine largeur de la colonne */
-  max-width: 150px;        /* mais pas trop grande */
+  width: 100%;
+  max-width: 150px;
   height: auto;
   border-radius: 50%;
   margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #555;
 }
