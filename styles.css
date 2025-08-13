@@ -30,38 +30,7 @@ body {
   gap: 15px;                 /* espace entre logo et titre */
   padding: 20px 0;
 }
-.header-center {
-  display: flex;
-  flex-direction: column; /* empile verticalement */
-  align-items: center;    /* centre horizontalement */
-  justify-content: center; /* centre verticalement si nécessaire */
-  text-align: center;
-  margin-top: 20px;       /* ajuster selon besoin */
-}
-.header-logo {
-  width: 80px;               /* taille du logo */
-  height: auto;
-}
 
-.title-container {
-  display: flex;
-  flex-direction: column;    /* titre au-dessus du slogan */
-  align-items: flex-start;   /* texte aligné à gauche du logo */
-}
-
-.site-title {
-  font-family: 'Parisienne', cursive;
-  font-size: 5rem;
-  color: #ff6f61;
-  font-weight: normal;
-}
-
-.slogan {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
-  color: #000;
-  margin-top: 10px;
-}
 
 /* MENU */
 .menu {
@@ -78,6 +47,34 @@ body {
   justify-content: center;
   border-top: 1px solid rgba(0,0,0,0.2);
   border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.header-center {
+  display: flex;
+  flex-direction: column; /* empile verticalement */
+  align-items: center;    /* centre horizontalement */
+  text-align: center;
+  margin-top: 20px;       /* ajuste selon besoin */
+}
+
+.header-logo {
+  width: 80px;            /* taille du logo */
+  height: auto;
+  margin-bottom: 10px;    /* espace entre logo et ChaOz */
+}
+
+.site-title {
+  font-family: 'Parisienne', cursive;
+  font-size: 5rem;
+  color: #ff6f61;
+  font-weight: normal;
+}
+
+.slogan {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .menu a {
