@@ -6,7 +6,7 @@
 }
 
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -27,20 +27,23 @@ body {
   width: 80px;
   height: auto;
 }
-
+/* ChaOz */
 .site-title {
   font-family: 'Parisienne', cursive;
-  font-size: 5rem;
-  color: #ff6f61;
+  font-size: 5rem;     /* ajuste selon la taille souhaitée */
+  color: #ff6f61;      /* couleur actuelle, tu peux changer */
   text-align: center;
+  margin: 0;
 }
 
+/* Slogan */
 .slogan {
   font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
-  color: #000;
+  font-size: 2rem;     /* ajuste selon la taille souhaitée */
+  color: #000;         /* noir */
   text-align: center;
-  margin-top: 10px;
+  margin-top: 10px;    /* un peu d'espace au dessus */
+  margin-bottom: 30px; /* espace avec le menu */
 }
 
 /* MENU */
