@@ -191,3 +191,8 @@ footer {
   color: #777;
   margin-top: 30px;
 }
+.chef-photo {
+  width: 150px;   /* même largeur que tes petites images */
+  height: auto;
+  border-radius: 10px; /* arrondi pour harmoniser */
+}
