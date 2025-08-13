@@ -7,29 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation -->
     <header>
-        <h1>ChaOz</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>ChaOz</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Charlotte</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section class="recipes">
-            <article>
-                <img src="recipe1.jpg" alt="Recipe 1">
-                <h2>Delicious Recipe</h2>
-                <p>Short description of the recipe by Charlotte.</p>
-            </article>
-            <!-- Add more recipes here -->
-        </section>
-    </main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to ChaOz</h2>
+            <p>Discover delicious recipes by Charlotte</p>
+            <a href="#recipes" class="btn">Explore Recipes</a>
+        </div>
+    </section>
+
+    <!-- Featured Recipes -->
+    <section id="recipes" class="recipes-section">
+        <div class="container">
+            <h2>Featured Recipes</h2>
+            <div class="recipes-grid">
+                <article>
+                    <img src="recipe1.jpg" alt="Recipe 1">
+                    <h3>Recipe 1</h3>
+                </article>
+                <article>
+                    <img src="recipe2.jpg" alt="Recipe 2">
+                    <h3>Recipe 2</h3>
+                </article>
+                <article>
+                    <img src="recipe3.jpg" alt="Recipe 3">
+                    <h3>Recipe 3</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 ChaOz</p>
+        <div class="container">
+            <p>&copy; 2025 ChaOz. All rights reserved.</p>
+        </div>
     </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
