@@ -59,9 +59,18 @@ body {
   color: #ff6f61;
 }
 
-/* LATEST RECIPES */
-.latest-recipes {
+/* LAYOUT */
+.content {
+  display: flex;
+  gap: 30px;
   padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LEFT COLUMN */
+.latest-recipes {
+  flex: 3;
 }
 
 .latest-recipes h2 {
@@ -73,14 +82,13 @@ body {
 /* Grandes images */
 .big-image.side-by-side {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   margin-bottom: 30px;
 }
 
 .big-image-block {
   flex: 1;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,4 +125,40 @@ body {
   text-align: center;
   font-size: 0.9rem;
   color: #555;
+}
+
+/* RIGHT COLUMN */
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.welcome-box {
+  text-align: center;
+}
+
+.welcome-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
 }
