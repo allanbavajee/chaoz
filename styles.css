@@ -15,6 +15,19 @@ body {
 }
 
 /* HEADER */
+.header-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.header-logo {
+  width: 80px;
+  height: auto;
+}
+
 .site-title {
   font-family: 'Parisienne', cursive;
   font-size: 5rem;
@@ -28,6 +41,34 @@ body {
   color: #000;
   text-align: center;
   margin-top: 10px;
+}
+
+/* MENU */
+.menu {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.menu ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 30px;
+  padding: 10px 0;
+  width: 400px; /* ajuster pour la longueur des lignes */
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.menu a:hover {
+  color: #ff6f61;
 }
 
 /* MAIN CONTENT LAYOUT */
@@ -45,6 +86,26 @@ body {
   flex: 3;
 }
 
+/* Section title */
+.latest-recipes h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #000;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+
+.latest-recipes h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #ff6f61;
+  display: block;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
 /* Big images side-by-side */
 .big-image.side-by-side {
   display: flex;
@@ -55,7 +116,7 @@ body {
 
 .big-image-block {
   flex: 1;
-  max-width: 48%;  /* chaque image prend moitié de la colonne */
+  max-width: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +128,7 @@ body {
   border-radius: 10px;
 }
 
-/* Small images 4 par ligne */
+/* Small images 4 per row */
 .small-images {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +136,7 @@ body {
 }
 
 .image-block {
-  width: calc(25% - 7.5px); /* 4 par ligne */
+  width: calc(25% - 7.5px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,104 +173,49 @@ body {
   margin-bottom: 10px;
 }
 
-
-/* MENU */
-.menu {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.menu ul {
-  display: inline-flex;
-  list-style: none;
-  gap: 30px;
-  padding: 10px 60px;
-  border-top: 1px solid rgba(0,0,0,0.2);
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: normal;
-}
-
-/* MAIN CONTENT */
-.main-content {
+/* SOCIAL LINKS */
+.social-links {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-/* LEFT COLUMN */
-.latest-recipes {
-  flex: 3;
-}
-
-/* Big images */
-.big-image.side-by-side {
-  display: flex;
+  justify-content: center;
   gap: 15px;
-  margin-bottom: 30px;
 }
 
-.big-image-block img {
-  width: 100%;
-  max-width: 300px; /* Limite la taille des grandes images */
-  border-radius: 10px;
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
 }
 
-.image-desc {
-  margin-top: 5px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Small images */
-.small-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.image-block {
-  width: calc(25% - 7.5px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.image-block img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* RIGHT COLUMN */
-.welcome-box {
-  flex: 1;
-  padding: 20px;
-  text-align: left;
-}
-
-.welcome-box h3 {
-  margin-bottom: 15px;
-}
-
-.chef-photo {
-  width: 150px;  /* même que petites images */
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
+.social-links img:hover {
+  transform: scale(1.1);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px 0;
+  background-color: #f9f9f9;
+  padding: 20px;
+  font-size: 0.9rem;
   color: #777;
   margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .big-image-block, .small-images {
+    max-width: 100%;
+  }
+
+  .image-block {
+    width: calc(50% - 5px);
+  }
+
+  .welcome-box {
+    text-align: center;
+  }
 }
