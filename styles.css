@@ -73,8 +73,8 @@ body {
 /* Grandes images */
 .big-image.side-by-side {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 10px;
   margin-bottom: 30px;
 }
 
