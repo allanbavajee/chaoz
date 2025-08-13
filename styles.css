@@ -214,3 +214,19 @@ footer {
   border-radius: 10px;  /* optionnel, pour arrondir les coins */
   margin-bottom: 10px;  /* espace sous l'image */
 }
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* espace entre les logos */
+  margin-top: 15px; /* espace au-dessus */
+}
+
+.social-links img {
+  width: 30px;   /* taille des icônes */
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1); /* petit effet au survol */
+}
