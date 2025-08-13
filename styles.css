@@ -233,12 +233,12 @@ footer {
 
 /* Témoignages */
 .testimonials {
-  margin-top: 50px; /* plus bas sous les logos */
+  margin-top: 70px; /* plus bas sous les logos */
   text-align: center;
 }
 
 .testimonials h4 {
-  font-family: 'Parisienne', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   color: #ff6f61;
   margin-bottom: 15px;
