@@ -121,3 +121,16 @@ nav ul li a {
     flex-direction: row;
   }
 }
+.side-by-side {
+  display: flex;           /* active le mode flex */
+  gap: 10px;               /* espace entre les images */
+  justify-content: center; /* centre les images horizontalement */
+  align-items: center;     /* aligne verticalement */
+}
+
+.side-by-side img {
+  width: 50%;              /* chaque image prend 50% de la largeur du conteneur */
+  height: auto;            /* conserve les proportions */
+  border-radius: 10px;     /* optionnel, coins arrondis */
+}
+
