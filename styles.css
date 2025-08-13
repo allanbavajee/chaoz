@@ -6,20 +6,16 @@
 }
 
 /* FONTS */
+/* Import Google Fonts - à mettre tout en haut */
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&display=swap');
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  color: #333;
-}
 
 /* HEADER */
 .header-top {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* logo et texte empilés */
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 15px;
   padding: 20px 0;
 }
 
@@ -27,29 +23,30 @@ body {
   width: 80px;
   height: auto;
 }
-/* ChaOz */
+
+/* Titre ChaOz */
 .site-title {
-  font-family: 'Parisienne', cursive;
-  font-size: 5rem;     /* ajuste selon la taille souhaitée */
-  color: #ff6f61;      /* couleur actuelle, tu peux changer */
+  font-family: 'Parisienne', cursive !important; /* police élégante */
+  font-size: 5rem;    /* ajuste selon besoin */
+  color: #ff6f61;
   text-align: center;
   margin: 0;
 }
 
 /* Slogan */
 .slogan {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2rem;     /* ajuste selon la taille souhaitée */
-  color: #000;         /* noir */
+  font-family: 'Dancing Script', cursive !important; /* police douce et gourmande */
+  font-size: 2rem;      /* ajuste selon besoin */
+  color: #000;
   text-align: center;
-  margin-top: 10px;    /* un peu d'espace au dessus */
-  margin-bottom: 30px; /* espace avec le menu */
+  margin-top: 5px;
+  margin-bottom: 35px; /* espace avec le menu */
 }
 
 /* MENU */
 .menu {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .menu ul {
@@ -57,10 +54,10 @@ body {
   list-style: none;
   gap: 30px;
   padding: 10px 0;
-  width: 400px; /* ajuster pour la longueur des lignes */
+  width: 400px; /* largeur du menu, ajuste si besoin */
   justify-content: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .menu a {
