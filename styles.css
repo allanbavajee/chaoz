@@ -135,15 +135,16 @@ nav ul li a {
 }
 .small-images {
   display: flex;
-  gap: 10px;          /* espace entre les images */
-  flex-wrap: wrap;     /* passe à la ligne si nécessaire */
-  justify-content: space-between; /* espace régulier entre les images */
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .small-images img {
-  width: calc(25% - 7.5px); /* 4 images par ligne avec gap */
+  width: calc(25% - 7.5px);
   height: auto;
   border-radius: 10px;
+  margin-bottom: 10px; /* espace vertical entre lignes */
 }
 
 .site-title {
@@ -159,5 +160,17 @@ nav ul li a {
   font-size: 1.2rem;
   color: #777;
   margin-bottom: 20px;
+}
+.big-image.side-by-side {
+  display: flex;
+  gap: 10px;         /* espace horizontal entre les deux grandes images */
+  justify-content: center; /* ou flex-start selon ce que tu veux */
+  align-items: flex-start;
+}
+
+.big-image.side-by-side .image-block img {
+  width: 48%; /* deux grandes images côte à côte */
+  height: auto;
+  border-radius: 10px;
 }
 
