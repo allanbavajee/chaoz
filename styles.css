@@ -5,17 +5,7 @@
   box-sizing: border-box;
 }
 
-/* FONTS */
-/* IMPORT GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&display=swap');
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* BODY */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
@@ -23,43 +13,18 @@ body {
 }
 
 /* HEADER */
-.header-top {
-  display: flex;             /* mettre le logo et le texte sur la même ligne */
-  align-items: center;       /* alignement vertical centré */
-  justify-content: center;   /* centre l’ensemble horizontalement */
-  gap: 15px;                 /* espace entre logo et titre */
-  padding: 20px 0;
-}
-
-
-/* MENU */
-.menu {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.menu ul {
-  display: inline-flex;
-  list-style: none;
-  gap: 30px;
-  padding: 10px 0;
-  width: 400px;
-  justify-content: center;
-  border-top: 1px solid rgba(0,0,0,0.2);
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-}
 .header-center {
   display: flex;
-  flex-direction: column; /* empile verticalement */
-  align-items: center;    /* centre horizontalement */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 20px;       /* ajuste selon besoin */
+  margin-top: 20px;
 }
 
 .header-logo {
-  width: 80px;            /* taille du logo */
-  height: auto;
-  margin-bottom: 10px;    /* espace entre logo et ChaOz */
+  height: 5rem;   /* même hauteur que le titre ChaOz */
+  width: auto;
+  margin-bottom: 10px;
 }
 
 .site-title {
@@ -77,6 +42,22 @@ body {
   margin-bottom: 30px;
 }
 
+/* MENU */
+.menu {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.menu ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 30px;
+  padding: 10px 0;
+  justify-content: center;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
 .menu a {
   text-decoration: none;
   color: #333;
@@ -88,7 +69,7 @@ body {
   color: #ff6f61;
 }
 
-/* CONTENU PRINCIPAL LAYOUT */
+/* MAIN CONTENT */
 .main-content {
   display: flex;
   gap: 30px;
@@ -102,7 +83,6 @@ body {
   flex: 3;
 }
 
-/* Section titre */
 .latest-recipes h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.2rem;
@@ -147,7 +127,7 @@ body {
 }
 
 .image-block {
-  width: calc(25% - 7.5px); /* 4 par ligne */
+  width: calc(25% - 7.5px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -219,4 +199,3 @@ footer {
     width: 100%;
   }
 }
-
