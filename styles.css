@@ -196,3 +196,13 @@ footer {
   height: auto;
   border-radius: 10px; /* arrondi pour harmoniser */
 }
+.main-content {
+  display: flex;
+  align-items: flex-start; /* aligne le haut des deux colonnes */
+  gap: 20px; /* espace entre la gauche et la droite */
+}
+.welcome-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
