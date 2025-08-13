@@ -181,3 +181,11 @@ body {
 .social-links img:hover {
   transform: scale(1.1);
 }
+footer {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 30px;
+}
