@@ -12,16 +12,10 @@ body {
   color: #333;
 }
 
-/* HEADER */
-.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
-  flex-direction: column; /* centre verticalement */
-}
+/* Import des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@400;600&display=swap');
 
+/* HEADER */
 .site-title {
   font-family: 'Parisienne', cursive;
   font-size: 4rem;
@@ -31,26 +25,19 @@ body {
 }
 
 .slogan {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.6rem;
+  font-weight: 500;
   color: #000;
   text-align: center;
   margin-top: 5px;
 }
 
 /* MENU */
-.menu ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 30px;
-  margin-top: 10px;
-}
-
 .menu a {
   text-decoration: none;
   color: #333;
-  font-weight: normal; /* pas bold */
+  font-weight: normal;
 }
 
 .menu a:hover {
@@ -59,14 +46,13 @@ body {
 
 /* SECTION TITRES */
 .latest-recipes h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  color: #ff6f61;
+  color: #000;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
 }
-
 /* LAYOUT */
 .content {
   display: flex;
