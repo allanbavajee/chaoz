@@ -233,7 +233,7 @@ footer {
 
 /* Témoignages */
 .testimonials {
-  margin-top: 50px; /* plus bas sous les logos */
+  margin-top: 60px; /* encore plus bas */
   text-align: center;
 }
 
@@ -245,17 +245,19 @@ footer {
 }
 
 .testimonial-slider {
-  position: relative;
-  height: 120px; /* hauteur fixe pour le défilement */
   overflow: hidden;
+  width: 100%;
+}
+
+.testimonial-track {
+  display: flex;
+  animation: slideHorizontal 18s infinite linear;
 }
 
 .testimonial {
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: slide 12s infinite;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .testimonial p {
@@ -276,10 +278,10 @@ footer {
   color: #777;
 }
 
-/* Animation défilement vertical */
-@keyframes slide {
-  0%, 30% { transform: translateY(0); }
-  33%, 63% { transform: translateY(-120px); }
-  66%, 96% { transform: translateY(-240px); }
-  100% { transform: translateY(0); }
+/* Animation : 3 témoignages × 6s = 18s */
+@keyframes slideHorizontal {
+  0% { transform: translateX(0); }
+  33.333% { transform: translateX(-100%); }
+  66.666% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
 }
