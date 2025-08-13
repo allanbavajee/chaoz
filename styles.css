@@ -13,30 +13,31 @@ body {
 }
 
 /* HEADER */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-direction: column; /* centre verticalement */
+}
+
 .site-title {
   font-family: 'Parisienne', cursive;
   font-size: 4rem;
   font-weight: normal;
   color: #ff6f61;
+  text-align: center;
 }
 
 .slogan {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.5rem;
-  color: #b5651d;
-}
-
-/* TITRES SECONDAIRES */
-.latest-recipes h2 {
-  font-family: 'Parisienne', cursive;
-  color: #ff6f61;
-}
-
-/* TEXTES GENERAUX */
-.image-desc,
-p {
   font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  color: #000;
+  text-align: center;
+  margin-top: 5px;
 }
+
 /* MENU */
 .menu ul {
   display: flex;
@@ -49,11 +50,21 @@ p {
 .menu a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-weight: normal; /* pas bold */
 }
 
 .menu a:hover {
   color: #ff6f61;
+}
+
+/* SECTION TITRES */
+.latest-recipes h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #ff6f61;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 /* LAYOUT */
