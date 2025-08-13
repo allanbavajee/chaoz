@@ -1,2 +1,2 @@
-// Optional interactivity
+// Optional JS
 console.log("Welcome to ChaOz!");
