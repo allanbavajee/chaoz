@@ -30,7 +30,14 @@ body {
   gap: 15px;                 /* espace entre logo et titre */
   padding: 20px 0;
 }
-
+.header-center {
+  display: flex;
+  flex-direction: column; /* empile verticalement */
+  align-items: center;    /* centre horizontalement */
+  justify-content: center; /* centre verticalement si nécessaire */
+  text-align: center;
+  margin-top: 20px;       /* ajuster selon besoin */
+}
 .header-logo {
   width: 80px;               /* taille du logo */
   height: auto;
@@ -46,16 +53,14 @@ body {
   font-family: 'Parisienne', cursive;
   font-size: 5rem;
   color: #ff6f61;
-  text-align: center;
-  margin: 0;
+  font-weight: normal;
 }
 
 .slogan {
   font-family: 'Dancing Script', cursive;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #000;
-  text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 /* MENU */
