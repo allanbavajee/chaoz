@@ -133,4 +133,17 @@ nav ul li a {
   height: auto;            /* conserve les proportions */
   border-radius: 10px;     /* optionnel, coins arrondis */
 }
+.small-images {
+  display: flex;
+  gap: 10px;          /* espace entre les images */
+  flex-wrap: wrap;     /* passe à la ligne si nécessaire */
+  justify-content: space-between; /* espace régulier entre les images */
+}
+
+.small-images img {
+  width: calc(25% - 7.5px); /* 4 images par ligne avec gap */
+  height: auto;
+  border-radius: 10px;
+}
+
 
