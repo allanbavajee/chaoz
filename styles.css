@@ -206,3 +206,31 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+.main-content {
+  display: flex;           /* active la mise en page en colonnes */
+  align-items: flex-start; /* aligne le haut des colonnes */
+  gap: 40px;               /* espace entre les colonnes */
+  padding: 20px;
+}
+
+/* Colonne gauche : dernières créations */
+.latest-recipes {
+  flex: 3;                 /* occupe plus de place */
+}
+
+/* Colonne droite : welcome box */
+.welcome-box {
+  flex: 1;                 /* moins large que la colonne gauche */
+  background-color: #fff8f5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;        /* aligner le texte à gauche */
+}
+
+.chef-photo {
+  width: 100%;             /* image pleine largeur de la colonne */
+  max-width: 150px;        /* mais pas trop grande */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
