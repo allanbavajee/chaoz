@@ -73,28 +73,15 @@ body {
 /* Grandes images */
 .big-image.side-by-side {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.big-image.side-by-side .image-block img {
-  width: 48%;
+.big-image-block img {
+  width: 45%;       /* Deux grandes images côte à côte */
   height: auto;
   border-radius: 10px;
-}
-
-.image-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.image-desc {
-  margin-top: 5px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
 }
 
 /* Petites images */
@@ -105,27 +92,22 @@ body {
   justify-content: space-between;
 }
 
-.small-images .image-block {
+.small-image-block {
   width: calc(25% - 7.5px); /* 4 par ligne */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.small-images .image-block img {
+.small-image-block img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-@media(max-width: 900px) {
-  .big-image.side-by-side {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .big-image.side-by-side .image-block img {
-    width: 90%;
-  }
-
-  .small-images .image-block {
-    width: calc(50% - 5px); /* 2 par ligne sur petit écran */
-  }
+.image-desc {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
 }
