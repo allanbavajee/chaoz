@@ -146,4 +146,18 @@ nav ul li a {
   border-radius: 10px;
 }
 
+.site-title {
+  font-size: 3rem;       /* gros titre */
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 20px;
+}
 
