@@ -24,36 +24,36 @@ body {
 
 /* HEADER */
 .header-top {
-  display: flex;
-  flex-direction: column; /* logo et texte empilés */
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+  display: flex;             /* mettre le logo et le texte sur la même ligne */
+  align-items: center;       /* alignement vertical centré */
+  justify-content: center;   /* centre l’ensemble horizontalement */
+  gap: 15px;                 /* espace entre logo et titre */
   padding: 20px 0;
 }
 
 .header-logo {
-  width: 80px;
+  width: 80px;               /* taille du logo */
   height: auto;
 }
 
-/* Titre ChaOz */
+.title-container {
+  display: flex;
+  flex-direction: column;    /* titre au-dessus du slogan */
+  align-items: flex-start;   /* texte aligné à gauche du logo */
+}
+
 .site-title {
-  font-family: 'Parisienne', cursive !important;
+  font-family: 'Parisienne', cursive;
   font-size: 5rem;
   color: #ff6f61;
-  text-align: center;
   margin: 0;
 }
 
-/* Slogan */
 .slogan {
-  font-family: 'Dancing Script', cursive !important;
+  font-family: 'Dancing Script', cursive;
   font-size: 2rem;
   color: #000;
-  text-align: center;
   margin-top: 5px;
-  margin-bottom: 35px;
 }
 
 /* MENU */
