@@ -235,11 +235,11 @@ footer {
 .testimonials {
   margin-top: 70px; /* plus bas sous les logos */
   text-align: center;
+  font-family: 'Edu NSW ACT Hand', cursive; /* Applique la police à toute la section */
 }
 
 .testimonials h4 {
-  /*font-family: 'Poppins', sans-serif;*/
-  font-family: 'Edu NSW ACT Hand', cursive;
+  font-family: 'Edu NSW ACT Hand', cursive; /* Police pour le titre */
   font-size: 1.6rem;
   color: #ff6f61;
   margin-bottom: 15px;
@@ -260,6 +260,7 @@ footer {
 }
 
 .testimonial p {
+  font-family: 'Edu NSW ACT Hand', cursive; /* Police pour le texte des témoignages */
   font-style: italic;
   font-size: 0.95rem;
   color: #555;
@@ -273,6 +274,7 @@ footer {
 }
 
 .testimonial span {
+  font-family: 'Edu NSW ACT Hand', cursive; /* Police aussi pour le nom */
   font-size: 0.85rem;
   color: #777;
 }
