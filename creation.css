@@ -44,64 +44,14 @@ body {
 }
 
 /* MENU CATEGORIES */
-.category-menu {
-  display: flex;
-  justify-content: center;
-  background: #f8f8f8;
-  padding: 10px;
-  gap: 15px;
-  border-bottom: 2px solid #eee;
-}
-.category-menu a {
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-.category-menu a:hover {
-  background: #d6336c;
-  color: #fff;
-}
-
-/* SECTIONS */
-.category-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-.category-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* CAROUSEL */
-.carousel {
-  display: flex;
-  overflow: hidden;
-  gap: 15px;
-}
-.carousel img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-
-/* FADE ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 .category-section {
   padding: 50px 0;
   position: relative;
+  background: #fff;
+}
+
+.category-section:nth-child(even) {
+  background: #fafafa; /* alternance légère */
 }
 
 .category-title {
@@ -125,17 +75,7 @@ body {
 .scroll-container {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
   padding: 10px 20px;
-}
-
-.scroll-container::-webkit-scrollbar {
-  height: 8px;
-}
-.scroll-container::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
 }
 
 .cake-card {
@@ -166,7 +106,7 @@ body {
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* Animation automatique */
+/* Animation auto scroll */
 @keyframes scrollLeft {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -183,4 +123,9 @@ body {
 
 .scroll-right {
   animation: scrollRight 20s linear infinite;
+}
+
+/* Pause au survol */
+.scroll-container:hover {
+  animation-play-state: paused;
 }
