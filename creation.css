@@ -1,6 +1,7 @@
 /* RESET */
 * { margin:0; padding:0; box-sizing:border-box; }
 
+/* FONTS + BODY */
 body {
   font-family: 'Poppins', sans-serif;
   background: #fff;
@@ -16,46 +17,62 @@ body {
   gap: 15px;
   padding: 14px 20px;
 }
-.logo { height:50px; width:auto; display:block; }
+.logo { height: 50px; width:auto; }
 .site-title { font-family: 'Parisienne', cursive; font-size:3.8rem; color:#ff6f61; }
-.site-slogan { display:block; font-family: 'Dancing Script', cursive; font-size:1.6rem; margin-top:6px; }
+.site-slogan { display:block; font-family:'Dancing Script', cursive; font-size:1.6rem; color:#000; margin-top:6px; }
 
 .menu { text-align:center; margin-top:8px; }
-.menu ul { display:inline-flex; list-style:none; gap:28px; padding:10px 0; justify-content:center; border-top:1px solid rgba(0,0,0,0.12); border-bottom:1px solid rgba(0,0,0,0.12); margin:0 auto; }
+.menu ul {
+  display:inline-flex;
+  list-style:none;
+  gap:28px;
+  padding:10px 0;
+  justify-content:center;
+  border-top:1px solid rgba(0,0,0,0.12);
+  border-bottom:1px solid rgba(0,0,0,0.12);
+}
 .menu a { text-decoration:none; color:#333; font-weight:400; }
 .menu a:hover { color:#ff6f61; }
 
 /* MAIN CONTENT */
 .creations-content { max-width:1200px; margin:36px auto; padding:0 18px; }
-.category { margin-bottom:50px; text-align:center; }
-.category h2 { font-family: 'Parisienne', cursive; font-size:2.5rem; color:#ff6f61; margin-bottom:20px; position:relative; }
-hr { border:none; height:2px; background:rgba(255,111,97,0.2); margin:40px 0; }
 
-/* SCROLL CONTAINER */
-.scroll-container {
+/* CATEGORY TITLES */
+.category h2 {
+  font-family:'Parisienne', cursive;
+  font-size:2rem;
+  margin-bottom:12px;
+  text-align:center;
+  color:#ff6f61;
+}
+
+/* HORIZONTAL CAROUSEL */
+.carousel {
   overflow: hidden;
-  position: relative;
-}
-.inner {
-  display: flex;
-  flex-wrap: nowrap;
-  gap:20px;
-  animation: scroll-left 15s linear infinite;
-}
-.scroll-right .inner { animation: scroll-right 15s linear infinite; }
-.cake-card {
-  flex: 0 0 220px;
-  display:flex;
-  justify-content:center;
-}
-.cake-card img {
   width: 100%;
-  height:auto;
-  border-radius:15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  position: relative;
+  margin: 0 auto 20px auto;
 }
 
-/* ANIMATIONS */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 20s linear infinite;
+}
+
+.carousel-right .carousel-track {
+  animation: scroll-right 20s linear infinite;
+}
+
+.carousel-track img {
+  height: 180px;
+  width: auto;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Animations */
 @keyframes scroll-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -65,8 +82,17 @@ hr { border:none; height:2px; background:rgba(255,111,97,0.2); margin:40px 0; }
   100% { transform: translateX(0); }
 }
 
+/* SEPARATION */
+hr {
+  border: none;
+  border-top: 2px solid #eee;
+  margin: 40px 0;
+}
+
 /* RESPONSIVE */
-@media(max-width:900px){
-  .cake-card { flex:0 0 160px; }
-  .category h2 { font-size:2rem; }
+@media (max-width:900px){
+  .carousel-track img { height: 140px; }
+}
+@media (max-width:600px){
+  .carousel-track img { height: 100px; }
 }
