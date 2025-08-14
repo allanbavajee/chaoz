@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChaOz</title>
-
-  <!-- Fonts & Styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&family=Edu+NSW+ACT+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,7 +13,7 @@
   <header>
     <div class="header-center">
       <div class="title-logo">
-        <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo" />
+        <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo">
         <h1 class="site-title">ChaOz</h1>
       </div>
       <p class="slogan">Bake with Grace, Serve with Love</p>
@@ -33,7 +31,7 @@
 
   <!-- MAIN CONTENT -->
   <div class="main-content">
-
+    
     <!-- LEFT COLUMN : Images -->
     <section class="latest-recipes">
       <h2>Latest Creations</h2>
@@ -66,32 +64,16 @@
           <img src="image/pic.temp.5.png" alt="Small Recipe 4">
           <p class="image-desc">Chocolate Muffin</p>
         </div>
-        <div class="image-block">
-          <img src="image/pic.temp.7.png" alt="Small Recipe 5">
-          <p class="image-desc">Pancakes</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.8.png" alt="Small Recipe 6">
-          <p class="image-desc">Cinnamon Roll</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.9.png" alt="Small Recipe 7">
-          <p class="image-desc">Quiche</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.10.png" alt="Small Recipe 8">
-          <p class="image-desc">Brownies</p>
-        </div>
       </div>
     </section>
 
-    <!-- RIGHT COLUMN : Charlotte + Social + Testimonials -->
+    <!-- RIGHT COLUMN : Charlotte -->
     <aside class="welcome-box">
       <h3>Welcome, I'm Charlotte</h3>
       <img src="image/charlotte.png" alt="Charlotte" class="new-charlotte-photo">
       <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
 
-      <!-- Réseaux sociaux -->
+      <!-- Social Links -->
       <div class="social-links">
         <a href="https://www.facebook.com/wire.core.solutions/" target="_blank"><img src="image/fb.png" alt="Facebook"></a>
         <a href="https://wa.me/23059732188" target="_blank"><img src="image/wa.png" alt="Whatsapp"></a>
@@ -103,30 +85,32 @@
       <!-- Témoignages -->
       <div class="testimonials">
         <h4>Ce que disent nos clients</h4>
-        <div class="testimonial-viewport">
+        <div class="testimonial-slider">
           <div class="testimonial-track" id="testimonialTrack">
-            <!-- Slides injectés par script.js -->
+            <!-- Les témoignages seront chargés ici par script.js -->
           </div>
         </div>
       </div>
 
-      <!-- Formulaire témoignage -->
-      <form id="testimonialForm" class="testimonial-form">
-        <h5>Laissez votre témoignage</h5>
-        <input type="text" id="name" placeholder="Votre nom" required>
-        <textarea id="message" placeholder="Votre message" required></textarea>
-        <select id="stars" required>
-          <option value="">Notez-nous</option>
-          <option value="5">⭐⭐⭐⭐⭐</option>
-          <option value="4">⭐⭐⭐⭐</option>
-          <option value="3">⭐⭐⭐</option>
-          <option value="2">⭐⭐</option>
-          <option value="1">⭐</option>
-        </select>
-        <button type="submit">Envoyer</button>
-      </form>
-    </aside>
+      <!-- Formulaire de témoignage -->
+      <div class="testimonial-form">
+        <h4>Laissez votre témoignage</h4>
+        <form id="testimonialForm">
+          <input type="text" id="name" placeholder="Votre nom" required>
+          <input type="email" id="email" placeholder="Votre email" required>
+          <textarea id="message" placeholder="Votre témoignage" required></textarea>
+          <select id="stars">
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5" selected>⭐⭐⭐⭐⭐</option>
+          </select>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
 
+    </aside>
   </div>
 
   <!-- FOOTER -->
