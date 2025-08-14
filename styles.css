@@ -95,10 +95,16 @@ body {
 
 /* track - visible window */
 .testimonial-track {
-  position: relative;
+  display: flex;
+  transition: transform 0.5s ease;
   overflow: hidden;
-  width:120%;
-  display:block;
+  width: 100%; /* prend toute la largeur dispo */
+}
+
+.testimonial {
+  flex: 0 0 100%; /* chaque témoignage prend 100% de la largeur */
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 /* inner wrapper that will be translated by JS */
