@@ -38,6 +38,7 @@ body {
   font-size: 5rem;
   color: #ff6f61;
   font-weight: normal;
+  margin: 0; /* supprime marge par défaut */
 }
 
 /* SLOGAN */
