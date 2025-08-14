@@ -26,54 +26,95 @@
       </ul>
     </nav>
   </header>
-   <!-- MAIN CONTENT : créations -->
-  <main class="creations-page">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creations - ChaOz</title>
+  <link rel="stylesheet" href="creations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <!-- Birthday Cakes -->
-    <section class="cake-category">
-      <h3>Birthday Cakes</h3>
-      <div class="cake-gallery">
-        <div class="cake-card"><img src="image/birthday1.jpg" alt="Birthday Cake 1"></div>
-        <div class="cake-card"><img src="image/birthday2.jpg" alt="Birthday Cake 2"></div>
-        <div class="cake-card"><img src="image/birthday1.jpg" alt="Birthday Cake 3"></div>
-        <div class="cake-card"><img src="image/birthday2.jpg" alt="Birthday Cake 4"></div>
-      </div>
-    </section>
+  <!-- HEADER (comme index) -->
+  <header class="header-container">
+    <div class="header-top">
+      <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="logo">
+      <h1 class="site-title">ChaOz</h1>
+    </div>
+    <p class="site-slogan">Bake with Grace, Serve with Love</p>
 
-    <!-- Sponge Cakes -->
-    <section class="cake-category">
-      <h3>Sponge Cakes</h3>
-      <div class="cake-gallery">
-        <div class="cake-card"><img src="image/genoise1.jpg" alt="Genoise 1"></div>
-        <div class="cake-card"><img src="image/genoise2.jpg" alt="Genoise 2"></div>
-        <div class="cake-card"><img src="image/genoise1.jpg" alt="Genoise 3"></div>
-        <div class="cake-card"><img src="image/genoise2.jpg" alt="Genoise 4"></div>
-      </div>
-    </section>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="creations.html" class="active">Creations</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Maspin Cakes -->
-    <section class="cake-category">
-      <h3>Maspin Cakes</h3>
-      <div class="cake-gallery">
-        <div class="cake-card"><img src="image/maspin1.jpg" alt="Maspin 1"></div>
-        <div class="cake-card"><img src="image/maspin1.jpg" alt="Maspin 2"></div>
-        <div class="cake-card"><img src="image/maspin1.jpg" alt="Maspin 3"></div>
-        <div class="cake-card"><img src="image/maspin1.jpg" alt="Maspin 4"></div>
-      </div>
-    </section>
+  <!-- MENU SECONDAIRE FIXE -->
+  <nav class="category-nav">
+    <a href="#birthday">Birthday Cakes</a>
+    <a href="#genoise">Genoises</a>
+    <a href="#marzipan">Marzipan</a>
+    <a href="#cocktail">Cocktail Cakes</a>
+  </nav>
 
-    <!-- Cocktail Cakes -->
-    <section class="cake-category">
-      <h3>Cocktail Cakes</h3>
-      <div class="cake-gallery">
-        <div class="cake-card"><img src="image/cocktail1.jpg" alt="Cocktail Cake 1"></div>
-        <div class="cake-card"><img src="image/cocktail1.jpg" alt="Cocktail Cake 2"></div>
-        <div class="cake-card"><img src="image/cocktail1.jpg" alt="Cocktail Cake 3"></div>
-        <div class="cake-card"><img src="image/cocktail1.jpg" alt="Cocktail Cake 4"></div>
-      </div>
-    </section>
+  <!-- SECTION 1 -->
+  <section id="birthday" class="category-section">
+    <div class="category-banner" style="background-image:url('image/birthday-banner.jpg')">
+      <h2>Birthday Cakes</h2>
+    </div>
+    <div class="carousel">
+      <img src="image/bday1.jpg" alt="">
+      <img src="image/bday2.jpg" alt="">
+      <img src="image/bday3.jpg" alt="">
+      <img src="image/bday4.jpg" alt="">
+    </div>
+  </section>
 
-  </main>
+  <!-- SECTION 2 -->
+  <section id="genoise" class="category-section">
+    <div class="category-banner" style="background-image:url('image/genoise-banner.jpg')">
+      <h2>Genoises</h2>
+    </div>
+    <div class="carousel">
+      <img src="image/genoise1.jpg" alt="">
+      <img src="image/genoise2.jpg" alt="">
+      <img src="image/genoise3.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="marzipan" class="category-section">
+    <div class="category-banner" style="background-image:url('image/marzipan-banner.jpg')">
+      <h2>Marzipan</h2>
+    </div>
+    <div class="carousel">
+      <img src="image/marzipan1.jpg" alt="">
+      <img src="image/marzipan2.jpg" alt="">
+      <img src="image/marzipan3.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section id="cocktail" class="category-section">
+    <div class="category-banner" style="background-image:url('image/cocktail-banner.jpg')">
+      <h2>Cocktail Cakes</h2>
+    </div>
+    <div class="carousel">
+      <img src="image/cocktail1.jpg" alt="">
+      <img src="image/cocktail2.jpg" alt="">
+      <img src="image/cocktail3.jpg" alt="">
+    </div>
+  </section>
+
+</body>
+</html>
+
 
   </body>
 </html>
