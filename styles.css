@@ -58,13 +58,12 @@ body {
 
 /* MAIN LAYOUT */
 .main-content {
-  display:flex;
-  flex-direction: row; /* Assure les colonnes côte à côte */
-  gap:30px;
-  max-width:1200px;
-  margin:36px auto;
-  padding:0 18px;
-  align-items: flex-start; /* évite que Welcome prenne toute la hauteur */
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 36px auto;
+  padding: 0 18px;
+  align-items: flex-start; /* aligne les colonnes en haut */
 }
 
 /* LEFT COLUMN */
@@ -81,7 +80,7 @@ body {
 .image-block img { width:100%; border-radius:10px; }
 
 /* RIGHT COLUMN */
-.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; }
+.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;max-width: 320px; }
 .welcome-box h3 { font-family:'Parisienne', cursive; margin:0; font-size:1.8rem; }
 .chef-photo { width:140px; height:auto; border-radius:8px; }
 
