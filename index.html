@@ -9,28 +9,28 @@
 </head>
 <body>
 
-  <!--  HEADER  (je garde ta structure) -->
+  <!-- HEADER -->
   <header class="header-container">
     <div class="header-top">
-    <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="logo">
-    <h1 class="site-title">ChaOz</h1>
-  </div>
-  <p class="site-slogan">Bake with Grace, Serve with Love</p>
+      <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="logo">
+      <h1 class="site-title">ChaOz</h1>
+    </div>
+    <p class="site-slogan">Bake with Grace, Serve with Love</p>
 
     <nav class="menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="creations.html">Creations</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT (TA STRUCTURE) -->
-  <div class="main-content">
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
 
-    <!-- LEFT COLUMN : Images -->
+    <!-- LEFT COLUMN : Latest Creations (large) -->
     <section class="latest-recipes">
       <h2>Latest Creations</h2>
 
@@ -57,18 +57,13 @@
       </div>
     </section>
 
-    <!-- RIGHT COLUMN : Charlotte + Témoignages + Formulaire + Réseaux -->
-    <main class="main-content">
-  <section class="latest-recipes">
-    <h2>Latest Creations</h2>
-    <!-- images et contenu ici -->
-  </section>
+    <!-- RIGHT COLUMN : Welcome + Testimonials + Form + Social (smaller) -->
     <aside class="welcome-box">
       <h3>Welcome, I'm Charlotte</h3>
       <img src="image/charlotte.png" alt="Charlotte - Chef Pâtissière" class="chef-photo">
       <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
 
-      <!-- social -->
+      <!-- Social Links -->
       <div class="social-links">
         <a href="https://www.facebook.com/wire.core.solutions" target="_blank"><img src="image/fb.png" alt="Facebook"></a>
         <a href="https://www.tiktok.com/@wirecoresolutions" target="_blank"><img src="image/tk.png" alt="TikTok"></a>
@@ -77,7 +72,7 @@
         <a href="https://wa.me/23059732188" target="_blank"><img src="image/wa.png" alt="WhatsApp"></a>
       </div>
 
-      <!-- Témoignages : container vide → on injecte via JS -->
+      <!-- Testimonials -->
       <div class="testimonials">
         <h4>Ce que disent nos clients</h4>
         <div id="testimonialTrack" class="testimonial-track"></div>
@@ -88,7 +83,6 @@
           <input id="userEmail" type="email" placeholder="Votre email" required>
           <textarea id="userMessage" placeholder="Votre témoignage" required></textarea>
 
-          <!-- étoiles visibles et cliquables (pas de select) -->
           <div class="star-rating" id="starRating">
             <button type="button" class="star" data-value="5" aria-label="5 étoiles">★</button>
             <button type="button" class="star" data-value="4" aria-label="4 étoiles">★</button>
@@ -103,7 +97,7 @@
       </div>
     </aside>
 
-  </div>
+  </main>
 
   <footer>
     <p>© 2025 ChaOz — Crafted with Love</p>
