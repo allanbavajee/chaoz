@@ -1,23 +1,13 @@
-/* RESET */
 * { margin:0; padding:0; box-sizing:border-box; }
-
-/* FONTS + BODY */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  color: #333;
-}
+body { font-family:'Poppins',sans-serif; background:#fff; color:#333; }
 
 /* HEADER */
-.header-container { width:100%; text-align:center; }
-.header-top { display:flex; align-items:center; justify-content:center; gap:15px; padding:14px 20px; }
-.logo { height:50px; width:auto; display:block; }
-.site-title { font-family:'Parisienne', cursive; font-size:3.8rem; color:#ff6f61; margin:0; }
-.site-slogan { display:block; text-align:center; font-family:'Dancing Script', cursive; font-size:1.6rem; color:#000; margin-top:6px; }
-
-/* MENU */
-.menu { text-align:center; margin-top:8px; }
-.menu ul { display:inline-flex; list-style:none; gap:28px; padding:10px 0; justify-content:center; border-top:1px solid rgba(0,0,0,0.12); border-bottom:1px solid rgba(0,0,0,0.12); margin:0 auto; }
+.header-container { text-align:center; }
+.header-top { display:flex; justify-content:center; align-items:center; gap:15px; padding:14px 20px; }
+.logo { height:50px; width:auto; }
+.site-title { font-family:'Parisienne',cursive; font-size:3.8rem; color:#ff6f61; }
+.site-slogan { font-family:'Dancing Script',cursive; font-size:1.6rem; color:#000; margin-top:6px; }
+.menu ul { display:inline-flex; list-style:none; gap:28px; padding:10px 0; border-top:1px solid rgba(0,0,0,0.12); border-bottom:1px solid rgba(0,0,0,0.12); }
 .menu a { text-decoration:none; color:#333; font-weight:400; }
 .menu a:hover { color:#ff6f61; }
 
@@ -25,63 +15,19 @@ body {
 .creations-content { max-width:1200px; margin:36px auto; padding:0 18px; }
 
 /* CATEGORY */
-<section class="category-section">
-  <h2 class="category-title">Birthday Cakes</h2>
-  <div class="carousel-row left-to-right">
-    <div class="carousel-track">
-      <div class="carousel-item">
-        <img src="image/creation/1.png" alt="Birthday Cake 1">
-        <span>Chocolate Layer</span>
-      </div>
-      ...
-    </div>
-  </div>
-</section>
-
+.category-section { margin-bottom:60px; }
+.category-title { font-family:'Parisienne',cursive; font-size:2rem; text-align:center; margin-bottom:16px; position:relative; }
+.category-title::after { content:''; display:block; width:60px; height:3px; background:#ff6f61; margin:10px auto 0; border-radius:2px; }
 
 /* CAROUSEL */
-.carousel-row {
-  overflow-x: hidden; /* cache ce qui dépasse */
-  width: 100%;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;  /* très important : horizontal */
-}
-
-.carousel-item {
-  flex: 0 0 auto; /* prend sa largeur naturelle, ne se casse pas à la ligne */
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  display: block;
-  width: 280px; /* ou 100% si tu veux responsive */
-  height: auto;
-}
-
-.carousel-item span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.4);
-  color: #fff;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 0.95rem;
-}
-
+.carousel-row { overflow:hidden; width:100%; position:relative; }
+.carousel-track { display:flex; gap:16px; flex-wrap:nowrap; }
+.carousel-item { flex:0 0 auto; position:relative; border-radius:10px; overflow:hidden; }
+.carousel-item img { width:280px; height:auto; display:block; border-radius:10px; }
+.carousel-item span { position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.45); color:#fff; text-align:center; padding:6px 0; font-size:0.95rem; }
 
 /* FOOTER */
 footer { text-align:center; padding:18px 0; color:#777; border-top:1px solid rgba(0,0,0,0.04); margin-top:30px; }
 
 /* RESPONSIVE */
-@media (max-width:900px){
-  .carousel-item img { width:200px; }
-  .site-title { font-size:2.6rem; }
-}
+@media(max-width:900px){ .carousel-item img{ width:200px; } .site-title{ font-size:2.6rem; } }
