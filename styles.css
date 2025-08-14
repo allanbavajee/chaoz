@@ -154,3 +154,23 @@ body {
 
 /* FOOTER */
 footer { text-align: center; background-color: #f9f9f9; padding: 20px; font-size: 
+/* Animation défilement horizontal */
+@keyframes slide-left {
+  0% { transform: translateX(100%); }
+  10% { transform: translateX(0); }      /* le témoignage reste 4s visible */
+  25% { transform: translateX(-100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  animation: slide-left linear infinite;
+  animation-duration: calc(4s * var(--testimonial-count)); /* durée totale selon le nombre de témoignages */
+}
+
