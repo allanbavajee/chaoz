@@ -1,4 +1,4 @@
-// Charger les témoignages depuis le fichier JSON
+// Charger les témoignages depuis JSON
 async function loadTestimonials() {
   try {
     const response = await fetch('temoignages.json');
@@ -8,53 +8,47 @@ async function loadTestimonials() {
     testimonials.forEach(t => {
       const div = document.createElement('div');
       div.className = 'testimonial-item';
-      div.innerHTML = `
-        <p>"${t.message}"</p>
-        <div class="stars">${'⭐'.repeat(t.stars)}</div>
-        <span>- ${t.name}</span>
-      `;
+      div.innerHTML = `<p>"${t.message}"</p><div class="stars">${'⭐'.repeat(t.stars)}</div><span>- ${t.name}</span>`;
       track.appendChild(div);
     });
 
     startSlideAnimation();
   } catch (err) {
-    console.error('Erreur lors du chargement des témoignages:', err);
+    console.error('Erreur chargement témoignages:', err);
   }
 }
 
-// Animation slide de gauche à droite avec pause 4s
+// Slide animation avec pause 4s
 function startSlideAnimation() {
   const track = document.getElementById('testimonialTrack');
   const items = Array.from(track.children);
-  if(items.length === 0) return;
-
+  if (!items.length) return;
   let index = 0;
-  const itemWidth = items[0].offsetWidth + 30;
 
   function showNext() {
+    const itemWidth = items[0].offsetWidth + 20;
     track.style.transition = 'transform 1s ease-in-out';
     track.style.transform = `translateX(-${index * itemWidth}px)`;
+
     index++;
-    if(index >= items.length) index = 0;
-    setTimeout(showNext, 4000); // pause 4s
+    if (index >= items.length) index = 0;
+
+    setTimeout(showNext, 4000);
   }
 
   setTimeout(showNext, 4000);
 }
 
-//  Formulaire témoignage
+// Formulaire témoignage
 document.getElementById('submitTestimonial').addEventListener('click', () => {
   const name = document.getElementById('userName').value;
   const email = document.getElementById('userEmail').value;
   const message = document.getElementById('userMessage').value;
   const stars = parseInt(document.getElementById('userStars').value);
 
-  if(!name || !email || !message){
-    alert('Veuillez remplir tous les champs.');
-    return;
-  }
+  if (!name || !email || !message) { alert('Veuillez remplir tous les champs.'); return; }
 
-  console.log({name,email,message,stars});
+  console.log({ name, email, message, stars });
   alert('Merci pour votre témoignage !');
 
   document.getElementById('userName').value = '';
@@ -63,5 +57,5 @@ document.getElementById('submitTestimonial').addEventListener('click', () => {
   document.getElementById('userStars').value = '5';
 });
 
-// Lancer le chargement des témoignages
+// Lancer le chargement
 loadTestimonials();
