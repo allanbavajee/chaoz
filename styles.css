@@ -128,7 +128,7 @@ body {
 .testimonial-form textarea { min-height:80px; resize:vertical; }
 #submitTestimonial { padding:8px 14px; border-radius:6px; border:none; background:#ff6f61; color:#fff; cursor:pointer; }
 
-/* STAR RATING UI (visible) */
+/* STAR RATING UI (visible)  */
 .star-rating { display:flex; gap:6px; justify-content:center; margin-top:6px; }
 .star-rating .star {
   background:transparent;
