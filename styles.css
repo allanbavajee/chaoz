@@ -129,14 +129,12 @@ body {
   gap: 30px;
   overflow: hidden;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  white-space: nowrap;
 }
+
 .testimonial-item {
-  display: inline-block;
-  min-width: 250px;
-  max-width: 300px;
+  flex: 0 0 250px; /* largeur fixe */
   border-radius: 10px;
   padding: 10px 15px;
   background-color: #fff;
