@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const SLIDE_PAUSE = 4000; // 4s
   const TRANSITION_MS = 600; // 0.6s
 
+  /*carouselle*/
+  slidesPerView: 1,
+  centeredSlides: true,
+  spaceBetween: 0
+/*carouselle*/
+  
   function startSliding() {
     stopSliding();
     slideTimer = setTimeout(nextSlideCycle, SLIDE_PAUSE);
