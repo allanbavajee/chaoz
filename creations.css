@@ -32,16 +32,42 @@ body {
 }
 
 /* CAROUSEL */
-.carousel-row { overflow:hidden; }
-.carousel-track { display:flex; gap:16px; }
-.carousel-item { flex:0 0 auto; position:relative; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.06); transition:transform 0.3s; }
-.carousel-item img { display:block; width:280px; height:auto; }
-.carousel-item span {
-  position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.4); color:#fff; text-align:center; padding:6px 0; font-size:0.95rem;
+.carousel-row {
+  overflow-x: hidden; /* cache ce qui dépasse */
+  width: 100%;
 }
 
-/* HOVER EFFECT */
-.carousel-item:hover { transform:scale(1.05); }
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;  /* très important : horizontal */
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* prend sa largeur naturelle, ne se casse pas à la ligne */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  display: block;
+  width: 280px; /* ou 100% si tu veux responsive */
+  height: auto;
+}
+
+.carousel-item span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 0.95rem;
+}
+
 
 /* FOOTER */
 footer { text-align:center; padding:18px 0; color:#777; border-top:1px solid rgba(0,0,0,0.04); margin-top:30px; }
