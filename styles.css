@@ -159,3 +159,22 @@ body {
 
 /* FOOTER */
 footer { text-align:center; padding:18px 0; color:#777; border-top:1px solid rgba(0,0,0,0.04); margin-top:30px; }
+/* Spécifique à la page Creations */
+.creations-page { max-width:1200px; margin:40px auto; padding:0 20px; }
+.cake-category { margin-bottom:40px; }
+.cake-category h3 { font-family:'Parisienne', cursive; font-size:2rem; color:#ff6f61; margin-bottom:15px; text-align:left; }
+.cake-gallery {
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:flex-start;
+}
+.cake-gallery img {
+  width:calc(25% - 11.25px); /* 4 images par ligne */
+  border-radius:10px;
+  height:auto;
+  object-fit:cover;
+}
+@media (max-width:900px){
+  .cake-gallery img { width:calc(50% - 7.5px); margin-bottom:10px; }
+}
