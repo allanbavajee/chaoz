@@ -234,26 +234,26 @@ footer {
 
 /* Témoignages */
 .testimonials {
-  margin-top: 70px; /* plus bas sous les logos */
+  margin-top: 40px; /* plus proche des logos */
   text-align: center;
-  font-family: 'Edu NSW ACT Hand', cursive; /* Applique la police à toute la section */
 }
 
 .testimonials h4 {
-  font-family: 'Edu NSW ACT Hand', cursive; /* Police pour le titre */
-  font-size: 1.6rem;
-  color: #ff6f61;
+  font-family: 'Edu NSW ACT Hand', cursive;
+  font-size: 1.8rem;
+  color: #ff6f61; /* couleur assortie au site */
+  font-weight: normal; /* pas en gras */
   margin-bottom: 15px;
 }
 
 .testimonial-slider {
   position: relative;
-  height: 120px; /* hauteur fixe pour le défilement */
+  height: 160px; /* augmenté pour éviter les coupures */
   overflow: hidden;
 }
 
 .testimonial {
-  min-height: 120px;
+  min-height: 160px; /* adapté à la nouvelle hauteur */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -261,7 +261,6 @@ footer {
 }
 
 .testimonial p {
-  font-family: 'Edu NSW ACT Hand', cursive; /* Police pour le texte des témoignages */
   font-style: italic;
   font-size: 0.95rem;
   color: #555;
@@ -275,7 +274,6 @@ footer {
 }
 
 .testimonial span {
-  font-family: 'Edu NSW ACT Hand', cursive; /* Police aussi pour le nom */
   font-size: 0.85rem;
   color: #777;
 }
@@ -283,7 +281,8 @@ footer {
 /* Animation défilement vertical */
 @keyframes slide {
   0%, 30% { transform: translateY(0); }
-  33%, 63% { transform: translateY(-120px); }
-  66%, 96% { transform: translateY(-240px); }
+  33%, 63% { transform: translateY(-160px); }
+  66%, 96% { transform: translateY(-320px); }
   100% { transform: translateY(0); }
 }
+
