@@ -1,21 +1,21 @@
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
+  const carousels = document.querySelectorAll('.carousel-row');
 
-  const rows = document.querySelectorAll('.carousel-row');
-
-  rows.forEach(row=>{
+  carousels.forEach(row => {
     const track = row.querySelector('.carousel-track');
-    let scrollAmount = 0;
-    const speed = 1; // px per frame
-    const direction = row.classList.contains('right-to-left')?-1:1;
+    const direction = row.classList.contains('right-to-left') ? -1 : 1;
+    let position = 0;
 
-    function animate(){
-      scrollAmount += speed*direction;
-      if(scrollAmount > track.scrollWidth/2) scrollAmount = 0;
-      if(scrollAmount < -track.scrollWidth/2) scrollAmount = 0;
-      track.style.transform = `translateX(${scrollAmount}px)`;
+    // Dupliquer les items pour un défilement infini
+    track.innerHTML += track.innerHTML;
+
+    function animate() {
+      position += 0.5 * direction; // vitesse
+      if(Math.abs(position) >= track.scrollWidth/2) position = 0;
+      track.style.transform = `translateX(${ -position }px)`;
       requestAnimationFrame(animate);
     }
+
     animate();
   });
-
 });
