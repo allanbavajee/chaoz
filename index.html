@@ -6,27 +6,7 @@
   <title>ChaOz</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand:wght@400;700&display=swap" rel="stylesheet">
 </head>
-  <script>
-fetch('temoignages.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('testimonialContainer');
-    data.forEach(t => {
-      const stars = '⭐'.repeat(t.note);
-      const div = document.createElement('div');
-      div.classList.add('testimonial');
-      div.innerHTML = `
-        <p>"${t.message}"</p>
-        <div class="stars">${stars}</div>
-        <span>- ${t.nom}</span>
-      `;
-      container.appendChild(div);
-    });
-  });
-</script>
-
 <body>
 
   <!-- HEADER -->
@@ -108,48 +88,39 @@ fetch('temoignages.json')
       <h3>Welcome, I'm Charlotte</h3>
       <img src="image/charlotte.png" alt="Charlotte" class="new-charlotte-photo">
       <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
-<!-- test -->
+
+      <!-- Réseaux sociaux -->
       <div class="social-links">
-        <a href="https://www.facebook.com/wire.core.solutions/" target="_blank">
-          <img src="image/fb.png" alt="Facebook">
-        </a>
-        <a href="https://wa.me/23059732188" target="_blank">
-          <img src="image/wa.png" alt="Whatsapp">
-        </a>
-        <a href="https://www.tiktok.com/@wirecoresolutions/" target="_blank">
-          <img src="image/tk.png" alt="TikTok">
-        </a>
-        <a href="mailto:allan.bavajee@gmail.com" target="_blank">
-          <img src="image/mail.png" alt="Mail">
-        </a>
-        <a href="https://www.linkedin.com/in/allan-bavajee/" target="_blank">
-          <img src="image/in.png" alt="Mail">
-        </a>
+        <a href="https://www.facebook.com/wire.core.solutions/" target="_blank"><img src="image/fb.png" alt="Facebook"></a>
+        <a href="https://wa.me/23059732188" target="_blank"><img src="image/wa.png" alt="Whatsapp"></a>
+        <a href="https://www.tiktok.com/@wirecoresolutions/" target="_blank"><img src="image/tk.png" alt="TikTok"></a>
+        <a href="mailto:allan.bavajee@gmail.com" target="_blank"><img src="image/mail.png" alt="Mail"></a>
+        <a href="https://www.linkedin.com/in/allan-bavajee/" target="_blank"><img src="image/in.png" alt="LinkedIn"></a>
       </div>
-     <!-- Témoignages -->
-<div class="testimonials">
-  <h4>Ce que disent nos clients</h4>
-  <div class="testimonial-slider">
-     <div class="testimonial-container" id="testimonialContainer">
-  <div class="testimonial-form">
-  <h4>Laissez votre témoignage</h4>
-  <form action="mailto:allan.bavajee@gmail.com" method="POST" enctype="text/plain">
-    <input type="text" name="name" placeholder="Votre nom" required>
-    <textarea name="message" placeholder="Votre témoignage" required></textarea>
-    <label>Notez-nous :</label>
-    <select name="rating" required>
-      <option value="5">⭐⭐⭐⭐⭐</option>
-      <option value="4">⭐⭐⭐⭐</option>
-      <option value="3">⭐⭐⭐</option>
-      <option value="2">⭐⭐</option>
-      <option value="1">⭐</option>
-    </select>
-    <button type="submit">Envoyer</button>
-  </form>
-    </div>
-  </div>
-</div>
-    </aside>  
+
+      <!-- Témoignages -->
+      <div class="testimonials">
+        <h4>Ce que disent nos clients</h4>
+        <div class="testimonial-slider" id="testimonialSlider"></div>
+      </div>
+
+      <!-- Formulaire témoignage -->
+      <form id="testimonialForm">
+        <h4>Laissez votre témoignage</h4>
+        <input type="text" id="name" placeholder="Votre nom" required>
+        <textarea id="message" placeholder="Votre message" required></textarea>
+        <select id="stars" required>
+          <option value="">Notez-nous</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+        <button type="submit">Envoyer</button>
+      </form>
+
+    </aside>     
      
   </div>
 
@@ -158,5 +129,6 @@ fetch('temoignages.json')
     <p>© 2025 ChaOz — Crafted with Love</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
