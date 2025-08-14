@@ -156,73 +156,63 @@ body {
 }
 
 /* Slide */
-.testimonial {
-  flex: 0 0 100%;
-  min-width: 100%;
-  padding: 10px 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6px;
-  box-sizing: border-box;
-}
-.testimonial p { font-style: italic; font-size: 0.95rem; color: #555; }
-.stars       { font-size: 1.1rem; color: gold; }
-.testimonial span { font-size: 0.85rem; color: #777; }
-
-/* Formulaire témoignage */
-.testimonial-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 18px;
-  width: 100%;
-}
-.testimonial-form h5 {
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.testimonial-form input,
-.testimonial-form textarea,
-.testimonial-form select {
-  padding: 8px;
-  font-size: 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 100%;
-}
-.testimonial-form textarea { min-height: 90px; resize: vertical; }
-.testimonial-form button {
-  background-color: #ff6f61;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.testimonial-form button:hover { background-color: #e35b50; }
-
-/* FOOTER */
-footer {
+.testimonials {
+  margin-top: 40px;
   text-align: center;
-  background-color: #f9f9f9;
-  padding: 20px;
-  font-size: 0.9rem;
+}
+
+.testimonials h4 {
+  font-family: 'Edu NSW ACT Hand', cursive;
+  font-size: 1.8rem;
+  color: #ff6f61;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+/* Slider horizontal */
+.testimonial-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  animation: slide-horizontal 20s linear infinite;
+}
+
+.testimonial {
+  flex: 0 0 auto;
+  width: 250px; /* largeur fixe pour chaque témoignage */
+  margin: 0 15px;
+  text-align: center;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.stars {
+  font-size: 1.1rem;
+  color: gold;
+  margin-bottom: 3px;
+}
+
+.testimonial span {
+  font-size: 0.85rem;
   color: #777;
-  margin-top: 30px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-  .main-content {
-    grid-template-columns: 1fr; /* pile les colonnes */
+/* Animation défilement gauche → droite */
+@keyframes slide-horizontal {
+  0% {
+    transform: translateX(0);
   }
-  .welcome-box { max-width: 600px; margin: 0 auto; }
-}
-
-@media (max-width: 600px) {
-  .small-images { grid-template-columns: repeat(2, 1fr); }
-  .site-title { font-size: 3.5rem; }
-  .slogan { font-size: 1.6rem; }
-  .menu ul { width: 90%; }
+  100% {
+    transform: translateX(-50%);
+  }
 }
