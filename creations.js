@@ -1,19 +1,21 @@
-// Automatic horizontal scroll for carousel
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded',()=>{
+
   const rows = document.querySelectorAll('.carousel-row');
 
-  rows.forEach((row, index) => {
+  rows.forEach(row=>{
     const track = row.querySelector('.carousel-track');
-    let scrollPos = 0;
-    const speed = 1 + index * 0.5; // vitesse différente par rangée
+    let scrollAmount = 0;
+    const speed = 1; // px per frame
+    const direction = row.classList.contains('right-to-left')?-1:1;
 
-    function scroll() {
-      scrollPos += speed;
-      if (scrollPos >= track.scrollWidth - row.offsetWidth) scrollPos = 0;
-      track.scrollLeft = scrollPos;
-      requestAnimationFrame(scroll);
+    function animate(){
+      scrollAmount += speed*direction;
+      if(scrollAmount > track.scrollWidth/2) scrollAmount = 0;
+      if(scrollAmount < -track.scrollWidth/2) scrollAmount = 0;
+      track.style.transform = `translateX(${scrollAmount}px)`;
+      requestAnimationFrame(animate);
     }
-
-    scroll();
+    animate();
   });
+
 });
