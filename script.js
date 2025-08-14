@@ -1,4 +1,4 @@
-// Charger les témoignages depuis le fichier JSON
+//  Charger les témoignages depuis le fichier JSON
 async function loadTestimonials() {
   try {
     const response = await fetch('temoignages.json');
