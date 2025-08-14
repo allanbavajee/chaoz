@@ -5,131 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChaOz</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&family=Edu+NSW+ACT+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <div class="header-center">
-      <div class="title-logo">
-        <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo">
-        <h1 class="site-title">ChaOz</h1>
+    <div class="header-top">
+      <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo">
+      <div class="title-container">
+        <h1 class="site-title" style="font-family: 'Parisienne', cursive; font-size: 5rem; color: #ff6f61; font-weight: normal;">
+          ChaOz
+        </h1>
+
+        <p class="slogan" style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #000; margin-top: 10px; margin-bottom: 30px;">
+          Bake with Grace, Serve with Love
+        </p>
       </div>
-      <p class="slogan">Bake with Grace, Serve with Love</p>
     </div>
 
     <nav class="menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="creations.html">Creations</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- MAIN CONTENT -->
-  <div class="main-content">
-    <!-- LEFT COLUMN : Images -->
-    <section class="latest-recipes">
-      <h2>Latest Creations</h2>
+  
+<div class="main-content">
+    
+  <!-- LEFT COLUMN : Images -->
+  <section class="latest-recipes">
+    <h2>Latest Creations</h2>
 
-      <div class="big-image side-by-side">
-        <div class="big-image-block">
-          <img src="image/pic.temp.0.png" alt="Big Recipe 0">
-          <p class="image-desc">Chicken Avocado Pasta</p>
-        </div>
-        <div class="big-image-block">
-          <img src="image/pic.temp.1.png" alt="Big Recipe 1">
-          <p class="image-desc">Sausage and Veg Tray Bake</p>
-        </div>
+    <div class="big-image side-by-side">
+      <div class="big-image-block">
+        <img src="image/pic.temp.0.png" alt="Big Recipe 1">
+        <p class="image-desc">Chicken Avocado Pasta</p>
       </div>
-
-      <div class="small-images">
-        <div class="image-block">
-          <img src="image/pic.temp.6.png" alt="Small Recipe 6">
-          <p class="image-desc">Banana Bread</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.3.png" alt="Small Recipe 3">
-          <p class="image-desc">Veggie Salad</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.4.png" alt="Small Recipe 4">
-          <p class="image-desc">Fruit Tart</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.5.png" alt="Small Recipe 5">
-          <p class="image-desc">Chocolate Muffin</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.7.png" alt="Small Recipe 7">
-          <p class="image-desc">Chocolate Muffin</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.8.png" alt="Small Recipe 8">
-          <p class="image-desc">Chocolate Muffin</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.9.png" alt="Small Recipe 9">
-          <p class="image-desc">Chocolate Muffin</p>
-        </div>
-        <div class="image-block">
-          <img src="image/pic.temp.10.png" alt="Small Recipe 10">
-          <p class="image-desc">Chocolate Muffin</p>
-        </div>
-        
+      <div class="big-image-block">
+        <img src="image/pic.temp.1.png" alt="Big Recipe 2">
+        <p class="image-desc">Sausage and Veg Tray Bake</p>
       </div>
-    </section>
+    </div>
 
-    <!-- RIGHT COLUMN : Charlotte -->
-    <aside class="welcome-box">
-      <h3>Welcome, I'm Charlotte</h3>
-      <img src="image/charlotte.png" alt="Charlotte" class="new-charlotte-photo">
-      <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
-
-      <div class="social-links">
-        <a href="https://www.facebook.com/wire.core.solutions/" target="_blank"><img src="image/fb.png" alt="Facebook"></a>
-        <a href="https://wa.me/23059732188" target="_blank"><img src="image/wa.png" alt="Whatsapp"></a>
-        <a href="https://www.tiktok.com/@wirecoresolutions/" target="_blank"><img src="image/tk.png" alt="TikTok"></a>
-        <a href="mailto:allan.bavajee@gmail.com" target="_blank"><img src="image/mail.png" alt="Mail"></a>
-        <a href="https://www.linkedin.com/in/allan-bavajee/" target="_blank"><img src="image/in.png" alt="LinkedIn"></a>
+    <div class="small-images">
+      <div class="image-block">
+        <img src="image/pic.temp.6.png" alt="Small Recipe 1">
+        <p class="image-desc">Banana Bread</p>
       </div>
-
-      <!-- Témoignages -->
-      <div class="testimonials">
-        <h4>Ce que disent nos clients</h4>
-        <div class="testimonial-track" id="testimonialTrack">
-          <!-- Les témoignages seront chargés ici depuis le JSON via script.js -->
-        </div>
+      <div class="image-block">
+        <img src="image/pic.temp.3.png" alt="Small Recipe 2">
+        <p class="image-desc">Veggie Salad</p>
       </div>
-
-      <!-- Formulaire témoignage -->
-      <div class="testimonial-form">
-        <h4>Laissez votre témoignage</h4>
-        <input type="text" id="userName" placeholder="Votre nom">
-        <input type="email" id="userEmail" placeholder="Votre email">
-        <textarea id="userMessage" placeholder="Votre témoignage"></textarea>
-        <label for="userStars">Étoiles :</label>
-        <select id="userStars">
-          <option value="1">⭐</option>
-          <option value="2">⭐⭐</option>
-          <option value="3">⭐⭐⭐</option>
-          <option value="4">⭐⭐⭐⭐</option>
-          <option value="5" selected>⭐⭐⭐⭐⭐</option>
-        </select>
-        <button id="submitTestimonial">Envoyer</button>
+      <div class="image-block">
+        <img src="image/pic.temp.4.png" alt="Small Recipe 3">
+        <p class="image-desc">Fruit Tart</p>
       </div>
+      <div class="image-block">
+        <img src="image/pic.temp.5.png" alt="Small Recipe 4">
+        <p class="image-desc">Chocolate Muffin</p>
+      </div>
+      <div class="image-block">
+        <img src="image/pic.temp.7.png" alt="Small Recipe 5">
+        <p class="image-desc">Pancakes</p>
+      </div>
+      <div class="image-block">
+        <img src="image/pic.temp.8.png" alt="Small Recipe 6">
+        <p class="image-desc">Cinnamon Roll</p>
+      </div>
+      <div class="image-block">
+        <img src="image/pic.temp.9.png" alt="Small Recipe 7">
+        <p class="image-desc">Quiche</p>
+      </div>
+      <div class="image-block">
+        <img src="image/pic.temp.10.png" alt="Small Recipe 8">
+        <p class="image-desc">Brownies</p>
+      </div>
+    </div>
+  </section>
 
-    </aside>
-  </div>
+  <!-- RIGHT COLUMN : Charlotte -->
+  <aside class="welcome-box">
+    <h3>Welcome, I'm Charlotte</h3>
+    <img src="image/Charlotte.jpg" alt="Charlotte - Chef Pâtissière" class="chef-photo">
+    <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
+  </aside>
 
-  <!-- FOOTER -->
+</div>
+
   <footer>
     <p>© 2025 ChaOz — Crafted with Love</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
