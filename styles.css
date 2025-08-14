@@ -81,7 +81,7 @@ body {
 .image-block img { width:100%; border-radius:10px; }
 
 /* RIGHT COLUMN */
-.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:15px; text-align:center;max-width: 420px;min-width: 300px }
+.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:15px; text-align:center;max-width: 380px;min-width: 300px }
 .welcome-box h3 { font-family:'Parisienne', cursive; margin:0; font-size:1.8rem; }
 .chef-photo { width:140px; height:auto; border-radius:8px; }
 
