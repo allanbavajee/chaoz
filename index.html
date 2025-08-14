@@ -112,24 +112,25 @@
   <h4>Ce que disent nos clients</h4>
   <div class="testimonial-slider">
      <div class="testimonial-container" id="testimonialContainer">
-      <p>"Les créations de Charlotte sont toujours un vrai délice, à la fois pour les yeux et les papilles."</p>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <span>- Sophie L.</span>
-    </div>
-    <div class="testimonial">
-      <p>"Chaque gâteau est une œuvre d’art. On sent l’amour dans chaque bouchée."</p>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <span>- Marc D.</span>
-    </div>
-    <div class="testimonial">
-      <p>"Jamais déçue, toujours émerveillée. Bravo Charlotte !"</p>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <span>- Élodie P.</span>
+  <div class="testimonial-form">
+  <h4>Laissez votre témoignage</h4>
+  <form action="mailto:allan.bavajee@gmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <textarea name="message" placeholder="Votre témoignage" required></textarea>
+    <label>Notez-nous :</label>
+    <select name="rating" required>
+      <option value="5">⭐⭐⭐⭐⭐</option>
+      <option value="4">⭐⭐⭐⭐</option>
+      <option value="3">⭐⭐⭐</option>
+      <option value="2">⭐⭐</option>
+      <option value="1">⭐</option>
+    </select>
+    <button type="submit">Envoyer</button>
+  </form>
     </div>
   </div>
 </div>
-
-    </aside>     
+    </aside>  
      
   </div>
 
