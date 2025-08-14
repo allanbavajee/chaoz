@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChaOz</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -13,7 +15,7 @@
   <header>
     <div class="header-center">
       <div class="title-logo">
-        <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo">
+        <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo" />
         <h1 class="site-title">ChaOz</h1>
       </div>
       <p class="slogan">Bake with Grace, Serve with Love</p>
@@ -31,7 +33,7 @@
 
   <!-- MAIN CONTENT -->
   <div class="main-content">
-    
+
     <!-- LEFT COLUMN : Images -->
     <section class="latest-recipes">
       <h2>Latest Creations</h2>
@@ -83,7 +85,7 @@
       </div>
     </section>
 
-    <!-- RIGHT COLUMN : Charlotte -->
+    <!-- RIGHT COLUMN : Charlotte + Social + Testimonials -->
     <aside class="welcome-box">
       <h3>Welcome, I'm Charlotte</h3>
       <img src="image/charlotte.png" alt="Charlotte" class="new-charlotte-photo">
@@ -101,12 +103,16 @@
       <!-- Témoignages -->
       <div class="testimonials">
         <h4>Ce que disent nos clients</h4>
-        <div class="testimonial-slider" id="testimonialSlider"></div>
+        <div class="testimonial-viewport">
+          <div class="testimonial-track" id="testimonialTrack">
+            <!-- Slides injectés par script.js -->
+          </div>
+        </div>
       </div>
 
       <!-- Formulaire témoignage -->
-      <form id="testimonialForm">
-        <h4>Laissez votre témoignage</h4>
+      <form id="testimonialForm" class="testimonial-form">
+        <h5>Laissez votre témoignage</h5>
         <input type="text" id="name" placeholder="Votre nom" required>
         <textarea id="message" placeholder="Votre message" required></textarea>
         <select id="stars" required>
@@ -119,9 +125,8 @@
         </select>
         <button type="submit">Envoyer</button>
       </form>
+    </aside>
 
-    </aside>     
-     
   </div>
 
   <!-- FOOTER -->
