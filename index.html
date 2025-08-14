@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ChaOz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!--  HEADER  -->
+  <!--  HEADER  (je garde ta structure) -->
   <header class="header-container">
-     <div class="header-top">
-      <img src="image/chaoz.logo.w.png" alt="Chaoz Logo" class="logo">
+    <div class="header-top">
+      <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="logo">
       <h1 class="site-title">ChaOz</h1>
-    </div>
-    <p class="site-slogan">Bake with Grace, Serve with Love</p>
+      <p class="site-slogan">Bake with Grace, Serve with Love</p>
     </div>
 
     <nav class="menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="creations.html">Creations</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN CONTENT (TA STRUCTURE) -->
   <div class="main-content">
 
     <!-- LEFT COLUMN : Images -->
@@ -59,42 +57,45 @@
       </div>
     </section>
 
-    <!-- RIGHT COLUMN : Charlotte + Témoignages -->
+    <!-- RIGHT COLUMN : Charlotte + Témoignages + Formulaire + Réseaux -->
     <aside class="welcome-box">
       <h3>Welcome, I'm Charlotte</h3>
       <img src="image/charlotte.png" alt="Charlotte - Chef Pâtissière" class="chef-photo">
       <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
-      
-      <!-- Réseaux sociaux -->
+
+      <!-- social -->
       <div class="social-links">
-        <a href="https://www.facebook.com/wire.core.solutions"><img src="image/fb.png" alt="Facebook"></a>
-        <a href="https://www.tiktok.com/@wirecoresolutions"><img src="image/tk.png" alt="Tiktok"></a>        
-        <a href="https://www.linkedin.com/in/allan-bavajee"><img src="image/in.png" alt="Linkedin"></a>
-        <a href="mailto:allan.bavajee@gmail.com" target="_blank"><img src="image/mail.png" alt="Email"></a>
-        <a href="https://wa.me/23059732188" target="_blank"><img src="image/wa.png" alt="Whatsapp"></a>
+        <a href="https://www.facebook.com/wire.core.solutions" target="_blank"><img src="image/fb.png" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@wirecoresolutions" target="_blank"><img src="image/tk.png" alt="TikTok"></a>
+        <a href="https://www.linkedin.com/in/allan-bavajee" target="_blank"><img src="image/in.png" alt="LinkedIn"></a>
+        <a href="mailto:allan.bavajee@gmail.com" target="_blank"><img src="image/mail.png" alt="Mail"></a>
+        <a href="https://wa.me/23059732188" target="_blank"><img src="image/wa.png" alt="WhatsApp"></a>
       </div>
 
-      <!-- Témoignages -->
+      <!-- Témoignages : container vide → on injecte via JS -->
       <div class="testimonials">
         <h4>Ce que disent nos clients</h4>
         <div id="testimonialTrack" class="testimonial-track"></div>
 
         <h4>Laissez votre témoignage</h4>
-        <form class="testimonial-form">
-          <input type="text" id="userName" placeholder="Votre nom">
-          <input type="email" id="userEmail" placeholder="Votre email">
-          <textarea id="userMessage" placeholder="Votre témoignage"></textarea>
-          <select id="userStars">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-          </select>
-          <button type="button" id="submitTestimonial">Envoyer</button>
+        <form class="testimonial-form" id="testimonialForm">
+          <input id="userName" type="text" placeholder="Votre nom" required>
+          <input id="userEmail" type="email" placeholder="Votre email" required>
+          <textarea id="userMessage" placeholder="Votre témoignage" required></textarea>
+
+          <!-- étoiles visibles et cliquables (pas de select) -->
+          <div class="star-rating" id="starRating">
+            <button type="button" class="star" data-value="5" aria-label="5 étoiles">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4 étoiles">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3 étoiles">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2 étoiles">★</button>
+            <button type="button" class="star" data-value="1" aria-label="1 étoile">★</button>
+            <input type="hidden" id="userStars" value="5">
+          </div>
+
+          <button type="submit" id="submitTestimonial">Envoyer</button>
         </form>
       </div>
-      
     </aside>
 
   </div>
