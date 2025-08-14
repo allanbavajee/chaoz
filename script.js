@@ -175,3 +175,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+async function loadTestimonials() {
+  try {
+    const response = await fetch('temoignages.json');
+    const testimonials = await response.json();
+
+    const track = document.getElementById('testimonialTrack');
+    track.innerHTML = ''; // nettoyer avant ajout
+
+    // Créer un wrapper flex
+    const list = document.createElement('div');
+    list.className = 'testimonial-list';
+    track.appendChild(list);
+
+    // Ajouter tous les témoignages
+    testimonials.forEach(t => {
+      const div = document.createElement('div');
+      div.className = 'testimonial-item';
+      div.innerHTML = `
+        <p>"${t.message}"</p>
+        <div class="stars">${'⭐'.repeat(t.stars)}</div>
+        <span>- ${t.name}</span>
+      `;
+      list.appendChild(div);
+    });
+
+    // Défilement automatique
+    let index = 0;
+    const items = document.querySelectorAll('.testimonial-item');
+    const total = items.length;
+
+    setInterval(() => {
+      index++;
+      if (index >= total) index = 0;
+      list.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000);
+
+  } catch (err) {
+    console.error('Erreur chargement témoignages:', err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadTestimonials);
