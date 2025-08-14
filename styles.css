@@ -89,7 +89,7 @@ body {
 .social-links img { width:32px; height:32px; }
 
 /* TESTIMONIALS (carousel container) */
-.testimonials { margin-top:14px; width:100%; }
+.testimonials {flex: 0 0 100%; margin-top:14px; width:100%; }
 .testimonials h4 { color:#ff6f61; font-size:1.15rem; margin-bottom:10px; }
 
 /* track - visible window */
