@@ -39,23 +39,11 @@ function startSlideAnimation() {
   setTimeout(showNext, 4000);
 }
 
-// Formulaire témoignage
+//  Formulaire témoignage
 document.getElementById('submitTestimonial').addEventListener('click', () => {
   const name = document.getElementById('userName').value;
   const email = document.getElementById('userEmail').value;
   const message = document.getElementById('userMessage').value;
   const stars = parseInt(document.getElementById('userStars').value);
 
-  if (!name || !email || !message) { alert('Veuillez remplir tous les champs.'); return; }
-
-  console.log({ name, email, message, stars });
-  alert('Merci pour votre témoignage !');
-
-  document.getElementById('userName').value = '';
-  document.getElementById('userEmail').value = '';
-  document.getElementById('userMessage').value = '';
-  document.getElementById('userStars').value = '5';
-});
-
-// Lancer le chargement
-loadTestimonials();
+  if
