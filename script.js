@@ -202,14 +202,14 @@ async function loadTestimonials() {
 
     // Défilement automatique
     let index = 0;
-    const items = document.querySelectorAll('.testimonial-item');
-    const total = items.length;
+const items = document.querySelectorAll('.testimonial-item');
+const total = items.length;
 
-    setInterval(() => {
-      index++;
-      if (index >= total) index = 0;
-      list.style.transform = `translateX(-${index * 100}%)`;
-    }, 4000);
+setInterval(() => {
+  index++;
+  if (index >= total) index = 0;
+  listEl.style.transform = `translateX(-${index * 100}%)`; // <- simple pour 1 item = 100%
+}, 4000);
 
   } catch (err) {
     console.error('Erreur chargement témoignages:', err);
