@@ -6,17 +6,19 @@
 body { font-family: 'Poppins', sans-serif; background-color: #fff; color: #333; }
 .header-container {
   background-color: white;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .header-top {
   display: flex;
-  flex-direction: column; /* Tout en vertical */
   align-items: center;    /* Centre horizontalement */
   justify-content: center; /* Centre verticalement */
   text-align: center;     /* Texte centré */
+  gap: 10px;
 }
-
+.logo {
+  height: 50px; /* ajuster selon la taille voulue */
+}
 .header-top img {
   max-width: 150px;
   height: auto;
