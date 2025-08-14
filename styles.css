@@ -12,17 +12,23 @@ body {
 .header-container { width:100%; }
 .header-top {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap; /* allows slogan to go to new line */
+  align-items: center;       /* Centre verticalement logo et titre */
+  justify-content: center;   /* Centre horizontalement */
+  gap: 15px;
   padding: 14px 20px;
 }
-.logo { height: 70px; width: auto; order:1; display:block; }
-.site-title { font-family: 'Parisienne', cursive; font-size: 3.8rem; color:#ff6f61; margin:0; order:2; }
+.logo {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+.site-title {
+  font-family: 'Parisienne', cursive;
+  font-size: 3.8rem;
+  color:#ff6f61;
+  margin:0;
+}
 .site-slogan {
-  order:3;
-  flex-basis:100%;
   text-align:center;
   font-family: 'Dancing Script', cursive;
   font-size:1.6rem;
@@ -49,6 +55,7 @@ body {
 /* MAIN LAYOUT */
 .main-content {
   display:flex;
+  flex-direction: row; /* Assure les colonnes côte à côte */
   gap:30px;
   max-width:1200px;
   margin:36px auto;
@@ -56,7 +63,7 @@ body {
 }
 
 /* LEFT COLUMN */
-.latest-recipes { flex:3; }
+.latest-recipes { flex:3; } /* Plus large */
 .latest-recipes h2 { text-align:center; font-size:2rem; margin-bottom:20px; color:#000; }
 .big-image.side-by-side { display:flex; gap:18px; margin-bottom:24px; }
 .big-image-block { flex:1; display:flex; flex-direction:column; align-items:center; }
