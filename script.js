@@ -42,7 +42,7 @@ function startSlideAnimation() {
   setTimeout(showNext, 4000);
 }
 
-// Formulaire témoignage
+//  Formulaire témoignage
 document.getElementById('submitTestimonial').addEventListener('click', () => {
   const name = document.getElementById('userName').value;
   const email = document.getElementById('userEmail').value;
