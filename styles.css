@@ -1,72 +1,156 @@
 /* RESET */
-* { margin:0; padding:0; box-sizing:border-box; }
-
-/* BODY */
-body { font-family: 'Poppins', sans-serif; background:#fff; color:#333; }
-
-/* HEADER */
-.header-center { display:flex; flex-direction:column; align-items:center; text-align:center; margin-top:20px; }
-.title-logo { display:flex; align-items:center; gap:15px; }
-.header-logo { height:80px; width:auto; }
-.site-title { font-family:'Parisienne', cursive; font-size:5rem; color:#ff6f61; font-weight:normal; margin:0; }
-.slogan { font-family:'Dancing Script', cursive; font-size:2rem; color:#000; margin-top:10px; margin-bottom:20px; }
-
-/* MENU */
-.menu { text-align:center; margin-top:15px; }
-.menu ul { display:inline-flex; list-style:none; gap:30px; padding:10px 0; width:420px; justify-content:center; border-top:1px solid rgba(0,0,0,0.2); border-bottom:1px solid rgba(0,0,0,0.2); margin:0 auto; }
-.menu a { text-decoration:none; color:#333; font-weight:normal; font-size:1rem; }
-.menu a:hover { color:#ff6f61; }
-
-/* MAIN CONTENT */
-.main-content { display:flex; gap:30px; max-width:1200px; margin:40px auto; padding:0 20px; }
-
-/* LEFT COLUMN */
-.latest-recipes { flex:3; }
-.latest-recipes h2 { font-family:'Poppins', sans-serif; font-size:2.2rem; text-align:center; margin-bottom:30px; color:#000; }
-.big-image.side-by-side { display:flex; justify-content:space-between; gap:20px; margin-bottom:30px; }
-.big-image-block { flex:1; display:flex; flex-direction:column; align-items:center; }
-.big-image-block img { width:100%; height:auto; border-radius:10px; }
-.image-desc { margin-top:5px; text-align:center; font-size:0.9rem; color:#555; }
-.small-images { display:flex; flex-wrap:wrap; gap:10px; }
-.image-block { width:calc(25% - 7.5px); display:flex; flex-direction:column; align-items:center; }
-.image-block img { width:100%; height:auto; border-radius:10px; }
-
-/* RIGHT COLUMN */
-.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:15px; text-align:center; }
-.welcome-box h3 { font-family:'Parisienne', cursive; font-size:2rem; margin-bottom:10px; }
-.new-charlotte-photo { width:150px; height:auto; border-radius:10px; margin-bottom:10px; }
-.welcome-box p { font-size:0.95rem; color:#333; line-height:1.4; }
-
-/* SOCIAL LINKS */
-.social-links { display:flex; justify-content:center; gap:15px; margin-top:15px; }
-.social-links img { width:30px; height:30px; transition:transform 0.2s ease; }
-.social-links img:hover { transform:scale(1.1); }
-
-/* TESTIMONIAUX HORIZONTAL */
-.testimonials { margin-top:40px; text-align:center; }
-.testimonials h4 { font-family:'Edu NSW ACT Hand', cursive; font-size:1.8rem; color:#ff6f61; font-weight:normal; margin-bottom:15px; }
-.testimonial-slider { width:100%; overflow:hidden; }
-.testimonial-track { display:flex; gap:30px; animation: scrollLeft 20s linear infinite; }
-.testimonial { min-width:300px; flex-shrink:0; border:1px solid #eee; padding:10px; border-radius:10px; background:#f9f9f9; }
-.testimonial p { font-style:italic; font-size:0.95rem; color:#555; margin-bottom:5px; }
-.stars { font-size:1.1rem; color:gold; margin-bottom:3px; }
-.testimonial span { font-size:0.85rem; color:#777; }
-
-@keyframes scrollLeft {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* FORMULAIRE TÉMOIGNAGE */
-.testimonial-form { margin-top:20px; width:100%; display:flex; flex-direction:column; align-items:center; gap:10px; }
-.testimonial-form form { display:flex; flex-direction:column; gap:10px; width:90%; max-width:400px; }
-.testimonial-form input, .testimonial-form textarea, .testimonial-form select, .testimonial-form button { padding:10px; font-size:1rem; border-radius:5px; border:1px solid #ccc; }
-.testimonial-form button { background:#ff6f61; color:#fff; border:none; cursor:pointer; transition:0.3s; }
-.testimonial-form button:hover { background:#ff4b3a; }
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* HEADER CENTER */
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  height: 80px;
+  width: auto;
+}
+
+.site-title {
+  font-family: 'Parisienne', cursive;
+  font-size: 5rem;
+  color: #ff6f61;
+  font-weight: normal;
+}
+
+.slogan {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* MENU */
+.menu {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.menu ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 30px;
+  padding: 10px 0;
+  width: 420px;
+  justify-content: center;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.menu a:hover {
+  color: #ff6f61;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* LEFT COLUMN */
+.latest-recipes { flex: 3; }
+
+.latest-recipes h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.big-image.side-by-side { display: flex; gap: 20px; margin-bottom: 30px; }
+.big-image-block { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.big-image-block img { width: 100%; height: auto; border-radius: 10px; }
+.image-desc { margin-top: 5px; text-align: center; font-size: 0.9rem; color: #555; }
+
+.small-images { display: flex; flex-wrap: wrap; gap: 10px; }
+.image-block { width: calc(25% - 7.5px); display: flex; flex-direction: column; align-items: center; }
+.image-block img { width: 100%; height: auto; border-radius: 10px; }
+
+/* RIGHT COLUMN */
+.welcome-box { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center; }
+.welcome-box h3 { font-family: 'Parisienne', cursive; font-size: 2rem; margin-bottom: 10px; }
+.new-charlotte-photo { width: 150px; height: auto; border-radius: 10px; margin-bottom: 10px; }
+.welcome-box p { font-size: 0.95rem; line-height: 1.4; color: #333; }
+
+.social-links { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+.social-links img { width: 30px; height: 30px; transition: transform 0.2s ease; }
+.social-links img:hover { transform: scale(1.1); }
+
+/* Témoignages */
+.testimonials { margin-top: 40px; text-align: center; }
+.testimonials h4 {
+  font-family: 'Edu NSW ACT Hand', cursive;
+  font-size: 1.8rem;
+  color: #ff6f61;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.testimonial-track {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.testimonial-item {
+  display: inline-block;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.testimonial-item p { font-style: italic; color: #555; margin-bottom: 5px; }
+.testimonial-item .stars { color: gold; font-size: 1.1rem; margin-bottom: 3px; }
+.testimonial-item span { font-size: 0.85rem; color: #777; }
+
+/* Formulaire témoignage */
+.testimonial-form { margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.testimonial-form input, .testimonial-form textarea, .testimonial-form select { width: 80%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; }
+.testimonial-form button { padding: 8px 15px; background-color: #ff6f61; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; }
+.testimonial-form button:hover { background-color: #e05550; }
 
 /* FOOTER */
-footer { text-align:center; background-color:#f9f9f9; padding:20px; font-size:0.9rem; color:#777; margin-top:30px; }
-
-/* RESPONSIVE */
-@media(max-width:900px){ .main-content { flex-direction:column; } .big-image.side-by-side { flex-direction:column; gap:15px; } .image-block { width:calc(50% - 5px); } }
-@media(max-width:600px){ .image-block { width:100%; } .testimonial-track { animation: scrollLeft 30s linear infinite; } }
+footer { text-align: center; background-color: #f9f9f9; padding: 20px; font-size: 
