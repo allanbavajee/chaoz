@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChaOz</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!--  HEADER  -->
+  <!-- HEADER -->
   <header>
-    <div class="header-center">
-      <div class="title-logo">
-        <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo">
+    <div class="header-top">
+      <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="header-logo">
+      <div class="title-container">
         <h1 class="site-title">ChaOz</h1>
+        <p class="slogan">Bake with Grace, Serve with Love</p>
       </div>
-      <p class="slogan">Bake with Grace, Serve with Love</p>
     </div>
 
     <nav class="menu">
@@ -35,6 +36,7 @@
     <!-- LEFT COLUMN : Images -->
     <section class="latest-recipes">
       <h2>Latest Creations</h2>
+
       <div class="big-image side-by-side">
         <div class="big-image-block">
           <img src="image/pic.temp.0.png" alt="Big Recipe 1">
@@ -58,41 +60,31 @@
       </div>
     </section>
 
-    <!-- RIGHT COLUMN : Charlotte + Témoignages + Formulaire -->
+    <!-- RIGHT COLUMN : Charlotte + Témoignages -->
     <aside class="welcome-box">
       <h3>Welcome, I'm Charlotte</h3>
-      <img src="image/Charlotte.jpg" alt="Charlotte" class="new-charlotte-photo">
-      <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care.</p>
-      
-      <!-- Logos sociaux -->
-      <div class="social-links">
-        <a href="#"><img src="image/fb.png" alt="Facebook"></a>
-        <a href="#"><img src="image/wa.png" alt="Whatsapp"></a>
-        <a href="#"><img src="image/tk.png" alt="TikTok"></a>
-        <a href="#"><img src="image/mail.png" alt="Mail"></a>
-        <a href="#"><img src="image/in.png" alt="LinkedIn"></a>
-      </div>
+      <img src="image/Charlotte.jpg" alt="Charlotte - Chef Pâtissière" class="chef-photo">
+      <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
 
       <!-- Témoignages -->
       <div class="testimonials">
         <h4>Ce que disent nos clients</h4>
-        <div class="testimonial-track" id="testimonialTrack"></div>
-      </div>
+        <div id="testimonialTrack" class="testimonial-track"></div>
 
-      <!-- Formulaire -->
-      <div class="testimonial-form">
         <h4>Laissez votre témoignage</h4>
-        <input type="text" id="userName" placeholder="Votre nom">
-        <input type="email" id="userEmail" placeholder="Votre email">
-        <textarea id="userMessage" placeholder="Votre témoignage"></textarea>
-        <select id="userStars">
-          <option value="5">⭐⭐⭐⭐⭐</option>
-          <option value="4">⭐⭐⭐⭐</option>
-          <option value="3">⭐⭐⭐</option>
-          <option value="2">⭐⭐</option>
-          <option value="1">⭐</option>
-        </select>
-        <button id="submitTestimonial">Envoyer</button>
+        <form class="testimonial-form">
+          <input type="text" id="userName" placeholder="Votre nom">
+          <input type="email" id="userEmail" placeholder="Votre email">
+          <textarea id="userMessage" placeholder="Votre témoignage"></textarea>
+          <select id="userStars">
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+          <button type="button" id="submitTestimonial">Envoyer</button>
+        </form>
       </div>
     </aside>
 
