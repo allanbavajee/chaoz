@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       track.appendChild(list);
 
       const items = list.querySelectorAll('.testimonial-item');
-      let index = 0;
+      let index = items.length - 1;
 
       function showNext() {
         index = (index + 1) % items.length;
