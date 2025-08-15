@@ -1,47 +1,180 @@
+/* RESET */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Poppins', sans-serif; background:#fdfdfd; color:#333; display:flex; flex-direction:column; min-height:100vh; }
-main { flex:1; }
 
-/* HEADER */
-.header-container { text-align:center; padding:20px 0; }
-.header-top { display:flex; align-items:center; justify-content:center; gap:15px; }
-.logo { height:50px; width:auto; }
-.site-title { font-family:'Parisienne', cursive; font-size:3.5rem; color:#c94f7c; }
-.site-slogan { font-family:'Dancing Script', cursive; font-size:1.4rem; color:#555; margin-top:6px; }
-.menu ul { display:inline-flex; list-style:none; gap:25px; padding:10px 0; border-top:1px solid rgba(0,0,0,0.12); border-bottom:1px solid rgba(0,0,0,0.12); }
-.menu a { text-decoration:none; color:#333; font-weight:500; }
-.menu a:hover { color:#c94f7c; }
+/* FONTS + BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #333;
+}
 
-/* CONTACT */
-.contact-container { display:flex; max-width:1200px; margin:40px auto; padding:0 20px; gap:30px; align-items:flex-start; }
+/* HEADER: logo + title on same line, slogan below and centered */
+.header-container { 
+  width:100%; 
+  text-align:center; /* centre le contenu globalement */
+}
+.header-top {
+  display: flex;
+  align-items: center;       /* centre verticalement logo et titre */
+  justify-content: center;   /* centre horizontalement */
+  gap: 15px;
+  padding: 14px 20px;
+}
+.logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+.site-title {
+  font-family: 'Parisienne', cursive;
+  font-size: 3.8rem;
+  color:#c94f7c;
+  margin:0;
+}
+.site-slogan {
+  display: block;
+  text-align:center;
+  font-family: 'Dancing Script', cursive;
+  font-size:1.6rem;
+  color:#000;
+  margin-top:10px;
+}
 
-/* COLONNE GAUCHE (infos + réseaux) */
-.contact-left { display:flex; flex-direction:column; flex:1; gap:20px; }
-.contact-info, .social-section { background:#fff; padding:25px 20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
-.contact-info h2, .social-section h3 { color:#c94f7c; margin-bottom:10px; }
-.contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
-.social-links { display:flex; gap:15px; }
+/* MENU */
+.menu { text-align:center; margin-top:8px; }
+.menu ul {
+  display:inline-flex;
+  list-style:none;
+  gap:28px;
+  padding:10px 0;
+  width:420px;
+  justify-content:center;
+  border-top:1px solid rgba(0,0,0,0.12);
+  border-bottom:1px solid rgba(0,0,0,0.12);
+  margin:0 auto;
+}
+.menu a { text-decoration:none; color:#333; font-weight:400; }
+.menu a:hover { color:#ff6f61; }
+
+/* MAIN LAYOUT */
+.main-content {
+  display:flex;
+  flex-direction: row; /* Assure les colonnes côte à côte */
+  gap:30px;
+  max-width:1200px;
+  margin:36px auto;
+  padding:0 18px;
+  align-items: flex-start; /* évite que Welcome prenne toute la hauteur */
+}
+
+/* LEFT COLUMN */
+.latest-recipes { flex:3; } /* Plus large */
+.latest-recipes h2 { text-align:center; font-size:2rem; margin-bottom:20px; color:#000; }
+.big-image.side-by-side { display:flex; gap:18px; margin-bottom:24px; }
+.big-image-block { flex:1; display:flex; flex-direction:column; align-items:center; }
+.big-image-block img { width:100%; height:auto; border-radius:10px; }
+.image-desc { margin-top:6px; font-size:0.95rem; color:#555; text-align:center; }
+
+/* small images */
+.small-images { display:flex; flex-wrap:wrap; gap:10px; }
+.image-block { width:calc(25% - 7.5px); display:flex; flex-direction:column; align-items:center; }
+.image-block img { width:100%; border-radius:10px; }
+
+/* RIGHT COLUMN */
+.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:15px; text-align:center;max-width: 380px;min-width: 300px }
+.welcome-box h3 { font-family:'Parisienne', cursive; margin:0; font-size:1.8rem; }
+.chef-photo { width:140px; height:auto; border-radius:8px; }
+
+/* SOCIAL LINKS */
+.social-links { display:flex; gap:12px; justify-content:center; margin-top:8px; }
 .social-links img { width:32px; height:32px; }
 
-/* COLONNE DROITE (formulaire) */
-.contact-form { flex:1; background:#fff; padding:30px 20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
-.contact-form h2 { color:#c94f7c; margin-bottom:15px; }
-.contact-form form { display:flex; flex-direction:column; gap:15px; }
-.contact-form .form-group { display:flex; flex-direction:column; gap:5px; }
-.contact-form label { font-weight:500; color:#333; }
-.contact-form input, .contact-form textarea { padding:10px; border:1px solid #ccc; border-radius:8px; width:100%; }
-.contact-form input[type="file"] { border:none; background:#f5f5f5; padding:6px; border-radius:6px; }
-.contact-form button {
-  background:#c94f7c; color:#fff; padding:12px; border:none; border-radius:8px; font-weight:bold;
-  cursor:pointer; transition: background 0.3s ease;
+/* TESTIMONIALS (carousel container) */
+.testimonials { margin-top:14px; width:100%; }
+.testimonials h4 { color:#ff6f61; font-size:1.15rem; margin-bottom:10px; }
+
+/* track - visible window */
+/* Témoignages : container visible */
+/* track - visible window */
+.testimonial-track {
+  width: 100%;
+  overflow: hidden; 
+  position: relative;
 }
-.contact-form button:hover { background:#a43b62; }
+
+/* wrapper flex interne */
+.testimonial-list {
+  display: flex;
+  transition: transform 0.6s ease; 
+}
+
+/* chaque item = 100% de la largeur du track */
+.testimonial-item {
+  flex: 0 0 100%;        
+  box-sizing: border-box;
+  padding: 12px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: left;
+}
+.testimonial-item p { font-style:italic; color:#444; margin-bottom:8px; }
+.testimonial-item .stars { color:gold; margin-bottom:6px; font-size:1.05rem; }
+.testimonial-item span { display:block; color:#666; font-size:0.9rem; }
+
+/* FORM */
+.testimonial-form { margin-top:12px; display:flex; flex-direction:column; align-items:center; gap:8px; }
+.testimonial-form input, .testimonial-form textarea {
+  width:92%;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #ddd;
+}
+.testimonial-form textarea { min-height:80px; resize:vertical; }
+#submitTestimonial { padding:8px 14px; border-radius:6px; border:none; background:#ff6f61; color:#fff; cursor:pointer; }
+
+/* STAR RATING UI (visible)  */
+.star-rating { display:flex; gap:6px; justify-content:center; margin-top:6px; }
+.star-rating .star {
+  background:transparent;
+  border:none;
+  font-size:26px;
+  color:lightgray;
+  cursor:pointer;
+  padding:2px 4px;
+}
+.star-rating .star.selected,
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+  color:gold;
+}
+
+/* RESPONSIVE small screens */
+@media (max-width:900px){
+  .main-content { flex-direction:column; gap:20px; padding:0 12px; }
+  .image-block { width:calc(50% - 5px); }
+  .site-title { font-size:2.6rem; }
+  .chef-photo { width:120px; }
+}
 
 /* FOOTER */
-footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgba(0,0,0,0.1); }
-
-/* RESPONSIVE */
-@media (max-width:992px) {
-  .contact-container { flex-direction:column; }
-  .contact-left, .contact-form { width:100%; }
+footer { text-align:center; padding:18px 0; color:#777; border-top:1px solid rgba(0,0,0,0.04); margin-top:30px; }
+/* Spécifique à la page Creations */
+.creations-page { max-width:1200px; margin:40px auto; padding:0 20px; }
+.cake-category { margin-bottom:40px; }
+.cake-category h3 { font-family:'Parisienne', cursive; font-size:2rem; color:#ff6f61; margin-bottom:15px; text-align:left; }
+.cake-gallery {
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:flex-start;
+}
+.cake-gallery img {
+  width:calc(25% - 11.25px); /* 4 images par ligne */
+  border-radius:10px;
+  height:auto;
+  object-fit:cover;
+}
+@media (max-width:900px){
+  .cake-gallery img { width:calc(50% - 7.5px); margin-bottom:10px; }
 }
