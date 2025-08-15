@@ -110,3 +110,63 @@ body {
   margin: 0;
   font-size: 0.9rem;
 }
+/* Intro text */
+.intro-text {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+.intro-text h2 {
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  color: #c94f7c;
+}
+.intro-text p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Masonry style */
+.portfolio-gallery {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 0 20px;
+}
+.portfolio-item {
+  display: inline-block;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .portfolio-gallery {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio-gallery {
+    column-count: 1;
+  }
+}
