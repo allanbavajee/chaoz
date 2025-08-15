@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ChaOz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,10 +30,9 @@
   <!-- MAIN CONTENT -->
   <main class="main-content">
 
-    <!-- LEFT COLUMN : Latest Creations (large) -->
+    <!-- LEFT COLUMN : Latest Creations -->
     <section class="latest-recipes">
       <h2>Latest Creations</h2>
-
       <div class="big-image side-by-side">
         <div class="big-image-block">
           <img src="image/pic.temp.0.png" alt="Big Recipe 1">
@@ -58,7 +56,7 @@
       </div>
     </section>
 
-    <!-- RIGHT COLUMN : Welcome + Testimonials + Form + Social (smaller) -->
+    <!-- RIGHT COLUMN : Welcome + Testimonials + Form + Social -->
     <aside class="welcome-box">
       <h3>Welcome,</h3>
       <img src="image/charlotte.png" alt="Charlotte - Chef Pâtissière" class="chef-photo">
@@ -66,35 +64,35 @@
 
       <!-- Social Links -->
       <div class="social-links">
-        <a href="https://www.facebook.com/wire.core.solutions" target="_blank"><img src="image/social.network.logo/fb.png" alt="Facebook"></a>
-        <a href="https://www.tiktok.com/@wirecoresolutions" target="_blank"><img src="image/social.network.logo/tk.png" alt="TikTok"></a>
-        <a href="https://www.linkedin.com/in/allan-bavajee" target="_blank"><img src="image/social.network.logo/in.png" alt="LinkedIn"></a>
-        <a href="mailto:allan.bavajee@gmail.com" target="_blank"><img src="image/social.network.logo/mail.png" alt="Mail"></a>
-        <a href="https://wa.me/23059732188" target="_blank"><img src="image/social.network.logo/wa.png" alt="WhatsApp"></a>
+        <a href="#" target="_blank"><img src="image/social.network.logo/fb.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="image/social.network.logo/tk.png" alt="TikTok"></a>
+        <a href="#" target="_blank"><img src="image/social.network.logo/in.png" alt="LinkedIn"></a>
+        <a href="#" target="_blank"><img src="image/social.network.logo/mail.png" alt="Mail"></a>
+        <a href="#" target="_blank"><img src="image/social.network.logo/wa.png" alt="WhatsApp"></a>
       </div>
 
       <!-- Testimonials -->
-     <div class="testimonials">
-  <h4>What Our Clients Say</h4> <!-- titre en anglais -->
-  <div id="testimonialTrack" class="testimonial-track"></div>
- 
-  <form class="testimonial-form" id="testimonialForm">
-    <input id="userName" type="text" placeholder="Your Name" required>
-    <input id="userEmail" type="email" placeholder="Your Email" required>
-    <textarea id="userMessage" placeholder="Your Testimonial" required></textarea>
+      <div class="testimonials">
+        <h4>What Our Clients Say</h4>
+        <div id="testimonialTrack" class="testimonial-track"></div>
 
-    <div class="star-rating" id="starRating">
-      <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
-      <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
-      <button type="button" class="star" data-value="3" aria-label="3 stars">★</button>
-      <button type="button" class="star" data-value="2" aria-label="2 stars">★</button>
-      <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
-      <input type="hidden" id="userStars" value="5">
-    </div>
+        <form class="testimonial-form" id="testimonialForm">
+          <input id="userName" type="text" placeholder="Your Name" required>
+          <input id="userEmail" type="email" placeholder="Your Email" required>
+          <textarea id="userMessage" placeholder="Your Testimonial" required></textarea>
 
-    <button type="submit" id="submitTestimonial">Send</button>
-  </form>
-</div>
+          <div class="star-rating" id="starRating">
+            <button type="button" class="star" data-value="1">★</button>
+            <button type="button" class="star" data-value="2">★</button>
+            <button type="button" class="star" data-value="3">★</button>
+            <button type="button" class="star" data-value="4">★</button>
+            <button type="button" class="star" data-value="5">★</button>
+            <input type="hidden" id="userStars" value="5">
+          </div>
+
+          <button type="submit" id="submitTestimonial">Send</button>
+        </form>
+      </div>
     </aside>
 
   </main>
@@ -104,5 +102,5 @@
   </footer>
 
   <script src="script.js"></script>
- </body>
+</body>
 </html>
