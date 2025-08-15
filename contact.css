@@ -33,7 +33,7 @@ main { flex:1; }
 }
 .contact-info h2 { color:#c94f7c; margin-bottom:15px; }
 .contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
-.contact-info .social-links { display:flex; gap:15px; margin-top:15px; }
+.contact-info .social-links { display:flex; gap:15px; margin-top:20px; }
 .contact-info .social-links img { width:32px; height:32px; }
 
 /* COLONNE DROITE */
