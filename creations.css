@@ -1,3 +1,4 @@
+/* RESET */
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
 
@@ -16,23 +17,25 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
 .intro-text h2 { color:#c94f7c; font-size:2rem; margin-bottom:10px; }
 .intro-text p { font-size:1rem; color:#555; }
 
-/* WRAPPER GALERIE + COMMANDE */
+/* WRAPPER GALERIE + SIDEBAR */
 .creations-wrapper {
   display:flex;
   gap:30px;
   max-width:1200px;
   margin:40px auto;
   padding:0 20px;
+  align-items:flex-start;
 }
 
 /* GALERIE MASONRY */
 .creations-gallery {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  flex:1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 10px; /* base pour masonry */
+  gap: 20px;
+  flex: 1;
 }
+
 .cake-card {
   background:#fff;
   border-radius:12px;
@@ -40,18 +43,22 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
   text-align:center;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  grid-row-end: span 30; /* ajustable selon la taille des images */
 }
+
 .cake-card img {
-  display:block;
-  width:auto;
-  max-width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
 .cake-card h3 { font-size:1.1rem; margin:10px 0 5px; color:#333; }
 .cake-card p { font-size:0.9rem; color:#666; padding:0 10px 15px; }
 .cake-card:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
 
-/* ORDER SIDEBAR */
+/* SIDEBAR COMMANDE */
 .order-sidebar {
   flex:0 0 280px;
   background:#fff;
@@ -78,11 +85,4 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
 
 /* FOOTER */
 footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgba(0,0,0,0.1); }
-.social-links { display:flex; gap:15px; justify-content:center; margin:10px 0; }
-.social-links img { width:32px; height:32px; }
-
-/* RESPONSIVE */
-@media (max-width:992px) {
-  .creations-wrapper { flex-direction:column; }
-  .order-sidebar { width:100%; margin-bottom:20px; position:relative; top:auto; }
-}
+.social-links { display:flex; gap:15px; jus
