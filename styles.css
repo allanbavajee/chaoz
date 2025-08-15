@@ -102,7 +102,7 @@ body {
 .image-block img { width:100%; border-radius:10px; }
 
 /* RIGHT COLUMN */
-.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:15px; margin-top: 29px; text-align:center;max-width: 380px;min-width: 300px }
+.welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:15px; margin-top: 21px; text-align:center;max-width: 380px;min-width: 300px }
 .welcome-box h3 { margin-bottom: 10; margin:0; font-family: 'Patrick Hand', cursive;; font-size:1.8rem;font-weight: 400; }
 .chef-photo { width:140px; height:auto; border-radius:8px; }
 
