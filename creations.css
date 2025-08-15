@@ -170,3 +170,32 @@ body {
     column-count: 1;
   }
 }
+.footer-section {
+  background: #f9f9f9;
+  padding: 30px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+}
+.footer-section .social-links img {
+  width: 32px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+.footer-section .social-links img:hover {
+  transform: scale(1.1);
+}
+.footer-section .order-link a {
+  display: inline-block;
+  margin-top: 15px;
+  background: #c94f7c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-section .order-link a:hover {
+  background: #a43b62;
+}
+
