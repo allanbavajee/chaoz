@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  fetch('temoignage.json')
+  fetch('temoignages.json')
     .then(response => response.json())
     .then(data => {
       data.forEach(t => {
