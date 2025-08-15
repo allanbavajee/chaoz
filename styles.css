@@ -107,7 +107,7 @@ body {
 .chef-photo { width:140px; height:auto; border-radius:8px; }
 
 /* SOCIAL LINKS */
-.social-links { display:flex; gap:12px; justify-content:center; margin-top:8px; }
+.social-links { display:flex; gap:12px; justify-content:center; margin-top:20px; }
 .social-links img { width:32px; height:32px; }
 
 /* TESTIMONIALS (carousel container) */
