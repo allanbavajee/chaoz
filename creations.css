@@ -28,6 +28,7 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
 }
 
 /* GALERIE MASONRY */
+/* GALERIE MASONRY FLUIDE */
 .creations-gallery {
   column-count: 3;           /* nombre de colonnes sur desktop */
   column-gap: 20px;          /* espace entre colonnes */
@@ -56,6 +57,7 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .cake-card h3 { font-size:1.1rem; margin:10px 0 5px; color:#333; }
 .cake-card p { font-size:0.9rem; color:#666; padding:0 10px 15px; }
@@ -88,4 +90,11 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
 
 /* FOOTER */
 footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgba(0,0,0,0.1); }
-.social-links { display:flex; gap:15px; jus
+.social-links { display:flex; gap:15px; justify-content:center; margin:10px 0; }
+.social-links img { width:32px; height:32px; }
+
+/* RESPONSIVE */
+@media (max-width:992px) {
+  .creations-wrapper { flex-direction:column; }
+  .order-sidebar { width:100%; margin-bottom:20px; position:relative; top:auto; }
+}
