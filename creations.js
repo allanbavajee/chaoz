@@ -1,21 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const carousels = document.querySelectorAll('.carousel-row');
+  const track = document.querySelector('.carousel-track');
+  let position = 0;
 
-  carousels.forEach(row => {
-    const track = row.querySelector('.carousel-track');
-    const direction = row.classList.contains('right-to-left') ? -1 : 1;
-    let position = 0;
+  // Dupliquer les items pour un effet infini
+  track.innerHTML += track.innerHTML;
 
-    // Dupliquer les items pour un défilement infini
-    track.innerHTML += track.innerHTML;
-
-    function animate() {
-      position += 0.5 * direction; // vitesse
-      if(Math.abs(position) >= track.scrollWidth/2) position = 0;
-      track.style.transform = `translateX(${ -position }px)`;
-      requestAnimationFrame(animate);
+  function animate() {
+    position += 0.5; // vitesse
+    if (position >= track.scrollWidth / 2) {
+      position = 0;
     }
+    track.style.transform = `translateX(${-position}px)`;
+    requestAnimationFrame(animate);
+  }
 
-    animate();
-  });
+  animate();
 });
