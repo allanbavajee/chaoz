@@ -1,18 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.carousel-track');
-  
-  // Dupliquer les éléments pour un défilement infini
-  track.innerHTML += track.innerHTML;
+  const track = document.getElementById('testimonialTrack');
 
-  let position = 0;
-  function animate() {
-    position -= 0.5; // vitesse
-    if (Math.abs(position) >= track.scrollWidth / 2) {
-      position = 0;
-    }
-    track.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(animate);
+  if (!track) {
+    console.error('Le container testimonialTrack est introuvable.');
+    return;
   }
 
-  animate();
+  fetch('temoignage.json')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(t => {
+        const item = document.createElement('div');
+        item.className = 'testimonial-item';
+        item.innerHTML = `
+          <p>"${t.texte}"</p>
+          <div class="stars">${'★'.repeat(t.stars)}</div>
+          <span>- ${t.auteur}</span>
+        `;
+        track.appendChild(item);
+      });
+
+      const items = track.querySelectorAll('.testimonial-item');
+      let index = 0;
+
+      function showTestimonial(i) {
+        items.forEach((el, idx) => {
+          el.style.display = idx === i ? 'block' : 'none';
+        });
+      }
+
+      showTestimonial(index);
+
+      setInterval(() => {
+        index = (index + 1) % items.length;
+        showTestimonial(index);
+      }, 4000);
+    })
+    .catch(err => console.error('Erreur chargement JSON:', err));
 });
