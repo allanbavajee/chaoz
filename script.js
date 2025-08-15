@@ -1,18 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.carousel-track');
-  
-  // Dupliquer les éléments pour un défilement infini
-  track.innerHTML += track.innerHTML;
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".testimonial-track");
+  const items = document.querySelectorAll(".testimonial-item");
+  let index = 0;
 
-  let position = 0;
-  function animate() {
-    position -= 0.5; // vitesse
-    if (Math.abs(position) >= track.scrollWidth / 2) {
-      position = 0;
-    }
-    track.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(animate);
-  }
-
-  animate();
+  setInterval(() => {
+    index = (index + 1) % items.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000); // toutes les 4 secondes
 });
+</script>
