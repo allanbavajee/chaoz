@@ -38,17 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // ⭐ Formulaire testimonial + étoiles
   // -------------------------------
   const stars = document.querySelectorAll('#starRating .star');
-  const hiddenInput = document.getElementById('userStars');
+const hiddenInput = document.getElementById('userStars');
 
-  stars.forEach((star, idx) => {
-    star.addEventListener('click', () => {
-      stars.forEach((s, i) => {
-        if(i <= idx) s.classList.add('selected');
-        else s.classList.remove('selected');
-      });
-      hiddenInput.value = idx + 1;
+stars.forEach((star, idx) => {
+  star.addEventListener('click', () => {
+    stars.forEach((s, i) => {
+      s.classList.toggle('selected', i <= idx); // active seulement les étoiles jusqu'à l'index cliqué
     });
+    hiddenInput.value = idx + 1; // enregistre la valeur
   });
+});
+
 
   const form = document.getElementById('testimonialForm');
   form.addEventListener('submit', (e) => {
