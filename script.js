@@ -1,31 +1,39 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const track = document.querySelector(".testimonial-track");
-  if (!track) return console.error("Pas de testimonial-track trouvé");
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('testimonialTrack');
 
-  try {
-    const response = await fetch("temoignages.json");
-    const temoignages = await response.json();
+  // Charger les témoignages depuis JSON
+  fetch('temoignages.json')
+    .then(response => response.json())
+    .then(data => {
+      // Créer les éléments HTML
+      data.forEach(t => {
+        const item = document.createElement('div');
+        item.className = 'testimonial-item';
+        item.innerHTML = `
+          <p>"${t.texte}"</p>
+          <div class="stars">${'★'.repeat(t.stars)}</div>
+          <span>- ${t.auteur}</span>
+        `;
+        track.appendChild(item);
+      });
 
-    temoignages.forEach(t => {
-      const div = document.createElement("div");
-      div.className = "testimonial-item";
-      div.innerHTML = `
-        <p>"${t.texte}"</p>
-        <div class="stars">${'★'.repeat(t.stars)}${'☆'.repeat(5 - t.stars)}</div>
-        <span>- ${t.auteur}</span>
-      `;
-      track.appendChild(div);
-    });
+      const items = track.querySelectorAll('.testimonial-item');
+      let index = 0;
 
-    // carrousel auto
-    let index = 0;
-    const items = document.querySelectorAll(".testimonial-item");
-    setInterval(() => {
-      index = (index + 1) % items.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }, 4000);
+      // Fonction pour afficher un seul témoignage
+      function showTestimonial(i) {
+        items.forEach((el, idx) => {
+          el.style.display = idx === i ? 'block' : 'none';
+        });
+      }
 
-  } catch (err) {
-    console.error("Erreur chargement JSON:", err);
-  }
+      showTestimonial(index);
+
+      // Changer tous les 4 secondes
+      setInterval(() => {
+        index = (index + 1) % items.length;
+        showTestimonial(index);
+      }, 4000);
+    })
+    .catch(err => console.error('Erreur chargement JSON:', err));
 });
