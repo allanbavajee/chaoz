@@ -128,16 +128,25 @@ body {
 }
 
 .testimonial-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+}
+
+.testimonial-list {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 .testimonial-item {
-  flex: 0 0 100%;
-  padding: 20px;
-  text-align: center;
-  font-size: 1rem;
-  color: #555;
+  min-width: 100%;  /* un témoignage à la fois */
+  box-sizing: border-box;
+  padding: 12px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: left;
 }
 
 .stars {
