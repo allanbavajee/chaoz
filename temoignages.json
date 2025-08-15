@@ -1,42 +1,32 @@
 [
   {
-    "name": "Sophie L.",
-    "message": "Les créations de Charlotte sont toujours un vrai délice, à la fois pour les yeux et les papilles.",
-    "stars": 5
+    "texte": "Super gâteaux, un vrai régal !",
+    "stars": 5,
+    "auteur": "Marie"
   },
   {
-    "name": "Marc D.",
-    "message": "Chaque gâteau est une œuvre d’art. On sent l’amour dans chaque bouchée.",
-    "stars": 5
+    "texte": "Service impeccable et délicieux desserts.",
+    "stars": 4,
+    "auteur": "Jean"
   },
   {
-    "name": "Élodie P.",
-    "message": "Jamais déçue, toujours émerveillée. Bravo Charlotte !",
-    "stars": 5
-  },
-  {
-    "name": "Julien M.",
-    "message": "Le cheesecake framboise est juste incroyable, merci !",
-    "stars": 4
+    "texte": "Des créations magnifiques et savoureuses.",
+    "stars": 5,
+    "auteur": "Sophie"
   }
   {
-    "name": "zzzz.",
-    "message": "Les créations de Charlotte sont toujours un vrai délice, à la fois pour les yeux et les papilles.",
-    "stars": 5
+    "texte": "Super gâteaux, un vrai régal !",
+    "stars": 5,
+    "auteur": "Léa"
   },
   {
-    "name": "xxxx.",
-    "message": "Chaque gâteau est une œuvre d’art. On sent l’amour dans chaque bouchée.",
-    "stars": 5
+    "texte": "Service impeccable et délicieux desserts.",
+    "stars": 4,
+    "auteur": "Grâciel"
   },
   {
-    "name": "Éqqqq.",
-    "message": "Jamais déçue, toujours émerveillée. Bravo Charlotte !",
-    "stars": 5
-  },
-  {
-    "name": "vvvv.",
-    "message": "Le cheesecake framboise est juste incroyable, merci !",
-    "stars": 4
+    "texte": "Des créations magnifiques et savoureuses.",
+    "stars": 5,
+    "auteur": "Céleste"
   }
 ]
