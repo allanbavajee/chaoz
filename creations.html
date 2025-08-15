@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ChaOz</title>
+  <title>ChaOz - Creations</title>
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="creations.css">
 </head>
 <body>
 
@@ -20,44 +20,47 @@
     <nav class="menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="creations.html">Creations</a></li>
+        <li><a href="creations.html" class="active">Creations</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
- <!-- GALERIE -->
-  <section class="carousel-row">
-    <div class="carousel-track">
-      <div class="cake-card">
-        <img src="image/creation/1.png" alt="Chocolate Layer Cake">
+  <!-- PORTFOLIO GALLERY -->
+  <section class="portfolio-gallery">
+    <div class="portfolio-item">
+      <img src="image/creation/1.png" alt="Chocolate Layer Cake">
+      <div class="overlay">
         <h3>Chocolate Layer Cake</h3>
         <p>Rich chocolate sponge with creamy ganache.</p>
       </div>
-      <div class="cake-card">
-        <img src="image/creation/2.png" alt="Vanilla Dream">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="image/creation/2.png" alt="Vanilla Dream">
+      <div class="overlay">
         <h3>Vanilla Dream</h3>
         <p>Soft vanilla sponge with fresh cream.</p>
       </div>
-      <div class="cake-card">
-        <img src="image/creation/3.png" alt="Red Velvet">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="image/creation/3.png" alt="Red Velvet">
+      <div class="overlay">
         <h3>Red Velvet</h3>
         <p>Classic red velvet with cream cheese frosting.</p>
       </div>
-      <div class="cake-card">
-        <img src="image/creation/4.png" alt="Fruit Fantasy">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="image/creation/4.png" alt="Fruit Fantasy">
+      <div class="overlay">
         <h3>Fruit Fantasy</h3>
         <p>Layered sponge with seasonal fresh fruits.</p>
-      </div>
-      <div class="cake-card">
-        <img src="image/creation/5.png" alt="Lemon Delight">
-        <h3>Lemon Delight</h3>
-        <p>Refreshing lemon cake with zesty icing.</p>
       </div>
     </div>
   </section>
 
-  <script src="script.js"></script>
 </body>
 </html>
