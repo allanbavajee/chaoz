@@ -231,10 +231,20 @@ body {
 .order-btn:hover {
   background: #a43b62;
 }
+/* Container en 2 colonnes */
+.creations-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Colonne galerie */
 .creations-gallery {
   column-count: 3;
   column-gap: 15px;
-  padding: 20px;
+  width: 100%;
 }
 
 .creations-gallery img {
@@ -245,16 +255,53 @@ body {
   display: block;
 }
 
-@media (max-width: 768px) {
+/* Colonne commande */
+.order-sidebar {
+  flex: 0 0 280px; /* largeur fixe */
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.order-sidebar h3 {
+  margin-top: 0;
+  color: #c94f7c;
+}
+.order-sidebar p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+.order-btn {
+  display: block;
+  text-align: center;
+  background: #c94f7c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.order-btn:hover {
+  background: #a43b62;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .creations-container {
+    flex-direction: column;
+  }
+  .order-sidebar {
+    width: 100%;
+  }
   .creations-gallery {
     column-count: 2;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .creations-gallery {
     column-count: 1;
   }
 }
-
-
