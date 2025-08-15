@@ -68,7 +68,25 @@ body {
   padding:0 18px;
   align-items: flex-start; /* évite que Welcome prenne toute la hauteur */
 }
+/*temp*/
+.intro-header {
+  display: flex;
+  justify-content: space-between; /* Espace entre les deux */
+  align-items: center; /* Aligne verticalement */
+  margin-bottom: 20px;
+}
 
+.latest-creations {
+  font-size: 1.8rem;
+  color: #c94f7c;
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: normal;
+}
+/*temp*/
 /* LEFT COLUMN */
 .latest-recipes { flex:3; } /* Plus large */
 .latest-recipes h2 { text-align:center; font-size:2rem; margin-bottom:20px; color:#000; }
