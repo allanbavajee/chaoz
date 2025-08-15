@@ -46,6 +46,7 @@ main { flex:1; }
 }
 .contact-form h2 { color:#c94f7c; margin-bottom:15px; }
 .contact-form form { display:flex; flex-direction:column; gap:20px; }
+.contact-form .form-group { display:flex; flex-direction:column; gap:5px; }
 .contact-form label { font-weight:500; color:#333; }
 .contact-form input,
 .contact-form textarea { padding:10px; border:1px solid #ccc; border-radius:8px; width:100%; }
