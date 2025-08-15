@@ -26,3 +26,51 @@
       </ul>
     </nav>
   </header>
+
+  <!-- MAIN CONTACT -->
+  <main class="contact-container">
+    
+    <!-- COLONNE GAUCHE : INFOS -->
+    <section class="contact-info">
+      <h2>Contactez-nous</h2>
+      <p><strong>Email :</strong> contact@chaoz.com</p>
+      <p><strong>Téléphone :</strong> +230 123 4567</p>
+      <p><strong>Adresse :</strong> 123 Rue de la Pâtisserie, Port Louis, Mauritius</p>
+      <div class="social-links">
+        <a href="#"><img src="image/icons/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="image/icons/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="image/icons/pinterest.png" alt="Pinterest"></a>
+      </div>
+    </section>
+
+    <!-- COLONNE DROITE : FORMULAIRE -->
+    <section class="contact-form">
+      <h2>Passer une commande ou nous écrire</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="cake-name">Nom du gâteau :</label>
+        <input type="text" id="cake-name" name="cake-name">
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <label for="upload">Upload une photo (optionnel) :</label>
+        <input type="file" id="upload" name="upload" accept="image/*">
+
+        <button type="submit">Envoyer / Commander</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 ChaOz — Crafted with Love</p>
+  </footer>
+
+</body>
+</html>
