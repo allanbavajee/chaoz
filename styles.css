@@ -29,7 +29,8 @@ body {
   font-family: 'Parisienne', cursive;
   font-size: 3.8rem;
   color:#c94f7c;
-  margin:0;
+  margin-top:10x;
+  margin-bottom:10px;
 }
 .site-slogan {
   display: block;
