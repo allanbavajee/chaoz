@@ -1,32 +1,17 @@
 [
   {
-    "texte": "Super gâteaux, un vrai régal !",
-    "stars": 5,
-    "auteur": "Marie"
+    "texte": "Super délicieux, j'adore !",
+    "auteur": "Alice",
+    "stars": 5
   },
   {
-    "texte": "Service impeccable et délicieux desserts.",
-    "stars": 4,
-    "auteur": "Jean"
+    "texte": "Très bon service et gâteau magnifique.",
+    "auteur": "Bob",
+    "stars": 4
   },
   {
-    "texte": "Des créations magnifiques et savoureuses.",
-    "stars": 5,
-    "auteur": "Sophie"
-  }
-  {
-    "texte": "Super gâteaux, un vrai régal !",
-    "stars": 5,
-    "auteur": "Léa"
-  },
-  {
-    "texte": "Service impeccable et délicieux desserts.",
-    "stars": 4,
-    "auteur": "Grâciel"
-  },
-  {
-    "texte": "Des créations magnifiques et savoureuses.",
-    "stars": 5,
-    "auteur": "Céleste"
+    "texte": "Je recommande vivement !",
+    "auteur": "Claire",
+    "stars": 5
   }
 ]
