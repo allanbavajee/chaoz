@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('testimonialTrack');
 
-  // Charger les témoignages depuis JSON
+  if (!track) return console.error('Le container testimonialTrack est introuvable.');
+
   fetch('temoignages.json')
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
-      // Créer les éléments HTML
+      const list = document.createElement('div');
+      list.className = 'testimonial-list';
+
       data.forEach(t => {
         const item = document.createElement('div');
         item.className = 'testimonial-item';
@@ -14,26 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="stars">${'★'.repeat(t.stars)}</div>
           <span>- ${t.auteur}</span>
         `;
-        track.appendChild(item);
+        list.appendChild(item);
       });
 
-      const items = track.querySelectorAll('.testimonial-item');
+      track.appendChild(list);
+
+      const items = list.querySelectorAll('.testimonial-item');
       let index = 0;
 
-      // Fonction pour afficher un seul témoignage
-      function showTestimonial(i) {
-        items.forEach((el, idx) => {
-          el.style.display = idx === i ? 'block' : 'none';
-        });
+      function showNext() {
+        index = (index + 1) % items.length;
+        const offset = -index * track.clientWidth;
+        list.style.transform = `translateX(${offset}px)`;
       }
 
-      showTestimonial(index);
-
-      // Changer tous les 4 secondes
-      setInterval(() => {
-        index = (index + 1) % items.length;
-        showTestimonial(index);
-      }, 4000);
+      // Défiler tous les 4 secondes
+      setInterval(showNext, 4000);
     })
     .catch(err => console.error('Erreur chargement JSON:', err));
 });
