@@ -18,18 +18,19 @@ main { flex:1; }
 /* COLONNE GAUCHE */
 .contact-left {
   display: flex;
-  flex-direction: row;
-  flex:1;
-  gap:20px;
+  flex-direction: row; /* horizontal: infos + réseaux sociaux */
+  flex: 1;
+  gap: 20px;
+  align-items: flex-start; /* <-- ajouter pour que les boîtes ne s'étirent pas */
 }
 
-/* Infos contact */
 .contact-info {
-  flex:1;
+  flex: 1;
   background:#fff;
   padding:25px 20px;
   border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  align-self: flex-start; /* <-- ajouter pour que la boîte garde sa taille naturelle */
 }
 .contact-info h2 { color:#c94f7c; margin-bottom:10px; }
 .contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
