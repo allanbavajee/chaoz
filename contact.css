@@ -18,31 +18,32 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
   margin:40px auto;
   padding:0 20px;
   gap:30px;
+  align-items:flex-start;
 }
 
 /* COLONNE GAUCHE */
 .contact-info {
   flex:1;
   background:#fff;
-  padding:20px;
+  padding:30px 20px;
   border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 .contact-info h2 { color:#c94f7c; margin-bottom:15px; }
 .contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
-.contact-info .social-links { display:flex; gap:15px; margin-top:10px; }
+.contact-info .social-links { display:flex; gap:15px; margin-top:15px; }
 .contact-info .social-links img { width:32px; height:32px; }
 
 /* COLONNE DROITE */
 .contact-form {
   flex:1;
   background:#fff;
-  padding:20px;
+  padding:30px 20px;
   border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 .contact-form h2 { color:#c94f7c; margin-bottom:15px; }
-.contact-form form { display:flex; flex-direction:column; gap:12px; }
+.contact-form form { display:flex; flex-direction:column; gap:15px; }
 .contact-form label { font-weight:500; color:#333; }
 .contact-form input,
 .contact-form textarea { padding:10px; border:1px solid #ccc; border-radius:8px; width:100%; }
@@ -59,4 +60,5 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
 /* RESPONSIVE */
 @media (max-width:992px) {
   .contact-container { flex-direction:column; }
+  .contact-info, .contact-form { width:100%; margin-bottom:20px; }
 }
