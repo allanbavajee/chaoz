@@ -1,15 +1,8 @@
-/* RESET */
 * { margin:0; padding:0; box-sizing:border-box; }
-
-/* BODY */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #fdfdfd;
-  color: #333;
-}
+body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
 
 /* HEADER */
-.header-container { text-align:center; padding: 20px 0; }
+.header-container { text-align:center; padding:20px 0; }
 .header-top { display:flex; align-items:center; justify-content:center; gap:15px; }
 .logo { height:50px; width:auto; }
 .site-title { font-family:'Parisienne', cursive; font-size:3.5rem; color:#c94f7c; }
@@ -18,13 +11,13 @@ body {
 .menu a { text-decoration:none; color:#333; font-weight:500; }
 .menu a:hover { color:#c94f7c; }
 
-/* INTRO TEXT */
+/* INTRO */
 .intro-text { text-align:center; margin:30px auto; max-width:800px; }
 .intro-text h2 { color:#c94f7c; font-size:2rem; margin-bottom:10px; }
 .intro-text p { font-size:1rem; color:#555; }
 
-/* CONTAINER GALERIE + COMMANDE */
-.creations-container {
+/* WRAPPER GALERIE + COMMANDE */
+.creations-wrapper {
   display:flex;
   gap:30px;
   max-width:1200px;
@@ -32,15 +25,16 @@ body {
   padding:0 20px;
 }
 
-/* GALERIE */
+/* GALERIE MASONRY */
 .creations-gallery {
-  column-count:3;
-  column-gap:15px;
-  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  flex:1;
 }
 .cake-card {
   background:#fff;
-  margin-bottom:15px;
   border-radius:12px;
   overflow:hidden;
   text-align:center;
@@ -48,26 +42,16 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .cake-card img {
-  width:100%;
-  height:auto;
   display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
 }
-.cake-card h3 {
-  font-size:1.1rem;
-  margin:10px 0 5px;
-  color:#333;
-}
-.cake-card p {
-  font-size:0.9rem;
-  color:#666;
-  padding:0 10px 15px;
-}
-.cake-card:hover {
-  transform: translateY(-5px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
+.cake-card h3 { font-size:1.1rem; margin:10px 0 5px; color:#333; }
+.cake-card p { font-size:0.9rem; color:#666; padding:0 10px 15px; }
+.cake-card:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
 
-/* PASSER UNE COMMANDE */
+/* ORDER SIDEBAR */
 .order-sidebar {
   flex:0 0 280px;
   background:#fff;
@@ -75,6 +59,8 @@ body {
   border-radius:12px;
   box-shadow:0 4px 12px rgba(0,0,0,0.1);
   height:min-content;
+  position:sticky;
+  top:20px;
 }
 .order-sidebar h3 { color:#c94f7c; margin-bottom:10px; }
 .order-sidebar p { font-size:0.95rem; color:#555; margin-bottom:15px; }
@@ -91,21 +77,12 @@ body {
 .order-btn:hover { background:#a43b62; }
 
 /* FOOTER */
-footer {
-  text-align:center;
-  padding:20px 0;
-  color:#777;
-  border-top:1px solid rgba(0,0,0,0.1);
-}
+footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgba(0,0,0,0.1); }
 .social-links { display:flex; gap:15px; justify-content:center; margin:10px 0; }
 .social-links img { width:32px; height:32px; }
 
 /* RESPONSIVE */
 @media (max-width:992px) {
-  .creations-container { flex-direction:column; }
-  .order-sidebar { width:100%; margin-bottom:20px; }
-  .creations-gallery { column-count:2; }
-}
-@media (max-width:600px) {
-  .creations-gallery { column-count:1; }
+  .creations-wrapper { flex-direction:column; }
+  .order-sidebar { width:100%; margin-bottom:20px; position:relative; top:auto; }
 }
