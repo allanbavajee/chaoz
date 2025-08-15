@@ -62,4 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Ajouter le titre client-friendly au-dessus du formulaire
-  const formContainer = document.querySelec
+  const formContainer = document.querySelector('.testimonial-form');
+  const header = document.createElement('h4');
+  header.textContent = 'Share your feedback';
+  header.style.color = '#ff6f61';
+  header.style.fontSize = '1.15rem';
+  header.style.marginBottom = '10px';
+  formContainer.parentNode.insertBefore(header, formContainer);
+
+}); // <-- fermeture correcte du DOMContentLoaded
