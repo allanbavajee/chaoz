@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const track = document.querySelector(".testimonial-track");
 
   // Charger le JSON
-  const response = await fetch("temoignage.json");
+  const response = await fetch("temoignages.json");
   const temoignages = await response.json();
 
   // Créer les éléments HTML
