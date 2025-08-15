@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // -------------------------------
-  // ⭐ Témoignages carousel (gauche → droite)
+  // ⭐ Témoignages carousel (glissement gauche → droite)
   // -------------------------------
   const testimonialTrack = document.getElementById('testimonialTrack');
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       data.forEach(t => {
         const div = document.createElement('div');
         div.className = 'testimonial-item';
-        div.style.textAlign = 'center'; // centrer le texte
+        div.style.textAlign = 'center';
         div.innerHTML = `
           <p>"${t.texte}"</p>
           <div class="stars">${'★'.repeat(t.stars)}</div>
@@ -20,17 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
         testimonialTrack.appendChild(div);
       });
 
-      // Affichage 1 à 1, de gauche vers la droite
-      let current = data.length - 1; // commencer à la fin pour faire gauche→droite
-      const items = testimonialTrack.children;
-      Array.from(items).forEach(item => item.style.display = 'none');
-      if (items.length > 0) items[current].style.display = 'block';
+      const items = Array.from(testimonialTrack.children);
+      let current = 0;
+      const total = items.length;
+
+      // initialisation
+      items.forEach((item, idx) => {
+        item.style.position = 'absolute';
+        item.style.left = '0';
+        item.style.top = '0';
+        item.style.width = '100%';
+        item.style.transition = 'transform 0.8s ease';
+        item.style.transform = 'translateX(100%)'; // hors de l'écran à droite
+      });
+      if (items[0]) items[0].style.transform = 'translateX(0)';
 
       setInterval(() => {
-        items[current].style.display = 'none';
-        current = (current - 1 + items.length) % items.length; // décrémenter pour gauche→droite
-        items[current].style.display = 'block';
-      }, 4000); // 4 secondes par témoignage
+        const prev = current;
+        current = (current + 1) % total;
+        items[prev].style.transform = 'translateX(-100%)'; // sort à gauche
+        items[current].style.transform = 'translateX(0)';   // entre
+        // Reset celui d’avant pour prochaine boucle
+        setTimeout(() => {
+          items[prev].style.transform = 'translateX(100%)'; 
+        }, 800);
+      }, 4000);
 
     })
     .catch(err => console.error('Erreur chargement JSON:', err));
@@ -43,10 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   stars.forEach((star, idx) => {
     star.addEventListener('click', () => {
-      stars.forEach(s => s.classList.remove('selected'));
-      for (let i = 0; i <= idx; i++) { // remplit de gauche à droite
-        stars[i].classList.add('selected');
-      }
+      stars.forEach((s, i) => {
+        if (i <= idx) s.classList.add('selected');
+        else s.classList.remove('selected');
+      });
       hiddenInput.value = idx + 1;
     });
   });
@@ -57,13 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     alert(`Thanks for your feedback, ${document.getElementById('userName').value}!`);
     form.reset();
     stars.forEach(s => s.classList.remove('selected'));
-    hiddenInput.value = 5; // valeur par défaut
+    hiddenInput.value = 5;
   });
 
-  // Ajouter le titre client-friendly au-dessus du formulaire
+  // Ajouter le titre au-dessus du formulaire
   const formContainer = document.querySelector('.testimonial-form');
   const header = document.createElement('h4');
-  header.textContent = 'Tell us what you think';
+  header.textContent = 'Share your feedback';
   header.style.color = '#ff6f61';
   header.style.fontSize = '1.15rem';
   header.style.marginBottom = '10px';
