@@ -48,7 +48,7 @@ main { flex:1; }
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 .social-section h3 { color:#c94f7c; margin-bottom:10px; text-align:center; }
-.social-links { display:flex; flex-direction:column; gap:15px; }
+.social-links { display:flex; flex-direction:row; gap:15px; justify-content: center;}
 .social-links img { width:32px; height:32px; }
 
 /* COLONNE DROITE */
