@@ -1,27 +1,29 @@
+/* ==== Créations Page Gallery ==== */
 .creations-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 40px;
-  background-color: #fff;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 20px !important;
+  padding: 40px !important;
+  box-sizing: border-box;
 }
 
 .cake-card {
-  background: #fafafa;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cake-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
 .cake-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 10px 0 5px;
   color: #333;
 }
@@ -29,10 +31,10 @@
 .cake-card p {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 15px;
+  padding: 0 10px 15px;
 }
 
 .cake-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
