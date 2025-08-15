@@ -103,7 +103,7 @@ body {
 
 /* RIGHT COLUMN */
 .welcome-box { flex:1; display:flex; flex-direction:column; align-items:center; gap:15px; margin-top: 20px; text-align:center;max-width: 380px;min-width: 300px }
-.welcome-box h3 { font-family: 'Dancing Script', cursive; margin:0; font-size:1.8rem; }
+.welcome-box h3 { margin-bottom: 20; margin:0; font-size:1.8rem; }
 .chef-photo { width:140px; height:auto; border-radius:8px; }
 
 /* SOCIAL LINKS */
