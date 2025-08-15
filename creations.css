@@ -38,3 +38,49 @@
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+/* ==== CAROUSEL ==== */
+.carousel-row {
+  overflow: hidden;
+  padding: 40px 0;
+  background: #fafafa;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.cake-card {
+  min-width: 250px;
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cake-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.cake-card p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 10px 15px;
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
