@@ -24,17 +24,22 @@ main { flex:1; }
 }
 
 /* COLONNE GAUCHE */
-.contact-info {
+.contact-left {
   flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.contact-info, .social-links {
   background:#fff;
-  padding:30px 20px;
+  padding:20px;
   border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
-.contact-info h2 { color:#c94f7c; margin-bottom:15px; }
+.contact-info h2, .social-links h2 { color:#c94f7c; margin-bottom:10px; }
 .contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
-.contact-info .social-links { display:flex; gap:15px; margin-top:20px; }
-.contact-info .social-links img { width:32px; height:32px; }
+.social-links a { display:inline-block; margin-right:10px; }
+.social-links img { width:32px; height:32px; }
 
 /* COLONNE DROITE */
 .contact-form {
@@ -45,7 +50,7 @@ main { flex:1; }
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 .contact-form h2 { color:#c94f7c; margin-bottom:15px; }
-.contact-form form { display:flex; flex-direction:column; gap:20px; }
+.contact-form form { display:flex; flex-direction:column; gap:15px; }
 .contact-form .form-group { display:flex; flex-direction:column; gap:5px; }
 .contact-form label { font-weight:500; color:#333; }
 .contact-form input,
@@ -64,5 +69,5 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
 /* ==== RESPONSIVE ==== */
 @media (max-width:992px) {
   .contact-container { flex-direction:column; }
-  .contact-info, .contact-form { width:100%; margin-bottom:20px; }
+  .contact-left, .contact-form { width:100%; }
 }
