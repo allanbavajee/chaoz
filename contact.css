@@ -16,26 +16,27 @@ main { flex:1; }
 .contact-container { display:flex; max-width:1200px; margin:40px auto; padding:0 20px; gap:30px; align-items:flex-start; }
 
 /* COLONNE GAUCHE */
-display: flex;
-  flex-direction: row; /* horizontal: infos + réseaux sociaux */
-  flex: 1;
-  gap: 20px;
-  align-items: flex-start; /* <-- ajouter pour que les boîtes ne s'étirent pas */
+.contact-left {
+  display: flex;
+  flex-direction: row;
+  flex:1;
+  gap:20px;
 }
 
+/* Infos contact */
 .contact-info {
-  flex: 1;
+  flex:1;
   background:#fff;
   padding:25px 20px;
   border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
-  align-self: flex-start; /* <-- ajouter pour que la boîte garde sa taille naturelle */
 }
 .contact-info h2 { color:#c94f7c; margin-bottom:10px; }
 .contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
 
+/* Réseaux sociaux à droite de la colonne infos */
 .social-section {
-  width:120px; /* largeur fixe */
+  width:120px;
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
@@ -45,7 +46,6 @@ display: flex;
   border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
-
 .social-section h3 { color:#c94f7c; margin-bottom:10px; text-align:center; }
 .social-links { display:flex; flex-direction:column; gap:15px; }
 .social-links img { width:32px; height:32px; }
@@ -58,7 +58,6 @@ display: flex;
   border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
-
 .contact-form h2 { color:#c94f7c; margin-bottom:15px; }
 .contact-form form { display:flex; flex-direction:column; gap:15px; }
 .contact-form .form-group { display:flex; flex-direction:column; gap:5px; }
