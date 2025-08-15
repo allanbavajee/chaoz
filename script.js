@@ -1,38 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const track = document.getElementById('testimonialTrack');
+  // ⭐ Gestion des étoiles
+  const stars = document.querySelectorAll('#starRating .star');
+  const hiddenInput = document.getElementById('userStars');
 
-  if (!track) return console.error('Le container testimonialTrack est introuvable.');
+  stars.forEach((star, idx) => {
+    star.addEventListener('click', () => {
+      // Réinitialiser toutes les étoiles
+      stars.forEach(s => s.classList.remove('selected'));
 
-  fetch('temoignages.json')
-    .then(res => res.json())
-    .then(data => {
-      const list = document.createElement('div');
-      list.className = 'testimonial-list';
-
-      data.forEach(t => {
-        const item = document.createElement('div');
-        item.className = 'testimonial-item';
-        item.innerHTML = `
-          <p>"${t.texte}"</p>
-          <div class="stars">${'★'.repeat(t.stars)}</div>
-          <span>- ${t.auteur}</span>
-        `;
-        list.appendChild(item);
-      });
-
-      track.appendChild(list);
-
-      const items = list.querySelectorAll('.testimonial-item');
-      let index = items.length - 1;
-
-      function showNext() {
-        index = (index + 1) % items.length;
-        const offset = -index * track.clientWidth;
-        list.style.transform = `translateX(${offset}px)`;
+      // Sélectionner les étoiles de gauche jusqu'à celle cliquée
+      for (let i = 0; i <= idx; i++) {
+        stars[i].classList.add('selected');
       }
 
-      // Défiler tous les 4 secondes
-      setInterval(showNext, 4000);
-    })
-    .catch(err => console.error('Erreur chargement JSON:', err));
+      // Mettre à jour la valeur cachée
+      hiddenInput.value = idx + 1;
+    });
+  });
+
+  // 📄 Gestion du formulaire testimonial
+  const form = document.getElementById('testimonialForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert(`Thanks for your feedback, ${document.getElementById('userName').value}!`);
+    form.reset();
+    // Réinitialiser les étoiles
+    stars.forEach(s => s.classList.remove('selected'));
+    hiddenInput.value = 5; // Valeur par défaut
+  });
+
+  // 🌟 Texte client-friendly
+  document.querySelector('.testimonial-form').insertAdjacentHTML(
+    'beforebegin',
+    '<h4 class="testimonial-header">Share your feedback</h4>'
+  );
 });
