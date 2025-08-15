@@ -146,13 +146,11 @@ body {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  text-align: left;
+  text-align: center;
 }
-
-.stars {
-  margin-top: 8px;
-  color: gold;
-  font-size: 1.2rem;
+.testimonial-item .stars {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
 }
 
 .testimonial-item p { font-style:italic; color:#444; margin-bottom:8px; }
