@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // -------------------------------
-  // ⭐ Témoignages carousel
+  // ⭐ Témoignages carousel (gauche → droite)
   // -------------------------------
   const testimonialTrack = document.getElementById('testimonialTrack');
 
-  // Charger les témoignages depuis le fichier JSON
   fetch('temoignages.json')
     .then(response => response.json())
     .then(data => {
@@ -21,23 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
         testimonialTrack.appendChild(div);
       });
 
-      // Défilement automatique 1 à 1
-      let current = 0;
+      // Affichage 1 à 1, de gauche vers la droite
+      let current = data.length - 1; // commencer à la fin pour faire gauche→droite
       const items = testimonialTrack.children;
       Array.from(items).forEach(item => item.style.display = 'none');
-      if(items.length > 0) items[0].style.display = 'block';
+      if (items.length > 0) items[current].style.display = 'block';
 
       setInterval(() => {
         items[current].style.display = 'none';
-        current = (current + 1) % items.length;
+        current = (current - 1 + items.length) % items.length; // décrémenter pour gauche→droite
         items[current].style.display = 'block';
-      }, 4000); // 4s par témoignage
+      }, 4000); // 4 secondes par témoignage
 
     })
     .catch(err => console.error('Erreur chargement JSON:', err));
 
   // -------------------------------
-  // ⭐ Formulaire testimonial
+  // ⭐ Formulaire testimonial + étoiles
   // -------------------------------
   const stars = document.querySelectorAll('#starRating .star');
   const hiddenInput = document.getElementById('userStars');
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   stars.forEach((star, idx) => {
     star.addEventListener('click', () => {
       stars.forEach(s => s.classList.remove('selected'));
-      for (let i = 0; i <= idx; i++) {
+      for (let i = 0; i <= idx; i++) { // remplit de gauche à droite
         stars[i].classList.add('selected');
       }
       hiddenInput.value = idx + 1;
@@ -70,4 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
   header.style.marginBottom = '10px';
   formContainer.parentNode.insertBefore(header, formContainer);
 
-}); // <-- fermeture correcte du DOMContentLoaded
+});
