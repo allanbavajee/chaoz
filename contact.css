@@ -1,7 +1,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; }
 
-/* HEADER */
+/*  HEADER  */
 .header-container { text-align:center; padding:20px 0; }
 .header-top { display:flex; align-items:center; justify-content:center; gap:15px; }
 .logo { height:50px; width:auto; }
