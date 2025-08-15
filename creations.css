@@ -198,4 +198,63 @@ body {
 .footer-section .order-link a:hover {
   background: #a43b62;
 }
+.order-sidebar {
+  position: fixed;
+  right: 20px;
+  top: 150px;
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.order-sidebar h3 {
+  margin-top: 0;
+  color: #c94f7c;
+}
+.order-sidebar p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+.order-btn {
+  display: block;
+  text-align: center;
+  background: #c94f7c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.order-btn:hover {
+  background: #a43b62;
+}
+.creations-gallery {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 20px;
+}
+
+.creations-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .creations-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .creations-gallery {
+    column-count: 1;
+  }
+}
+
 
