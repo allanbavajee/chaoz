@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
-  let position = 0;
-
-  // Dupliquer les items pour un effet infini
+  
+  // Dupliquer les éléments pour un défilement infini
   track.innerHTML += track.innerHTML;
 
+  let position = 0;
   function animate() {
-    position += 0.5; // vitesse
-    if (position >= track.scrollWidth / 2) {
+    position -= 0.5; // vitesse
+    if (Math.abs(position) >= track.scrollWidth / 2) {
       position = 0;
     }
-    track.style.transform = `translateX(${-position}px)`;
+    track.style.transform = `translateX(${position}px)`;
     requestAnimationFrame(animate);
   }
 
