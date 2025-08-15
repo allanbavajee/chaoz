@@ -46,13 +46,14 @@
 }
 
 .carousel-track {
-  display: flex;
+  display: flex !important; /* FORCE la ligne horizontale */
+  flex-wrap: nowrap !important; /* Empêche de passer à la ligne */
   gap: 20px;
 }
 
 .cake-card {
-  min-width: 250px;
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* Empêche de s'étirer */
+  width: 250px;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -66,21 +67,3 @@
   height: auto;
   display: block;
 }
-
-.cake-card h3 {
-  font-size: 1.1rem;
-  margin: 10px 0 5px;
-  color: #333;
-}
-
-.cake-card p {
-  font-size: 0.9rem;
-  color: #666;
-  padding: 0 10px 15px;
-}
-
-.cake-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
