@@ -3,14 +3,52 @@ body { font-family: 'Poppins', sans-serif; background:#fdfdfd; color:#333; displ
 main { flex:1; }
 
 /* HEADER */
-.header-container { text-align:center; padding:20px 0; }
-.header-top { display:flex; align-items:center; justify-content:center; gap:15px; }
-.logo { height:50px; width:auto; }
-.site-title { font-family:'Parisienne', cursive; font-size:3.5rem; color:#c94f7c; }
-.site-slogan { font-family:'Dancing Script', cursive; font-size:1.4rem; color:#555; margin-top:6px; }
-.menu ul { display:inline-flex; list-style:none; gap:25px; padding:10px 0; border-top:1px solid rgba(0,0,0,0.12); border-bottom:1px solid rgba(0,0,0,0.12); }
-.menu a { text-decoration:none; color:#333; font-weight:500; }
-.menu a:hover { color:#c94f7c; }
+.header-container { 
+  width:100%; 
+  text-align:center;
+  margin-bottom: 20px;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 14px 20px;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
+.site-title {
+  font-family: 'Parisienne', cursive;
+  font-size: 3.8rem;
+  color:#c94f7c;
+  margin:0;
+}
+.site-slogan {
+  display: block;
+  text-align:center;
+  font-family: 'Dancing Script', cursive;
+  font-size:1.8rem;
+  color:#000;
+  margin:10px 0 20px 0;
+}
+
+/* MENU */
+.menu { text-align:center; margin-top:8px; }
+.menu ul {
+  display:inline-flex;
+  list-style:none;
+  gap:28px;
+  padding:10px 0;
+  width:420px;
+  justify-content:center;
+  border-top:1px solid rgba(0,0,0,0.12);
+  border-bottom:1px solid rgba(0,0,0,0.12);
+  margin:0 auto;
+}
+.menu a { text-decoration:none; color:#333; font-weight:400; }
+.menu a:hover { color:#ff6f61; }
 
 /* CONTACT */
 .contact-container { display:flex; max-width:1200px; margin:40px auto; padding:0 20px; gap:30px; align-items:flex-start; }
