@@ -46,10 +46,12 @@
     
    
   <!-- COLONNE DROITE -->
-  <!-- FORMULAIRE -->
+
 <section class="contact-form">
   <h2>Place an order or write to us</h2>
-  <form id="cakeForm" action="https://formspree.io/f/mpwlkere" method="POST" enctype="multipart/form-data">
+  
+  <!-- Formulaire classique -->
+  <form id="cakeForm" action="https://formspree.io/f/mpwlkere" method="POST">
     
     <div class="form-group">
       <label for="name">Your Name :</label>
@@ -76,24 +78,30 @@
       <textarea id="message" name="message" rows="5"></textarea>
     </div>
 
-    <div class="form-group">     
-      <label for="upload">Upload a photo of your cake idea, and let us make it a reality (optional)</label>
-       <input type="file" id="upload" name="upload" accept="image/*">
-      <a href="https://wa.me/23059732188?text=Hello%20ChaOz%20🎂%2C%20here%20is%20my%20cake%20idea%20photo%20📷" 
-     target="_blank" 
-     style="display:inline-block; background:#25D366; color:#fff; padding:10px 15px; border-radius:8px; text-decoration:none; font-weight:bold;">
-     📲 Send Photo via WhatsApp
-  </a>
-    </div>
-
     <button type="submit">Send / Order</button>
   </form>
 
-  <!-- Message de remerciement caché -->
-  <p id="thankyouMessage" style="display:none; color:green; font-weight:bold; margin-top:15px;">
+  <!-- Message de remerciement -->
+  <p id="thankyouMessage" style="display:none; color:green; font-weight:bold; margin-top:15px; text-align:center;">
     Thank you for your order! We’ll get back to you very soon.
   </p>
+
+  <!-- Séparateur -->
+  <hr style="margin:25px 0; border:0; border-top:1px solid #ddd;">
+
+  <!-- Section WhatsApp upload -->
+  <div class="whatsapp-upload" style="text-align:center;">
+    <label for="upload"><strong>Upload a photo of your cake idea (optional):</strong></label><br>
+    <input type="file" id="upload" name="upload" accept="image/*" style="margin:10px 0;">
+    <br>
+    <a href="https://wa.me/23059732188?text=Hello%20ChaOz%20🎂%2C%20here%20is%20my%20cake%20idea%20photo%20📷" 
+       target="_blank" 
+       style="display:inline-block; background:#25D366; color:#fff; padding:10px 15px; border-radius:8px; text-decoration:none; font-weight:bold;">
+       📲 Send Photo via WhatsApp
+    </a>
+  </div>
 </section>
+
 
 <!-- SCRIPT -->
 <script>
