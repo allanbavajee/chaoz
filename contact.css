@@ -80,6 +80,7 @@ main { flex:1; }
 /* espace entre le bloc infos et l’image */
 .contact-info{
   margin-bottom:16px;
+  margin-top: 30px
 }
 
 /* image responsive, centrée si plus petite */
