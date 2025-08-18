@@ -82,7 +82,7 @@
           <input id="userEmail" type="email" placeholder="Your Email" required>
           <textarea id="userMessage" placeholder="Your Testimonial" required></textarea>
 
-          <div class="star-ratin" id="starRatin">            
+          <div class="star-rating" id="starRating">            
             <button type="button" class="star" data-value="1">★</button>
             <button type="button" class="star" data-value="2">★</button>
             <button type="button" class="star" data-value="3">★</button>
@@ -90,28 +90,7 @@
             <button type="button" class="star" data-value="5">★</button>
             <input type="hidden" id="userStars" value="5">
           </div>
-          <script>
-    const stars = document.querySelectorAll('#starRating .star');
-    const hiddenInput = document.getElementById('userStars');
-
-    stars.forEach(star => {
-      star.addEventListener('click', () => {
-        const value = parseInt(star.dataset.value, 10);
-
-        // activer seulement jusqu'à la valeur choisie
-        stars.forEach(s => {
-          if (parseInt(s.dataset.value, 10) <= value) {
-            s.classList.add('selected');
-          } else {
-            s.classList.remove('selected');
-          }
-        });
-
-        hiddenInput.value = value;
-      });
-    });
-  </script>
-
+          
           <button type="submit" id="submitTestimonial">Send</button>
         </form>
       </div>
