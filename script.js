@@ -33,14 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // ⭐ Formulaire testimonial + étoiles
   // -------------------------------
   const stars = document.querySelectorAll('#starRating .star');
-  const hiddenInput = document.getElementById('userStars');
+const hiddenInput = document.getElementById('userStars');
 
-  stars.forEach((star, idx) => {
-    star.addEventListener('click', () => {
-      stars.forEach((s,i) => s.classList.toggle('selected', i >= idx));
-      hiddenInput.value = idx + 1;
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    const value = parseInt(star.getAttribute('data-value')); // ex: 3
+
+    // activer/désactiver les étoiles
+    stars.forEach(s => {
+      const sValue = parseInt(s.getAttribute('data-value'));
+      s.classList.toggle('selected', sValue <= value);
     });
+
+    // mettre la valeur choisie dans le hidden input
+    hiddenInput.value = value;
   });
+});
 
   const form = document.getElementById('testimonialForm');
   form.addEventListener('submit', e => {
