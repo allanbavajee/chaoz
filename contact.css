@@ -62,8 +62,8 @@ main { flex:1; }
 }
 
 /* chaque colonne prend 1/2, s’adapte proprement */
-.contact-left h2,
-.contact-form h2 {
+.contact-left,
+.contact-form {
   margin: 0 0 15px 0; /* même espacement en bas */
   padding: 0;
   font-size: 1.8rem;  /* même taille si tu veux uniformiser */
