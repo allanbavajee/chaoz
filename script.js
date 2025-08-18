@@ -1,56 +1,195 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const testimonialTrack = document.getElementById("testimonialTrack");
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  // Charger les témoignages depuis le fichier JSON
-  fetch("temoignages.json")
-    .then(response => {
-      if (!response.ok) throw new Error("Erreur de chargement des témoignages");
-      return response.json();
-    })
-    .then(data => {
-      if (Array.isArray(data)) {
-        data.forEach(t => {
-          const card = document.createElement("div");
-          card.classList.add("testimonial-card");
+/* FONTS + BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #333;
+}
 
-          card.innerHTML = `
-            <p class="testimonial-message">"${t.message}"</p>
-            <p class="testimonial-name">— ${t.name}</p>
-            <p class="testimonial-stars">${"★".repeat(t.stars)}</p>
-          `;
+/* HEADER: logo + title on same line, slogan below and centered */
+.header-container { 
+  width:100%; 
+  text-align:center;
+  margin-bottom: 20px;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 14px 20px;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
+.site-title {
+  font-family: 'Parisienne', cursive;
+  font-size: 3.8rem;
+  color:#c94f7c;
+  margin:0;
+}
+.site-slogan {
+  display: block;
+  text-align:center;
+  font-family: 'Dancing Script', cursive;
+  font-size:1.8rem;
+  color:#000;
+  margin:10px 0 20px 0;
+}
 
-          testimonialTrack.appendChild(card);
-        });
-      } else {
-        testimonialTrack.innerHTML = "<p>Aucun témoignage trouvé.</p>";
-      }
-    })
-    .catch(err => {
-      console.error("Erreur:", err);
-      testimonialTrack.innerHTML = "<p>Impossible de charger les témoignages.</p>";
-    });
-});
+/* MENU */
+.menu { text-align:center; margin-top:8px; }
+.menu ul {
+  display:inline-flex;
+  list-style:none;
+  gap:28px;
+  padding:10px 0;
+  width:420px;
+  justify-content:center;
+  border-top:1px solid rgba(0,0,0,0.12);
+  border-bottom:1px solid rgba(0,0,0,0.12);
+  margin:0 auto;
+}
+.menu a { text-decoration:none; color:#333; font-weight:400; }
+.menu a:hover { color:#ff6f61; }
 
+/* MAIN LAYOUT */
+.main-content {
+  display:flex;
+  flex-direction: row;
+  gap:30px;
+  max-width:1200px;
+  margin:36px auto;
+  padding:0 18px;
+  align-items: flex-start;
+}
 
-  // -------------------------------
-  // ⭐ Formulaire testimonial + étoiles
-  // -------------------------------
-  const stars = document.querySelectorAll('#starRating .star');
-  const hiddenInput = document.getElementById('userStars');
+/* LEFT COLUMN */
+.latest-recipes { flex:3; }
+.latest-recipes h2 { text-align:center; font-size:2rem; margin-bottom:20px; color:#000; }
+.big-image.side-by-side { display:flex; gap:18px; margin-bottom:24px; }
+.big-image-block { flex:1; display:flex; flex-direction:column; align-items:center; }
+.big-image-block img { width:100%; height:auto; border-radius:10px; }
+.image-desc { margin-top:6px; font-size:0.95rem; color:#555; text-align:center; }
 
-  stars.forEach((star, idx) => {
-    star.addEventListener('click', () => {
-      stars.forEach((s,i) => s.classList.toggle('selected', i <= idx));
-      hiddenInput.value = idx + 1;
-    });
-  });
+/* small images */
+.small-images { display:flex; flex-wrap:wrap; gap:10px; }
+.image-block { width:calc(25% - 7.5px); display:flex; flex-direction:column; align-items:center; }
+.image-block img { width:100%; border-radius:10px; }
 
-  const form = document.getElementById('testimonialForm');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    alert(`Thanks for your feedback, ${document.getElementById('userName').value}!`);
-    form.reset();
-    stars.forEach(s => s.classList.remove('selected'));
-    hiddenInput.value = 5;
-  });
-});
+/* RIGHT COLUMN */
+.welcome-box { 
+  flex:1; 
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  gap:15px; 
+  margin-top: -10px; 
+  text-align:center;
+  max-width: 380px;
+  min-width: 300px;
+}
+.welcome-box h3 { 
+  margin:0; 
+  font-family: 'Pacifico', cursive; 
+  font-size:1.8rem;
+  font-weight: 400; 
+}
+.chef-photo { width:140px; height:auto; border-radius:8px; }
+
+/* SOCIAL LINKS */
+.social-links { display:flex; gap:12px; justify-content:center; margin-top:20px; }
+.social-links img { width:32px; height:32px; }
+
+/* TESTIMONIALS */
+.testimonials { 
+  margin-top:30px; /* descendre légèrement la section */
+  width:100%; 
+}
+.testimonials h4 { color:#ff6f61; font-size:1.15rem; margin-bottom:10px; }
+
+/* Track container */
+.testimonial-track {
+  position: relative;
+  overflow: hidden;
+  width:100%;
+  height:120px;
+  margin-bottom:15px;
+}
+
+/* Témoignages items */
+.testimonial-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+  font-style: normal;
+  opacity: 0;
+  color: #444;
+  font-size:1.5rem
+  transition: opacity 0.6s ease;
+}
+.testimonial-item.active { opacity:1; }
+.testimonial-item .stars {
+  color: gold;
+  margin-bottom:6px;
+  font-size:1.05rem;
+}
+.testimonial-item p { font-style:italic; margin-bottom:8px; }
+.testimonial-item span { display:block; color:#666; font-size:0.9rem; }
+
+/* FORM */
+.testimonial-form { 
+  margin-top:20px; /* descendre le formulaire un peu */
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  gap:8px; 
+}
+.testimonial-form input, .testimonial-form textarea {
+  width:92%;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #ddd;
+}
+.testimonial-form textarea { min-height:80px; resize:vertical; }
+#submitTestimonial { 
+  padding:8px 14px; 
+  border-radius:6px; 
+  border:none; 
+  background:#ff6f61; 
+  color:#fff; 
+  cursor:pointer; 
+}
+
+/* STAR RATING UI */
+.star-rating { display:flex; gap:6px; justify-content:center; margin-top:6px; }
+.star-rating .star {
+  background:transparent;
+  border:none;
+  font-size:26px;
+  color:lightgray;
+  cursor:pointer;
+  padding:2px 4px;
+}
+.star-rating .star.selected,
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+  color:gold;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .main-content { flex-direction:column; gap:20px; padding:0 12px; }
+  .image-block { width:calc(50% - 5px); }
+  .site-title { font-size:2.6rem; }
+  .chef-photo { width:120px; }
+}
+
+/* FOOTER */
+footer { text-align:center; padding:18px 0; color:#777; border-top:1px solid rgba(0,0,0,0.04); margin-top:30px; }
