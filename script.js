@@ -1,33 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // -------------------------------
-  // ⭐ Témoignages carousel (gauche → droite)
-  // -------------------------------
-  const testimonialTrack = document.getElementById('testimonialTrack');
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonialTrack = document.getElementById("testimonialTrack");
 
-  fetch('temoignages.json')
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(t => {
-        const div = document.createElement('div');
-        div.className = 'testimonial-item';
-        div.innerHTML = `<p>"${t.texte}"</p><div class="stars">${'★'.repeat(t.stars)}</div><span>- ${t.auteur}</span>`;
-        testimonialTrack.appendChild(div);
-      });
-
-      const items = Array.from(testimonialTrack.children);
-      let current = 0;
-
-      // initialisation
-      items.forEach((item,i) => item.style.opacity = 0);
-      if(items[0]) items[0].style.opacity = 1;
-
-      setInterval(() => {
-        items[current].style.opacity = 0;
-        current = (current + 1) % items.length;
-        items[current].style.opacity = 1;
-      }, 4000);
+  // Charger les témoignages depuis le fichier JSON
+  fetch("temoignages.json")
+    .then(response => {
+      if (!response.ok) throw new Error("Erreur de chargement des témoignages");
+      return response.json();
     })
-    .catch(err => console.error(err));
+    .then(data => {
+      if (Array.isArray(data)) {
+        data.forEach(t => {
+          const card = document.createElement("div");
+          card.classList.add("testimonial-card");
+
+          card.innerHTML = `
+            <p class="testimonial-message">"${t.message}"</p>
+            <p class="testimonial-name">— ${t.name}</p>
+            <p class="testimonial-stars">${"★".repeat(t.stars)}</p>
+          `;
+
+          testimonialTrack.appendChild(card);
+        });
+      } else {
+        testimonialTrack.innerHTML = "<p>Aucun témoignage trouvé.</p>";
+      }
+    })
+    .catch(err => {
+      console.error("Erreur:", err);
+      testimonialTrack.innerHTML = "<p>Impossible de charger les témoignages.</p>";
+    });
+});
+
 
   // -------------------------------
   // ⭐ Formulaire testimonial + étoiles
