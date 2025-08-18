@@ -35,20 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const stars = document.querySelectorAll('#starRating .star');
 const hiddenInput = document.getElementById('userStars');
 
+const stars = document.querySelectorAll('#starRating .star');
+const hiddenInput = document.getElementById('userStars');
+
 stars.forEach(star => {
   star.addEventListener('click', () => {
-    const value = parseInt(star.getAttribute('data-value')); // ex: 3
+    const value = parseInt(star.dataset.value, 10); // récupère la valeur cliquée (1 à 5)
 
-    // activer/désactiver les étoiles
+    // mettre à jour l'affichage
     stars.forEach(s => {
-      const sValue = parseInt(s.getAttribute('data-value'));
-      s.classList.toggle('selected', sValue <= value);
+      s.classList.toggle('selected', parseInt(s.dataset.value, 10) <= value);
     });
 
-    // mettre la valeur choisie dans le hidden input
+    // mettre la valeur dans l'input hidden
     hiddenInput.value = value;
   });
 });
+
+
 
   const form = document.getElementById('testimonialForm');
   form.addEventListener('submit', e => {
