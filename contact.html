@@ -46,9 +46,10 @@
     
    
   <!-- COLONNE DROITE -->
-  <section class="contact-form">
-    <h2>Place an order or write to us</h2>
-   <form action="https://formspree.io/f/mpwlkere" method="POST" enctype="multipart/form-data">
+  <!-- FORMULAIRE -->
+<section class="contact-form">
+  <h2>Place an order or write to us</h2>
+  <form id="cakeForm" action="https://formspree.io/f/mpwlkere" method="POST" enctype="multipart/form-data">
     
     <div class="form-group">
       <label for="name">Your Name :</label>
@@ -82,19 +83,21 @@
 
     <button type="submit">Send / Order</button>
   </form>
-    <!-- Message de confirmation -->
-  <p id="formSuccess" style="display:none; margin-top:15px; color:#c94f7c; font-weight:bold;">
-    Thank you! See you soon 🙂
+
+  <!-- Message de remerciement caché -->
+  <p id="thankyouMessage" style="display:none; color:green; font-weight:bold; margin-top:15px;">
+    🎉 Thank you for your order! We’ll get back to you very soon. 💌
   </p>
 </section>
-  <script>
-  // Formspree success message without leaving the page
-  const form = document.getElementById('orderForm');
-  const successMsg = document.getElementById('formSuccess');
 
-  form.addEventListener('submit', async function(event) {
-    event.preventDefault();
-    
+<!-- SCRIPT -->
+<script>
+  const form = document.getElementById("cakeForm");
+  const thankyouMessage = document.getElementById("thankyouMessage");
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault(); // Empêche le rechargement
+
     const formData = new FormData(form);
 
     try {
@@ -105,13 +108,13 @@
       });
 
       if (response.ok) {
-        form.style.display = 'none'; // hide form
-        successMsg.style.display = 'block'; // show thank you message
+        form.reset(); // Efface tous les champs
+        thankyouMessage.style.display = "block"; // Affiche le message
       } else {
-        alert('Oops! There was a problem submitting your form.');
+        alert("Oops! Something went wrong. Please try again.");
       }
     } catch (error) {
-      alert('Oops! There was a problem submitting your form.');
+      alert("Network error. Please try again later.");
     }
   });
 </script>
