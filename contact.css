@@ -73,7 +73,7 @@ main { flex:1; }
 /* colonne gauche : empile infos puis image */
 .contact-left{
   display:flex;
-  margin-top: 60px;
+  margin-top: 0px;
   flex-direction:column;
   align-items:stretch; /* largeur 100% des blocs internes */
 }
