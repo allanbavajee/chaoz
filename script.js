@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   stars.forEach((star, idx) => {
     star.addEventListener('click', () => {
-      stars.forEach((s,i) => s.classList.toggle('selected', i <= idx));
+      stars.forEach((s,i) => s.classList.toggle('selected', i >= idx));
       hiddenInput.value = idx + 1;
     });
   });
