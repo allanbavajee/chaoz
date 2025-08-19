@@ -51,72 +51,30 @@ main { flex:1; }
 .menu a:hover { color:#ff6f61; }
 
 /* CONTACT */
-/* --- Mise en page Contact : 2 colonnes nettes --- */
-.contact-container{
-  display:flex;
-  gap:32px;
-  align-items:flex-start;
-  max-width:1200px;
-  margin:36px auto;
-  padding:0 18px;
-}
+.contact-container { display:flex; max-width:1200px; margin:40px auto; padding:0 20px; gap:30px; align-items:flex-start; }
 
-/* chaque colonne prend 1/2, s’adapte proprement */
-.contact-left,
-.contact-form {
-  margin: 0 0 15px 0; /* même espacement en bas */
-  padding: 0;
-  
-}
-
-/* colonne gauche : empile infos puis image */
-.contact-left{
-  display:flex;
-  margin-top: 0px;
-  flex-direction:column;
-  align-items:stretch; /* largeur 100% des blocs internes */
-}
-
-/* espace entre le bloc infos et l’image */
-.contact-info{
-  margin-bottom:16px;
-  margin-top: 30px
-}
-
-/* image responsive, centrée si plus petite */
-.contact-left .contact-image{
-  margin-top:8px;
-  margin-top: 30px
-}
-.contact-left .contact-image img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:100%;
-  border-radius:10px;
-}
-
-/* 🔧 Neutralise d’anciens styles qui pourraient casser la mise en page */
-.contact-image,
-.contact-image img{
-  float:none !important;
+/* COLONNE GAUCHE */
+.contact-left {
   display: flex;
-  justify-content: center;
-  width:20%;
-  height:auto;
+  flex-direction: row; /* horizontal: infos + réseaux sociaux */
+  flex: 1;
+  gap: 20px;
+  align-items: flex-start; /* <-- ajouter pour que les boîtes ne s'étirent pas */
 }
-.contact-container > .contact-image{
-  /* si une ancienne règle avait sorti .contact-image de la colonne gauche */
-  grid-column:auto !important;
+.contact-image img {
+  max-width: 100%;   /* prend toute la largeur dispo */
+  height: auto;
+  margin-top: 15px;  /* espace entre texte et image */
+  border-radius: 8px; /* optionnel : coins arrondis */
 }
-
-/* Optionnel : sur mobile, passe en 1 colonne */
-@media (max-width:900px){
-  .contact-container{
-    flex-direction:column;
-  }
+.contact-info {
+  flex: 1;
+  background:#fff;
+  padding:25px 20px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  align-self: flex-start; /* <-- ajouter pour que la boîte garde sa taille naturelle */
 }
-
 .contact-info h2 { color:#c94f7c; margin-bottom:10px; }
 .contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
 
@@ -138,8 +96,7 @@ main { flex:1; }
 
 /* COLONNE DROITE */
 .contact-form {
-  display: flex;
-  justify-content: center;
+  flex:1;
   background:#fff;
   padding:30px 20px;
   border-radius:12px;
