@@ -1,8 +1,12 @@
+/* Test CSS pour voir si ça marche */
 body {
+  background: red !important;
+}
+
 /* ABOUT US */
 .about {
   position: relative;
-  background: red !important;
+  background: url("about.back.png") center/cover no-repeat fixed;
   padding: 100px 20px;
   display: flex;
   align-items: center;
