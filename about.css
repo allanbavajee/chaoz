@@ -52,3 +52,31 @@
   margin: 35px auto;
   max-width: 600px;
 }
+
+html, body {
+  height: 100%;
+}
+
+.about {
+  position: relative;
+  background: url("../image/about/about.back.jpg") center/cover no-repeat fixed;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 40px 30px;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
