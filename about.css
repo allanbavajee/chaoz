@@ -50,63 +50,67 @@ main { flex:1; }
 .menu a { text-decoration:none; color:#333; font-weight:400; }
 .menu a:hover { color:#ff6f61; }
 
-/* ABOUT US */
+/* ABOUT US SECTION */
 .about {
   position: relative;
-  background: url("image/about/about.back.png") center/cover no-repeat fixed;
-  padding: 100px 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   min-height: 100vh;
+  padding: 80px 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, #fff 100%), 
+              url("image/about/about.back.png") top right no-repeat;
+  background-size: auto; /* conserve dimensions originales */
 }
 
-.about .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6); /* rend le texte lisible */
-  z-index: 0;
-}
-
+/* COLONNE TEXTE À GAUCHE */
 .about-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  background: rgba(255,255,255,0.08); /* léger transparent */
-  backdrop-filter: blur(10px); /* effet verre dépoli */
-  border-radius: 20px;
-  padding: 50px 40px;
-  color: #fff;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  text-align: left;
 }
 
-.about h2 {
+.about-content h2 {
   font-size: 3rem;
   margin-bottom: 25px;
   font-family: 'Parisienne', cursive;
-  color: #FFD700; /* doré */
+  color: #c94f7c;
 }
 
-.about p {
+.about-content p {
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 18px;
+  color: #333;
 }
 
-.about blockquote {
+.about-content blockquote {
   font-size: 1.3rem;
   font-style: italic;
-  color: #FFD700;
-  margin: 30px auto;
+  color: #c94f7c;
+  margin: 30px 0;
   max-width: 600px;
 }
-/* FOOTER */
-footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgba(0,0,0,0.1); }
-.social-links { display:flex; gap:15px; justify-content:center; margin:10px 0; }
-.social-links img { width:32px; height:32px; }
+
+/* COLONNE DROITE (juste pour réserver l’espace image) */
+.about-image {
+  width: 35%;
+}
+
+/* RESPONSIVE : sur mobile -> stack */
+@media(max-width: 992px) {
+  .about {
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, #fff 100%), 
+                url("image/about/about.back.png") top center no-repeat;
+    background-size: cover;
+  }
+  .about-content, .about-image {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+}
 
 
