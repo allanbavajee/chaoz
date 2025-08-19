@@ -100,7 +100,7 @@ main { flex:1; }
 .contact-image,
 .contact-image img{
   float:none !important;
-  width:50%;
+  width:20%;
   height:auto;
 }
 .contact-container > .contact-image{
