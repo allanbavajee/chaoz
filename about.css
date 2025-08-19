@@ -1,7 +1,7 @@
 /* ABOUT US */
 .about {
   position: relative;
-  background: url("image/index/about/about.back.png") center/cover no-repeat fixed;
+  background: url("image/about/about.back.png") center/cover no-repeat fixed;
   min-height: 100vh;
   display: flex;
   align-items: center;
