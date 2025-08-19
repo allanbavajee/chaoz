@@ -49,10 +49,6 @@ main { flex:1; }
 }
 .menu a { text-decoration:none; color:#333; font-weight:400; }
 .menu a:hover { color:#ff6f61; }
-/* Test CSS pour voir si ça marche */
-body {
-  background: red !important;
-}
 
 /* ABOUT US */
 .about {
