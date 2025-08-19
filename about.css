@@ -1,7 +1,8 @@
+body {
 /* ABOUT US */
 .about {
   position: relative;
-  background: url("about.back.png") center/cover no-repeat fixed;
+  background: red !important;
   padding: 100px 20px;
   display: flex;
   align-items: center;
