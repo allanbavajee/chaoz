@@ -100,6 +100,8 @@ main { flex:1; }
 .contact-image,
 .contact-image img{
   float:none !important;
+  width:50%;
+  height:auto;
 }
 .contact-container > .contact-image{
   /* si une ancienne règle avait sorti .contact-image de la colonne gauche */
