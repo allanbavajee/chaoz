@@ -1,13 +1,13 @@
 /* ABOUT US */
 .about {
   position: relative;
-  background: url("image/about/about.back.png") center/cover no-repeat fixed;
-  min-height: 100vh;
+  background: url("about.back.png") center/cover no-repeat fixed;
+  padding: 100px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px;
+  min-height: 100vh;
 }
 
 .about .overlay {
