@@ -51,3 +51,32 @@ document.addEventListener('DOMContentLoaded', () => {
     hiddenInput.value = 5;
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("testimonialForm");
+  const thankYou = document.getElementById("thankYouMessage");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // empêche le rechargement de la page
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        form.reset(); // efface tous les champs
+        thankYou.style.display = "block"; // affiche le message
+        setTimeout(() => { thankYou.style.display = "none"; }, 5000); // disparaît après 5s
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  });
+});
+
