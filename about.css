@@ -125,14 +125,14 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
 }
 
 .chaoz-text h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   color: #d49a00; /* doré élégant */
   margin-bottom: 15px;
 }
 
 .chaoz-text .intro {
-  font-size: 1.0rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #555;
   margin-bottom: 30px;
@@ -146,7 +146,7 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
 
 .chaoz-text blockquote {
   font-family: 'Parisienne', cursive;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 30px;
   padding: 15px 25px;
   border-left: 5px solid #d49a00;
