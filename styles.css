@@ -97,9 +97,10 @@ body {
   font-family: 'Dancing Script', cursive;
   color:#c94f7c;
   font-size:1.8rem;
+  margin-top:10px;
   font-weight: 400; 
 }
-.chef-photo { width:140px; height:auto; border-radius:8px;margin-top:20px; }
+.chef-photo { width:140px; height:auto; border-radius:8px;margin-top:10px; }
 
 /* SOCIAL LINKS */
 .social-links { display:flex; gap:12px; justify-content:center; margin-top:20px; }
