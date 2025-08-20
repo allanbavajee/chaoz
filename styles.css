@@ -85,9 +85,10 @@ body {
   flex:1; 
   display:flex; 
   flex-direction:column; 
+  font-family: 'Dancing Script', cursive;
   align-items:center; 
   gap:15px; 
-  margin-top: 0px; 
+  margin-top: 20px; 
   text-align:center;
   max-width: 380px;
   min-width: 300px;
