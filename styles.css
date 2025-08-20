@@ -107,7 +107,7 @@ body {
   margin-bottom:-10px;
   font-weight: 400; 
 }
-.chef-photo { width:140px; height:auto; border-radius:8px;margin-top:12px; }
+.chef-photo { width:140px; height:auto; border-radius:8px;margin-top:20px; }
 
 /* SOCIAL LINKS */
 .social-links { display:flex; gap:12px; justify-content:center; margin-top:20px; }
