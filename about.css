@@ -126,13 +126,13 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
 
 .chaoz-text h2 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   color: #d49a00; /* doré élégant */
   margin-bottom: 15px;
 }
 
 .chaoz-text .intro {
-  font-size: 1.3rem;
+  font-size: 1.0rem;
   font-weight: 500;
   color: #555;
   margin-bottom: 30px;
