@@ -97,10 +97,10 @@ body {
   font-family: 'Dancing Script', cursive;
   color:#c94f7c;
   font-size:1.8rem;
-  margin-top:10px;
+  margin-top:0px;
   font-weight: 400; 
 }
-.chef-photo { width:140px; height:auto; border-radius:8px;margin-top:10px; }
+.chef-photo { width:140px; height:auto; border-radius:8px;margin-top:0px; }
 
 /* SOCIAL LINKS */
 .social-links { display:flex; gap:12px; justify-content:center; margin-top:20px; }
@@ -161,16 +161,18 @@ body {
 }
 .testimonial-form textarea { min-height:80px; resize:vertical; }
 #submitTestimonial { 
-  padding:8px 14px; 
-  border-radius:6px; 
-  border:none; 
-  background:#000000; 
-  color:#fff; 
-  cursor:pointer; 
+  padding: 8px 14px; 
+  border-radius: 6px; 
+  border: none; 
+  background: #000000; 
+  color: #fff; 
+  cursor: pointer; 
+  transition: background-color .25s ease, transform .25s ease; /* smooth */
 }
-button:hover {
-  background-color: #c94f7c; /* change la couleur */
-  transform: scale(1.05);   /* léger zoom */
+
+#submitTestimonial:hover {
+  background-color: #c94f7c;
+  transform: scale(1.05);
 }
 
 /* STAR RATING UI */
