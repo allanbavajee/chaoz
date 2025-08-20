@@ -93,7 +93,7 @@ body {
   min-width: 300px;
 }
 .welcome-box h3 { 
-  margin:0; 
+  margin:5; 
   font-family: 'Patrick Hand', cursive; 
   font-size:1.8rem;
   font-weight: 400; 
@@ -167,7 +167,7 @@ body {
   cursor:pointer; 
 }
 button:hover {
-  background-color: ##c94f7c; /* change la couleur */
+  background-color: #c94f7c; /* change la couleur */
   transform: scale(1.05);   /* léger zoom */
 }
 
