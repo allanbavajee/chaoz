@@ -162,9 +162,13 @@ body {
   padding:8px 14px; 
   border-radius:6px; 
   border:none; 
-  background:#c94f7c; 
+  background:#000000; 
   color:#fff; 
   cursor:pointer; 
+}
+button:hover {
+  background-color: ##c94f7c; /* change la couleur */
+  transform: scale(1.05);   /* léger zoom */
 }
 
 /* STAR RATING UI */
