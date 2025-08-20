@@ -56,6 +56,7 @@ main { flex:1; }
 
 /* COLONNE GAUCHE */
 .contact-left {
+  margin-top: 15px;
   display: flex;
   flex-direction: column; /* horizontal: infos + réseaux sociaux */
   flex: 1;
@@ -64,12 +65,12 @@ main { flex:1; }
   align-items: flex-start; /* <-- ajouter pour que les boîtes ne s'étirent pas */
 }
 .contact-image img {
-  max-width: 60%;   /* prend toute la largeur dispo */
+  max-width: 50%;   /* prend toute la largeur dispo */
   height: auto;
   justify-content: center; /* centre l’image */
   margin-top: 15px;  /* espace entre texte et image */
   border-radius: 8px; /* optionnel : coins arrondis */
-  display: flex
+  display: flex;
 }
 .contact-info {
   flex: 1;
