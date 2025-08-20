@@ -85,8 +85,9 @@ body {
   font-family: 'Parisienne', cursive; /* ou une autre police */
   font-weight: normal; /* empêche le bold */
   font-size: 2.5rem;   /* tu ajustes la taille */
-  margin-top: 0px; 
-  color: #c94f7c;      /* couleur personnalisée */
+  margin-top: -10px; 
+  color: #FFD700;      /* couleur personnalisée */
+  text-shadow: 1px 1px 2px #FFDF00, 0 0 5px #FFE066;
 }
 .welcome-box { 
   flex:1; 
