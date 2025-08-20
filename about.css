@@ -103,6 +103,69 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
 .social-links { display:flex; gap:15px; justify-content:center; margin:10px 0; }
 .social-links img { width:32px; height:32px; }
 
+.about-chaoz {
+  background: linear-gradient(to right, #fff7f7, #fff);
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.chaoz-container {
+  display: flex;
+  align-items: center;   /* Centre verticalement */
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.chaoz-text {
+  flex: 0 0 70%;
+  text-align: left;
+}
+
+.chaoz-text h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  color: #d49a00; /* doré élégant */
+  margin-bottom: 15px;
+}
+
+.chaoz-text .intro {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.chaoz-text p {
+  line-height: 1.7;
+  margin: 15px 0;
+  font-size: 1.05rem;
+}
+
+.chaoz-text blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  padding: 15px 25px;
+  border-left: 5px solid #d49a00;
+  background: #fffdf2;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+.chaoz-image {
+  flex: 0 0 30%;
+  text-align: center;
+}
+
+.chaoz-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
 /* RESPONSIVE */
 @media (max-width:992px) {
   .creations-wrapper { flex-direction:column; }
