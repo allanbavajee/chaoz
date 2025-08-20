@@ -84,7 +84,7 @@ main { flex:1; }
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
   align-self: flex-start; /* <-- ajouter pour que la boîte garde sa taille naturelle */
 }
-.contact-info h2 { color:#c94f7c; margin-bottom:10px; }
+.contact-info h2 { color:#c94f7c; margin-bottom:10px;margin-top:3px; }
 .contact-info p { margin-bottom:10px; font-size:1rem; color:#555; }
 
 /* Réseaux sociaux à droite de la colonne infos */
@@ -129,8 +129,6 @@ main { flex:1; }
 footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgba(0,0,0,0.1); }
 .social-links { display:flex; gap:15px; justify-content:center; margin:10px 0;transition: filter 0.3s ease; }
 .social-links img { width:32px; height:32px; }
-.social-links img:hover {
-  filter: brightness(0) saturate(100%) invert(40%) sepia(89%) saturate(700%) hue-rotate(310deg) brightness(95%) contrast(97%);
 }
 /* RESPONSIVE */
 @media (max-width:992px) {
