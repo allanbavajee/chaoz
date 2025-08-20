@@ -94,11 +94,12 @@ body {
 }
 .welcome-box h3 { 
   margin:5; 
-  font-family: 'Patrick Hand', cursive; 
+  font-family: 'Dancing Script', cursive;
+  color:#c94f7c;
   font-size:1.8rem;
   font-weight: 400; 
 }
-.chef-photo { width:140px; height:auto; border-radius:8px; }
+.chef-photo { width:140px; height:auto; border-radius:8px;margin-top:20px; }
 
 /* SOCIAL LINKS */
 .social-links { display:flex; gap:12px; justify-content:center; margin-top:20px; }
