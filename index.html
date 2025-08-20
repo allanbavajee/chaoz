@@ -12,7 +12,7 @@
   <!-- HEADER -->
   <header class="header-container">
     <div class="header-top">
-      <img src="image/contact/chaoz.new.png" alt="ChaOz Logo" class="logo">
+      <img src="image/chaoz.logo.w.png" alt="ChaOz Logo" class="logo">
       <h1 class="site-title">ChaOz</h1>
     </div>
     <p class="site-slogan">Bake with Grace, Serve with Love</p>
@@ -58,7 +58,7 @@
 
     <!-- RIGHT COLUMN : Welcome + Testimonials + Form + Social -->
     <aside class="welcome-box">
-      <h3>Where every story begins</h3>
+      <h3>Welcome,</h3>
       <img src="image/charlotte.png" alt="Charlotte - Chef Pâtissière" class="chef-photo">
       <p>As a passionate pastry chef, I blend taste with originality to create desserts that not only please the palate but also tell a story. Every creation is crafted with love and care, ensuring each bite is a unique experience.</p>
 
@@ -72,63 +72,28 @@
       </div>
 
       <!-- Testimonials -->
-      <form class="testimonial-form" id="testimonialForm" 
-      action="https://formspree.io/f/meozvbgg" 
-      method="POST">
-  <h4>Give us your feedback</h4>
+      <div class="testimonials">
+        <h4>What Our Clients Say</h4>
+        <div id="testimonialTrack" class="testimonial-track"></div>
 
-  <input id="userName" type="text" name="name" placeholder="Your Name" required>
-  <input id="userEmail" type="email" name="email" placeholder="Your Email" required>
-  <textarea id="userMessage" name="message" placeholder="Your Testimonial" required></textarea>
+        <form class="testimonial-form" id="testimonialForm">
+           <h4>Give us your feedback</h4>
+          <input id="userName" type="text" placeholder="Your Name" required>
+          <input id="userEmail" type="email" placeholder="Your Email" required>
+          <textarea id="userMessage" placeholder="Your Testimonial" required></textarea>
 
-  <div class="star-rating" id="starRating">            
-    <button type="button" class="star" data-value="1">★</button>
-    <button type="button" class="star" data-value="2">★</button>
-    <button type="button" class="star" data-value="3">★</button>
-    <button type="button" class="star" data-value="4">★</button>
-    <button type="button" class="star" data-value="5">★</button>
-    <input type="hidden" id="userStars" name="stars" value="5">
-  </div>
+          <div class="star-rating" id="starRating">            
+            <button type="button" class="star" data-value="1">★</button>
+            <button type="button" class="star" data-value="2">★</button>
+            <button type="button" class="star" data-value="3">★</button>
+            <button type="button" class="star" data-value="4">★</button>
+            <button type="button" class="star" data-value="5">★</button>
+            <input type="hidden" id="userStars" value="5">
+          </div>
 
-  <button type="submit" id="submitTestimonial">Send</button>
-</form>
-
-<!-- Message de remerciement -->
-<p id="thankyouMessage" style="display:none; color:green; font-weight:bold; margin-top:10px;">
-  Thank you for your feedback 💖
-</p>
+          <button type="submit" id="submitTestimonial">Send</button>
+        </form>
       </div>
-      <script>
-  const form = document.getElementById("testimonialForm");
-  const thankyouMessage = document.getElementById("thankyouMessage");
-
-  form.addEventListener("submit", async function(event) {
-    event.preventDefault(); // Empêche le rechargement
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        form.reset(); // Efface tous les champs
-        thankyouMessage.style.display = "block"; // Affiche le message
-        setTimeout(() => {
-          thankyouMessage.style.display = "none";
-        }, 5000); // Disparait après 5 secondes
-      } else {
-        alert("Oops! Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      alert("Network error. Please try again later.");
-    }
-  });
-</script>
-
     </aside>
 
   </main>
