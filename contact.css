@@ -30,7 +30,7 @@ main { flex:1; }
   display: block;
   text-align:center;
   font-family: 'Dancing Script', cursive;
-  font-size:1.8rem;
+  font-size:2.4rem;
   color:#000;
   margin:10px 0 20px 0;
 }
@@ -60,6 +60,7 @@ main { flex:1; }
   flex-direction: column; /* horizontal: infos + réseaux sociaux */
   flex: 1;
   gap: 20px;
+  lign-items: center;
   align-items: flex-start; /* <-- ajouter pour que les boîtes ne s'étirent pas */
 }
 .contact-image img {
