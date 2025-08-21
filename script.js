@@ -47,13 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
             stars: t.stars || t.rating || 5
           });
         });
-      }
+       // 👇 Forcer le premier témoignage visible
+      if (items[0]) items[0].style.opacity = 1;
       startCarousel();
-    })
-    .catch(err => {
-      console.error('Impossible de charger temoignages.json :', err);
-      // on garde items vide, l'utilisateur pourra ajouter des témoignages manuellement
-    });
+    } else {
+      testimonialTrack.innerHTML = "<p style='color:#777;'>Aucun témoignage pour le moment.</p>";
+    }
+  })
+  .catch(err => {
+    console.error('Impossible de charger temoignages.json :', err);
+    testimonialTrack.innerHTML = "<p style='color:#777;'>Impossible de charger les témoignages.</p>";
+  });
 
   // STAR rating behavior (hover + click)
   function clearHover() { stars.forEach(s => s.classList.remove('hover')); }
