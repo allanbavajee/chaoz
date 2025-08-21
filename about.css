@@ -156,7 +156,7 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
 }
 
 .chaoz-image {
-  flex: 0 0 40%;
+  flex: 0 0 30%;
   text-align: center;
 }
 
@@ -175,7 +175,7 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
   position: fixed;      /* reste toujours visible */
   bottom: 20px;         /* marge du bas */
   left: 20px;           /* marge de gauche */
-  z-index: 5;           /* au-dessus du fond mais sous le contenu */
+  z-index: 999;           /* au-dessus du fond mais sous le contenu */
 }
 
 .bottom-left-image img {
