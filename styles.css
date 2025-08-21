@@ -103,7 +103,7 @@ body {
 }
 .welcome-box h3 { 
   margin:5; 
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Patrick Hand', cursive;
   color:#c94f7c;
   font-size:1.8rem;
   margin-top:-10px;
@@ -136,6 +136,7 @@ body {
 .testimonial-item {
   position: absolute;
   top: 0;
+  margin-top:10px;
   left: 0;
   width: 100%;
   text-align: center;
