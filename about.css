@@ -171,3 +171,16 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
   .creations-wrapper { flex-direction:column; }
   .order-sidebar { width:100%; margin-bottom:20px; position:relative; top:auto; }
 }
+.bottom-left-image {
+  position: fixed;      /* reste toujours visible */
+  bottom: 20px;         /* marge du bas */
+  left: 20px;           /* marge de gauche */
+  z-index: 5;           /* au-dessus du fond mais sous le contenu */
+}
+
+.bottom-left-image img {
+  width: 150px;         /* ajuste selon besoin */
+  height: auto;
+  opacity: 0.9;         /* un petit effet de transparence */
+  border-radius: 12px;  /* coins arrondis */
+}
