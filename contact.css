@@ -150,3 +150,19 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
   opacity: 0.95;
   border-radius: 12px;
 }
+.about-chaoz {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;  /* aligne tout en bas */
+  position: relative;
+  min-height: 500px;
+  padding: 60px 20px;
+}
+.bottom-left-image {
+  position: relative;  /* plus besoin d'absolu */
+  margin-left: 0;
+}
+.bottom-left-image img {
+  width: 300px;  /* taille fixe */
+  max-width: 40%; /* responsive */
+}
