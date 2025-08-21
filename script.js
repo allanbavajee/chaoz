@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   stars.forEach((star, idx) => {
     star.addEventListener('click', () => {
-      stars.forEach((s,i) => s.classList.toggle('selected', i <= idx));
+      stars.forEach((s,i) => s.classList.toggle('selected', i >= idx));
       hiddenInput.value = idx + 1;
     });
   });
@@ -52,31 +52,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("testimonialForm");
-  const thankYou = document.getElementById("thankYouMessage");
+ const form = document.getElementById("testimonialForm");
+const thankYou = document.getElementById("thankYouMessage");
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // empêche le rechargement de la page
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-    const formData = new FormData(form);
+  const formData = new FormData(form);
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" }
-      });
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    });
 
-      if (response.ok) {
-        form.reset(); // efface tous les champs
-        thankYou.style.display = "block"; // affiche le message
-        setTimeout(() => { thankYou.style.display = "none"; }, 5000); // disparaît après 5s
-      } else {
-        alert("Oops! Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      alert("Error: " + error.message);
+    if (response.ok) {
+      form.reset();
+      stars.forEach(s => s.classList.remove('selected'));
+      hiddenInput.value = 5; // reset étoiles
+      thankYou.style.display = "block";
+      setTimeout(() => { thankYou.style.display = "none"; }, 5000);
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
     }
-  });
+  } catch (error) {
+    alert("Error: " + error.message);
+  }
 });
-
