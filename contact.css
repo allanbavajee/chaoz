@@ -137,32 +137,3 @@ footer { text-align:center; padding:20px 0; color:#777; border-top:1px solid rgb
   .contact-left { flex-direction:column; width:100%; }
   .contact-info, .social-section, .contact-form { width:100%; margin-bottom:20px; }
 }
-.bottom-left-image {
-  position: absolute;       /* attachée à la section */
-  bottom: 0;                /* au bas de la section */
-  left: 0;                  /* à gauche */
-  z-index: 1;               /* derrière le texte si besoin */
-}
-
-.bottom-left-image img {
-  width: 300px;             /* image plus grande */
-  height: auto;
-  opacity: 0.95;
-  border-radius: 12px;
-}
-.about-chaoz {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;  /* aligne tout en bas */
-  position: relative;
-  min-height: 500px;
-  padding: 60px 20px;
-}
-.bottom-left-image {
-  position: relative;  /* plus besoin d'absolu */
-  margin-left: 0;
-}
-.bottom-left-image img {
-  width: 300px;  /* taille fixe */
-  max-width: 40%; /* responsive */
-}
