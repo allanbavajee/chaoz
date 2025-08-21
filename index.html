@@ -76,24 +76,24 @@
         <h4>What Our Clients Say</h4>
         <div id="testimonialTrack" class="testimonial-track"></div>
 
-        <form class="testimonial-form" id="testimonialForm" action="https://formspree.io/f/meozvbgg" method="POST">
-           <h4>Give us your feedback</h4>
-          <input id="userName" type="text" placeholder="Your Name" required>
-          <input id="userEmail" type="email" placeholder="Your Email" required>
-          <textarea id="userMessage" placeholder="Your Testimonial" required></textarea>
+        <form class="testimonial-form" id="testimonialForm" action="https://formspree.io/f/meozvbgg" method="POST" novalidate>
+  <h4>Give us your feedback</h4>
+  <input id="userName" type="text" name="name" placeholder="Your Name" required>
+  <input id="userEmail" type="email" name="email" placeholder="Your Email" required>
+  <textarea id="userMessage" name="message" placeholder="Your Testimonial" required></textarea>
 
-          <div class="star-rating" id="starRating">            
-            <button type="button" class="star" data-value="1">★</button>
-            <button type="button" class="star" data-value="2">★</button>
-            <button type="button" class="star" data-value="3">★</button>
-            <button type="button" class="star" data-value="4">★</button>
-            <button type="button" class="star" data-value="5">★</button>
-            <input type="hidden" id="userStars" value="5">
-          </div>
+  <div class="star-rating" id="starRating">            
+    <button type="button" class="star" data-value="1">★</button>
+    <button type="button" class="star" data-value="2">★</button>
+    <button type="button" class="star" data-value="3">★</button>
+    <button type="button" class="star" data-value="4">★</button>
+    <button type="button" class="star" data-value="5">★</button>
+    <input type="hidden" id="userStars" name="stars" value="5">
+  </div>
 
-          <button type="submit" id="submitTestimonial">Send</button>
-          <p id="thankYouMessage" style="color:#c94f7c; display:none; margin-top:10px;">Thank you for your feedback!</p>
-        </form>
+  <button type="submit" id="submitTestimonial">Send</button>
+  <p id="thankYouMessage" style="color:#c94f7c; display:none; margin-top:10px;">Merci pour votre retour !</p>
+</form>
       </div>
     </aside>
 
