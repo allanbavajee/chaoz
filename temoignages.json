@@ -1,27 +1,8 @@
 [
-  {
-    "texte": "Super délicieux, j'adore !",
-    "auteur": "Alice",
-    "stars": 5
-  },
-  {
-    "texte": "Très bon service et gâteau magnifique.",
-    "auteur": "Bob",
-    "stars": 4
-  },
-  {
-    "texte": "Super délicieux, j'adore !",
-    "auteur": "Léa",
-    "stars": 5
-  },
-  {
-    "texte": "Très bon service et gâteau magnifique.",
-    "auteur": "Grâciel",
-    "stars": 4
-  },
-  {
-    "texte": "Je recommande vivement !",
-    "auteur": "Claire",
-    "stars": 5
-  }
+  { "texte": "Super délicieux, j'adore !", "auteur": "Alice", "stars": 5},
+  { "texte": "Très bon service et gâteau magnifique.", "auteur": "Bob", "stars": 4},
+  { "texte": "Super délicieux, j'adore !", "auteur": "Léa", "stars": 5 },
+  { "texte": "Très bon service et gâteau magnifique.", "auteur": "Grâciel", "stars": 4},
+  { "texte": "Je recommande vivement !", "auteur": "Claire", "stars": 5}
+  { "texte": "Excellent !", "auteur": "Allan", "stars": 5}
 ]
