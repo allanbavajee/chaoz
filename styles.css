@@ -132,7 +132,7 @@ body {
   margin-bottom:15px;
 }
 
-/* Témoignages items */
+/* TESTIMONIALS items (fix: added missing semicolon and transition) */
 .testimonial-item {
   position: absolute;
   top: 0;
@@ -143,7 +143,7 @@ body {
   font-style: normal;
   opacity: 0;
   color: #444;
-  font-size:1.6rem
+  font-size: 1.6rem;
   transition: opacity 0.6s ease;
 }
 .testimonial-item.active { opacity:1; }
@@ -155,37 +155,7 @@ body {
 .testimonial-item p { font-style:italic; margin-bottom:8px; }
 .testimonial-item span { display:block; color:#666; font-size:0.9rem; }
 
-/* FORM */
-.testimonial-form { 
-  margin-top:20px; /* descendre le formulaire un peu */
-  display:flex; 
-  flex-direction:column; 
-  align-items:center; 
-  gap:8px; 
-}
-.testimonial-form input, .testimonial-form textarea {
-  width:92%;
-  padding:8px;
-  border-radius:6px;
-  border:1px solid #ddd;
-}
-.testimonial-form textarea { min-height:80px; resize:vertical; }
-#submitTestimonial { 
-  padding: 8px 14px; 
-  border-radius: 6px; 
-  border: none; 
-  background: #000000; 
-  color: #fff; 
-  cursor: pointer; 
-  transition: background-color .25s ease, transform .25s ease; /* smooth */
-}
-
-#submitTestimonial:hover {
-  background-color: #c94f7c;
-  transform: scale(1.05);
-}
-
-/* STAR RATING UI */
+/* STAR RATING UI (JS gère hover & selected) */
 .star-rating { display:flex; gap:6px; justify-content:center; margin-top:6px; }
 .star-rating .star {
   background:transparent;
@@ -196,10 +166,10 @@ body {
   padding:2px 4px;
 }
 .star-rating .star.selected,
-.star-rating .star:hover,
-.star-rating .star:hover ~ .star {
-  color:gold;
+.star-rating .star.hover {
+  color: gold;
 }
+
 
 /* RESPONSIVE */
 @media (max-width:900px){
